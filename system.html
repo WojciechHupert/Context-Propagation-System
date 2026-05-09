@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="moirai-logo.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <title>MOIRAI | Metro Architecture</title>
+    <meta name="description" content="Metro-style deep dive into the Moirai Engine architecture and memory processing." />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://moirai-studio.pages.dev/system.html" />
+    <meta name="theme-color" content="#050505" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://moirai-studio.pages.dev/system.html" />
+    <meta property="og:title" content="MOIRAI | Metro Architecture" />
+    <meta property="og:description" content="Metro-style deep dive into the Moirai Engine architecture and memory processing." />
+    <meta property="og:image" content="https://moirai-studio.pages.dev/moirai-social-preview.png" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://moirai-studio.pages.dev/system.html" />
+    <meta property="twitter:title" content="MOIRAI | Metro Architecture" />
+    <meta property="twitter:description" content="Metro-style deep dive into the Moirai Engine architecture and memory processing." />
+    <meta property="twitter:image" content="https://moirai-studio.pages.dev/moirai-social-preview.png" />
+    <script type="module" crossorigin src="/Moirai_Website/assets/system-qUrourY8.js"></script>
+    <link rel="modulepreload" crossorigin href="/Moirai_Website/assets/jsx-runtime-BH0zXVJA.js">
+    <link rel="stylesheet" crossorigin href="/Moirai_Website/assets/jsx-runtime-D3lXU6lQ.css">
+    <link rel="stylesheet" crossorigin href="/Moirai_Website/assets/system-DQNYD19Y.css">
+  </head>
+  <body>
+    <div class="grid-overlay"></div>
+
+    <div class="main-container">
+      <header class="site-header">
+        <div class="logo"><a href="./">MOIRAI</a></div>
+        <nav class="site-nav">
+          <a href="./" class="mono muted nav-link">ABOUT</a>
+          <a href="system.html" class="mono text-accent nav-link active-link">SYSTEM_MAP</a>
+        </nav>
+        <div class="system-status">
+          <a href="mailto:whupert@gmail.com" class="contact-button">Contact</a>
+        </div>
+      </header>
+
+      <main>
+        <section class="system-hero">
+          <div class="system-hero-content">
+            <h1 class="hero-title animate-slide-up" style="animation-delay: 0.1s;">The Moirai<br>Engine</h1>
+            
+            <div class="hero-lead animate-slide-up" style="animation-delay: 0.2s;">
+              <p>
+                A sophisticated cognitive architecture engineered for persistence and social propagation. 
+                Visualizing the flow of lived experience through the <strong>Dual-Layer Memory</strong> model and the administrative protocols of Moirai Studio.
+              </p>
+            </div>
+
+          </div>
+
+          <div id="react-flow-root"></div>
+        </section>
+
+        <!-- PART 2: MOIRAI STUDIO -->
+        <section class="studio-section" id="studio">
+          <div class="section-header">
+            <span class="mono text-accent">// 02 — ADMINISTRATION.LAYER</span>
+            <h2 style="margin-top:10px;">MOIRAI STUDIO PRO</h2>
+            <p class="hero-description full-width mt-20">
+              A standalone administrative suite providing a direct window into the collective consciousness and historical truth of the simulation.
+            </p>
+          </div>
+          <div class="studio-layout">
+            <!-- Studio modules -->
+            <div class="studio-modules">
+              <div class="module-card interactive-node" data-info="studio-sys">
+                <div class="module-tag mono">SYS</div>
+                <div class="module-title">Systems / Sanctum</div>
+                <p class="module-desc">Vitality monitor. Tracks the flow of dialogue and the formation of persistent memories in real-time.</p>
+              </div>
+              <div class="module-card interactive-node" data-info="studio-sub">
+                <div class="module-tag mono">SUB</div>
+                <div class="module-title">Subjects / Subject Weaver</div>
+                <p class="module-desc">Persona curation. Refine the core identities and perspectives of the 6 Subjects within the simulation.</p>
+              </div>
+              <div class="module-card interactive-node" data-info="studio-arc">
+                <div class="module-tag mono">ARC</div>
+                <div class="module-title">Archives / Oracle</div>
+                <p class="module-desc">Insight audit. Visualize how stories migrate through the network and monitor the evolution of shared truth.</p>
+              </div>
+            </div>
+            
+            <div class="studio-inspector">
+              <div class="info-panel glass-panel">
+                <div class="info-header">
+                  <span class="mono text-accent">// STUDIO_DETAILS</span>
+                  <h3 id="studio-panel-title">Select Module</h3>
+                </div>
+                <div class="info-content" id="studio-panel-content">
+                  <p class="mono muted">Waiting for selection...</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+      
+<!-- 08. ROADMAP -->
+        <section id="roadmap">
+          <div class="section-header">
+            <span class="mono text-accent">08. Development</span>
+            <h2>System Roadmap</h2>
+          </div>
+
+          <!-- Smart Roadmap Container -->
+          <div class="roadmap-smart">
+
+            <!-- Progress Header -->
+            <div class="roadmap-meta">
+              <div class="roadmap-stats">
+                <div class="roadmap-stat">
+                  <span class="roadmap-stat-value mono" id="rm-completed">7</span>
+                  <span class="roadmap-stat-label mono">Completed</span>
+                </div>
+                <div class="roadmap-stat-sep"></div>
+                <div class="roadmap-stat">
+                  <span class="roadmap-stat-value mono planned-val">1</span>
+                  <span class="roadmap-stat-label mono">Planned</span>
+                </div>
+                <div class="roadmap-stat-sep"></div>
+                <div class="roadmap-stat">
+                  <span class="roadmap-stat-value mono">8</span>
+                  <span class="roadmap-stat-label mono">Total Phases</span>
+                </div>
+              </div>
+              <div class="roadmap-progress-bar-wrap">
+                <div class="roadmap-progress-bar" style="width: 87.5%"></div>
+              </div>
+              <div class="roadmap-progress-label mono">87.5% COMPLETE</div>
+            </div>
+
+            <!-- Compact Phase Grid -->
+            <div class="roadmap-grid" id="roadmap-grid">
+
+              <div class="rm-phase completed" data-phase="1">
+                <div class="rm-phase-header">
+                  <div class="rm-phase-left">
+                    <span class="rm-phase-num mono">01</span>
+                    <span class="rm-phase-title">Action Records</span>
+                  </div>
+                  <div class="rm-phase-right">
+                    <span class="rm-badge mono">COMPLETED</span>
+                    <span class="rm-chevron mono">+</span>
+                  </div>
+                </div>
+                <div class="rm-phase-body">
+                  <p>Implementation of the ActionRecords schema. Automated LLM extraction of structured future intents, relationship shifts, and narrative commitments from live dialogue. Features dynamic retrieval injection into the prompt context based on trigger windows and cooldowns.</p>
+                </div>
+              </div>
+
+              <div class="rm-phase completed" data-phase="2">
+                <div class="rm-phase-header">
+                  <div class="rm-phase-left">
+                    <span class="rm-phase-num mono">02</span>
+                    <span class="rm-phase-title">Canonical Propagation</span>
+                  </div>
+                  <div class="rm-phase-right">
+                    <span class="rm-badge mono">COMPLETED</span>
+                    <span class="rm-chevron mono">+</span>
+                  </div>
+                </div>
+                <div class="rm-phase-body">
+                  <p>Deployment of the PropagationEvents architecture. Information spreads via associative routing, prioritizing Subjects within shared social circles. Each transfer generates a distinct recipient-owned record while maintaining a traceable link to its origin.</p>
+                </div>
+              </div>
+
+              <div class="rm-phase stabilized" data-phase="3">
+                <div class="rm-phase-header">
+                  <div class="rm-phase-left">
+                    <span class="rm-phase-num mono">03</span>
+                    <span class="rm-phase-title">Continuity Subsystem</span>
+                  </div>
+                  <div class="rm-phase-right">
+                    <span class="rm-badge mono">STABILIZED</span>
+                    <span class="rm-chevron mono">+</span>
+                  </div>
+                </div>
+                <div class="rm-phase-body">
+                  <p>Integration of the UMoiraiContinuitySubsystem within Unreal Engine. Enables temporal chaining of memories using PreviousMemoryId to reconstruct long-term narrative threads. Includes mutation tracking and drift counters to monitor cognitive evolution over time.</p>
+                </div>
+              </div>
+
+              <div class="rm-phase stabilized" data-phase="4">
+                <div class="rm-phase-header">
+                  <div class="rm-phase-left">
+                    <span class="rm-phase-num mono">04</span>
+                    <span class="rm-phase-title">Moirai Studio Pro</span>
+                  </div>
+                  <div class="rm-phase-right">
+                    <span class="rm-badge mono">STABILIZED</span>
+                    <span class="rm-chevron mono">+</span>
+                  </div>
+                </div>
+                <div class="rm-phase-body">
+                  <p>Development of an IDE-style administrative suite. Provides real-time neural vitals, flux tracking, and manual moderation of transcripts and memories. Features a master-detail layout for deep-diving into canonical memory writes and chaining metadata.</p>
+                </div>
+              </div>
+
+              <div class="rm-phase completed" data-phase="4.5">
+                <div class="rm-phase-header">
+                  <div class="rm-phase-left">
+                    <span class="rm-phase-num mono">4.5</span>
+                    <span class="rm-phase-title">Runtime Hardening</span>
+                  </div>
+                  <div class="rm-phase-right">
+                    <span class="rm-badge mono">COMPLETED</span>
+                    <span class="rm-chevron mono">+</span>
+                  </div>
+                </div>
+                <div class="rm-phase-body">
+                  <p>Critical safety layer implementation. Includes assistant dialogue sanitization before persistence and transcript authority filtering to exclude game_fallback or error rows. Introduces a one-step repair pass for malformed LLM outputs to maintain context hygiene.</p>
+                </div>
+              </div>
+
+              <div class="rm-phase completed" data-phase="6">
+                <div class="rm-phase-header">
+                  <div class="rm-phase-left">
+                    <span class="rm-phase-num mono">06</span>
+                    <span class="rm-phase-title">Human Recall</span>
+                  </div>
+                  <div class="rm-phase-right">
+                    <span class="rm-badge mono">COMPLETED</span>
+                    <span class="rm-chevron mono">+</span>
+                  </div>
+                </div>
+                <div class="rm-phase-body">
+                  <p>Advanced cognitive filtering. Implements retrieval bucketing (Recent, Stable, Social, Emotional) with strict token caps. Features a human-centric recall layer where memories exhibit age-based vagueness and semantic blurring based on their RecallStability rating.</p>
+                </div>
+              </div>
+
+              <div class="rm-phase completed" data-phase="7">
+                <div class="rm-phase-header">
+                  <div class="rm-phase-left">
+                    <span class="rm-phase-num mono">07</span>
+                    <span class="rm-phase-title">Studio Observability</span>
+                  </div>
+                  <div class="rm-phase-right">
+                    <span class="rm-badge mono">COMPLETED</span>
+                    <span class="rm-chevron mono">+</span>
+                  </div>
+                </div>
+                <div class="rm-phase-body">
+                  <p>Enhanced diagnostic tooling. Includes privacy level enforcement (shareable vs. private) and source attribution badges. Features propagation trace visualization and a refined inspector UI exposing 11 distinct metadata fields per memory record for deep auditability.</p>
+                </div>
+              </div>
+
+              <div class="rm-phase planned" data-phase="8">
+                <div class="rm-phase-header">
+                  <div class="rm-phase-left">
+                    <span class="rm-phase-num mono">08</span>
+                    <span class="rm-phase-title">World Reaction Layer</span>
+                  </div>
+                  <div class="rm-phase-right">
+                    <span class="rm-badge mono">PLANNED</span>
+                    <span class="rm-chevron mono">+</span>
+                  </div>
+                </div>
+                <div class="rm-phase-body">
+                  <p>Bridging the gap between cognition and environment. Enables direct coupling between Moirai continuity states and the world simulation. Memories now drive environmental shifts and Subject behavior changes based on historical persistence.</p>
+                </div>
+              </div>
+
+            </div><!-- /roadmap-grid -->
+          </div><!-- /roadmap-smart -->
+
+          <script>
+            document.querySelectorAll('#roadmap-grid .rm-phase').forEach(phase => {
+              phase.querySelector('.rm-phase-header').addEventListener('click', () => {
+                const isOpen = phase.classList.contains('open');
+                // collapse all
+                document.querySelectorAll('#roadmap-grid .rm-phase').forEach(p => {
+                  p.classList.remove('open');
+                  p.querySelector('.rm-chevron').textContent = '+';
+                });
+                if (!isOpen) {
+                  phase.classList.add('open');
+                  phase.querySelector('.rm-chevron').textContent = '×';
+                }
+              });
+            });
+          </script>
+        </section>
+
+        <!-- UNIFIED INFOGRAPHIC: 01 Architecture + 04 Cognition + 05 Social Mechanics -->
+        <section id="engine-infographic">
+          <div class="section-header">
+            <span class="mono text-accent">// SYSTEM OVERVIEW</span>
+            <h2>ENGINE COMPONENTS</h2>
+            <p class="hero-description full-width mt-20">
+              The three core operating layers of the Moirai Engine. Select a component to explore its internal logic.
+            </p>
+          </div>
+
+          <!-- Tab Navigation Bar -->
+          <div class="infographic-tabs" role="tablist">
+            <button class="infographic-tab active" role="tab" data-target="tab-architecture" aria-selected="true">
+              <span class="mono">01.</span> Architecture
+            </button>
+            <button class="infographic-tab" role="tab" data-target="tab-cognition" aria-selected="false">
+              <span class="mono">04.</span> Cognition
+            </button>
+            <button class="infographic-tab" role="tab" data-target="tab-social" aria-selected="false">
+              <span class="mono">05.</span> Social Mechanics
+            </button>
+          </div>
+
+          <!-- Infographic Stage: Left nav + Right detail -->
+          <div class="infographic-stage">
+            <nav class="infographic-nav" id="infographic-nav"></nav>
+            <div class="infographic-detail" id="infographic-detail"></div>
+          </div>
+
+        </section><!-- /engine-infographic -->
+
+        <script>
+          const INFOGRAPHIC_DATA = {
+            'tab-architecture': {
+              items: [
+                { id: 'arch-a', nav: 'Sensory Ingestion',   title: 'Sensory Ingestion',   tag: 'Module_A', body: 'The engine listens to the city, capturing the pulse of every interaction and observation. It transforms raw dialogue into the foundational data of lived experience.',                                                                            details: ['Input: Direct conversation', 'Processing: Semantic extraction', 'Persistence: Secure archival'] },
+                { id: 'arch-b', nav: 'Memory Synthesis',   title: 'Memory Synthesis',   tag: 'Module_B', body: 'Fragmented moments are woven into a coherent narrative history. This layer identifies what matters, ensuring that the past isn\'t just stored, but understood.',                                                                              details: ['Organization: Narrative threads', 'Persistence: Relational chaining', 'Focus: High-impact events'] },
+                { id: 'arch-c', nav: 'Behavioral Resonance',    title: 'Behavioral Resonance',    tag: 'Module_C', body: 'Historical records are translated back into action. The engine ensures that every reaction is rooted in a deep, persistent understanding of the social landscape.',                                                                  details: ['Output: Humanized recall', 'Intent: Socially aware action', 'Constraint: Subjects remember naturally'] }
+              ]
+            },
+            'tab-cognition': {
+              items: [
+                { id: 'cog-01', nav: '01 \u2014 Information Tiering',       title: 'Information Tiering',      tag: 'Step 01', body: 'Memories are organized by their emotional weight and relevance. This ensures the most vital experiences remain accessible while routine details recede into the background.',                  details: ['Bucket: Recent interactions', 'Bucket: Foundational facts', 'Bucket: Social hearsay', 'Bucket: Emotional weight'] },
+                { id: 'cog-02', nav: '02 \u2014 Recall Fluidity',     title: 'Recall Fluidity',    tag: 'Step 02', body: "The clarity of a memory shifts over time. Recent or significant events remain sharp, while older recollections begin to blur, mirroring the natural evolution of thought.",              details: ['Status: Stable vs Fragile', 'Behaviors: Forgetting & Drift', 'Influence: Time and Emotion'] },
+                { id: 'cog-03', nav: '03 \u2014 Subjective Interpretation',           title: 'Subjective Interpretation',          tag: 'Step 03', body: "No two perspectives are identical. Memories are subtly reshaped by a Subject's unique personality and current state, creating a deeply personal version of history.", details: ['Process: Phrasing mutation', 'Policy: Perspective bias', 'Output: Humanized, personal recall'] },
+                { id: 'cog-04', nav: '04 \u2014 Contextual Awareness',   title: 'Contextual Awareness',   tag: 'Step 04', body: 'The system distinguishes between personal experience and collective hearsay. This boundary ensures Subjects act with conviction on what they know, and caution on what they’ve only heard.',                             details: ['Source: Personal experience', 'Source: Social rumors', 'Goal: Maintain narrative integrity'] }
+              ]
+            },
+            'tab-social': {
+              items: [
+                { id: 'soc-01', nav: 'RULE 01 \u2014 Organic Propagation',    title: 'Organic Propagation',    tag: 'RULE_01', body: 'Information flows naturally through social circles. Knowledge spreads most effectively between Subjects who share close bonds or common environments.',                       details: ['Primary: Shared social ties', 'Fallback: Network proximity', 'Scoring: Relationship relevance'] },
+                { id: 'soc-02', nav: 'RULE 02 \u2014 Perspective Ownership',  title: 'Perspective Ownership',  tag: 'RULE_02', body: 'Knowledge is never just copied. When a story is shared, it is reborn through the eyes of the listener, becoming a new, unique record of their own understanding.', details: ['Ownership: Personal ownership', 'Linkage: Traceable origin', 'Tracking: Contextual mutation'] },
+                { id: 'soc-03', nav: 'RULE 03 \u2014 Social Boundaries',     title: 'Social Boundaries',     tag: 'RULE_03', body: 'The engine respects the sanctity of private thought. Only information intended for the public or a specific circle is allowed to traverse the social network.',                                                     details: ['Check: Accessibility level', 'Security: Privacy protection', 'Safety: Prevents secret leakage'] },
+                { id: 'soc-04', nav: 'RULE 04 \u2014 Narrative Evolution',        title: 'Narrative Evolution',        tag: 'RULE_04', body: 'As a story moves from person to person, it naturally evolves. Details may drift or shift, reflecting the living, breathing nature of social communication.',                 details: ['Preserved: Core essence', 'Degraded: Precise confidence', 'Cap: Propagation limit'] },
+                { id: 'soc-05', nav: 'RULE 05 \u2014 Information Equilibrium',       title: 'Information Equilibrium',       tag: 'RULE_05', body: 'The system prevents the noise of gossip from overwhelming true insight. It regulates the pace of social exchange to maintain a stable and meaningful narrative flow.',                            details: ['Regulation: Exchange pace', 'Constraint: Social saturation', 'Prevention: Gossip loops'] }
+              ]
+            }
+          };
+
+          const navEl = document.getElementById('infographic-nav');
+          const detailEl = document.getElementById('infographic-detail');
+
+          function renderDetail(item) {
+            const list = item.details ? item.details.map(d => `<li>${d}</li>`).join('') : '';
+            return `
+              <div class="detail-tag mono">${item.tag}</div>
+              <h3 class="detail-title">${item.title}</h3>
+              <p class="detail-body">${item.body}</p>
+              ${list ? `<ul class="detail-list">${list}</ul>` : ''}
+            `;
+          }
+
+          function loadTab(tabId) {
+            const data = INFOGRAPHIC_DATA[tabId];
+            if (!data) return;
+            navEl.innerHTML = data.items.map((item, i) =>
+              `<button class="infographic-nav-item${i === 0 ? ' active' : ''}" data-id="${item.id}">
+                <span class="mono nav-item-tag">${item.tag}</span>
+                <span class="nav-item-label">${item.nav}</span>
+              </button>`
+            ).join('');
+            detailEl.innerHTML = renderDetail(data.items[0]);
+            navEl.querySelectorAll('.infographic-nav-item').forEach(btn => {
+              btn.addEventListener('click', () => {
+                navEl.querySelectorAll('.infographic-nav-item').forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                const found = data.items.find(it => it.id === btn.dataset.id);
+                if (found) detailEl.innerHTML = renderDetail(found);
+              });
+            });
+          }
+
+          document.querySelectorAll('.infographic-tab').forEach(tab => {
+            tab.addEventListener('click', () => {
+              document.querySelectorAll('.infographic-tab').forEach(t => {
+                t.classList.remove('active');
+                t.setAttribute('aria-selected', 'false');
+              });
+              tab.classList.add('active');
+              tab.setAttribute('aria-selected', 'true');
+              loadTab(tab.dataset.target);
+            });
+          });
+
+          loadTab('tab-architecture');
+        </script>
+
+      </main>
+      <footer style="padding: 60px 40px; border-top: 1px solid var(--border-color);">
+        <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 40px; align-items: start;">
+          <div>
+            <div class="logo">MOIRAI</div>
+            <p class="mono muted" style="margin-top: 12px; font-size: 0.7rem; line-height: 1.8; max-width: 260px;">
+              Cognitive persistence engine. A precisely engineered societal simulation.
+            </p>
+          </div>
+          
+          <div style="text-align: center;">
+            <span class="mono text-accent" style="font-size: 0.65rem;">NAVIGATE</span>
+            <div style="margin-top: 12px; display: flex; flex-direction: column; gap: 8px;">
+              <a href="./" class="mono muted" style="font-size: 0.75rem;">ABOUT</a>
+              <a href="system.html" class="mono muted" style="font-size: 0.75rem; text-decoration: underline;">SYSTEM_MAP</a>
+            </div>
+          </div>
+
+          <div style="text-align: right;">
+            <span class="mono text-accent" style="font-size: 0.65rem;">LEGAL & CREDITS</span>
+            <div style="margin-top: 12px; display: flex; flex-direction: column; gap: 8px;">
+              <div class="mono muted" style="font-size: 0.65rem;">
+                all rights reserved 2026.<br>
+                <a href="mailto:whupert@gmail.com" style="color: inherit; text-decoration: none;">whupert@gmail.com</a>
+              </div>
+              <div class="mono muted" style="font-size: 0.65rem;">
+                created by: Wojciech Hupert // <a href="https://shapeseeds.com" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: underline;">Shapeseeds</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

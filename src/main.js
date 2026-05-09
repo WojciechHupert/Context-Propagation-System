@@ -12,7 +12,12 @@ if (graphMount) {
 
 // Initialize the system
 document.addEventListener('DOMContentLoaded', () => {
-  console.log('MOIRAI System Initialized...');
+  // Auto-initialize visualization
+  setTimeout(() => {
+    window.dispatchEvent(new CustomEvent('moirai-initialize'));
+    const hero = document.querySelector('.hero');
+    if (hero) hero.classList.add('graph-active');
+  }, 500);
   
   // Update status numbers randomly to simulate "processing"
   const statusItems = document.querySelectorAll('.status-item span:last-child');
@@ -27,52 +32,24 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }, 3000);
 
-  // CTA Interaction — "Initialize Moirai" button
-  const cta = document.querySelector('.cta-button');
-  if (cta) {
-    let initialized = false;
-    cta.addEventListener('click', () => {
-      if (initialized) return;
-      
-      cta.innerText = 'INITIALIZING...';
-      cta.style.opacity = '0.7';
-      cta.style.pointerEvents = 'none';
-      
-      // Fire custom event to show the graph
-      setTimeout(() => {
-        window.dispatchEvent(new CustomEvent('moirai-initialize'));
-        cta.innerText = 'SYSTEM ACTIVE';
-        cta.style.background = 'transparent';
-        cta.style.border = '1px solid var(--accent-color)';
-        cta.style.color = 'var(--accent-color)';
-        cta.style.opacity = '1';
-        initialized = true;
-        
-        // Add the active class to hero for visual feedback
-        const hero = document.querySelector('.hero');
-        if (hero) hero.classList.add('graph-active');
-      }, 1200);
-    });
-  }
-
   // System Log Simulation
   const logContainer = document.getElementById('log-container');
   const logMessages = [
-    '> PROPAGATION_EVENT: NPC5 → NPC2 [MutationCount: 1]',
-    '> RECALL_FILTER: Applying age-vagueness to NPC4.MemoryRecord #417',
-    '> MAINTENANCE: Extracting durable facts from NPC1 transcript',
-    '> ACTION_LIFECYCLE: NPC3.ActionRecord #89 → TRIGGERED',
-    '> SCHEMA_SYNC: 11 canonical tables validated',
-    '> PRIVACY_GATE: Blocking private clause from propagation',
-    '> PROMPT_BUDGET: Recent=4, Stable=6, Social=3, Emotional=2',
-    '> ASSOCIATIVE_ROUTING: ShareGroup "dome_core" → 3 eligible recipients',
-    '> DRIFT_COUNTER: NPC5 hearsay at hop 2/2 [DEPTH_CAP]',
-    '> RECALL_STABILITY: Degrading fragile memory for NPC6',
-    '> SANCTUM_TELEMETRY: DB latency 12ms, active turns 847',
-    '> SUBJECT_WEAVER: NPC1 SystemPrompt recompiled',
-    '> LOOP_SUPPRESSION: Blocking recursive hearsay for existing record',
-    '> [INFO] OLLAMA_HEALTH: 127.0.0.1:11434 responsive',
-    '> TEMPORAL_CHAIN: Linking NPC2.Memory #503 → #501 via PreviousMemoryId'
+    '> KNOWLEDGE_FLOW: Subject 5 → Subject 2 [Social Hop: 1]',
+    '> RECALL_FILTER: Fading older memory details for Subject 4',
+    '> SYNTHESIS: Distilling durable facts from Subject 1 interactions',
+    '> INTENT_FLOW: Subject 3 goal → ACTIVATED',
+    '> SCHEMA_SYNC: Historical records validated',
+    '> PRIVACY_GATE: Protecting private thoughts from social spread',
+    '> RECALL_BALANCE: Organizing memory tiers for efficiency',
+    '> SOCIAL_ROUTING: Identifying eligible recipients in shared circles',
+    '> DRIFT_MONITOR: Subject 5 hearsay reaching propagation limit',
+    '> RECALL_STABILITY: Adjusting memory clarity for Subject 6',
+    '> VITALITY_MONITOR: System latency stable, memory depth increasing',
+    '> SUBJECT_WEAVER: Subject 1 identity refined and updated',
+    '> LOOP_SUPPRESSION: Preventing redundant gossip cycles',
+    '> [INFO] ENGINE_HEALTH: Narrative processing active',
+    '> TEMPORAL_CHAIN: Linking Subject 2 experiences chronologically'
   ];
 
   if (logContainer) {

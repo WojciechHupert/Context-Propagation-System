@@ -9,6 +9,98 @@
   align-items: start;
 }
 
+/* ===========================
+   SYSTEM HERO V2
+=========================== */
+.system-hero {
+  padding: 100px 40px 60px;
+  border-bottom: 1px solid var(--border-color);
+  background: radial-gradient(circle at 100% 0%, rgba(255, 77, 0, 0.05) 0%, transparent 40%);
+  position: relative;
+}
+
+.system-hero-content {
+  max-width: 1000px;
+  position: relative;
+  z-index: 5;
+}
+
+.hero-label {
+  display: inline-block;
+  padding: 4px 12px;
+  background: rgba(255, 77, 0, 0.1);
+  border: 1px solid var(--accent-color);
+  color: var(--accent-color);
+  font-weight: 700;
+  margin-bottom: 24px;
+}
+
+.hero-title {
+  font-size: clamp(3rem, 8vw, 6rem);
+  line-height: 0.9;
+  margin-bottom: 32px;
+}
+
+.hero-lead {
+  font-size: 1.25rem;
+  line-height: 1.7;
+  color: var(--muted-color);
+  max-width: 720px;
+  margin-bottom: 48px;
+}
+
+.hero-meta {
+  display: flex;
+  gap: 60px;
+  border-top: 1px solid var(--border-color);
+  padding-top: 32px;
+}
+
+.meta-item {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.meta-label {
+  font-size: 0.65rem;
+  color: var(--accent-color);
+  opacity: 0.8;
+}
+
+.meta-value {
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.meta-value.text-accent {
+  animation: pulse-status 2s infinite ease-in-out;
+}
+
+@keyframes pulse-status {
+  0%, 100% { opacity: 1; text-shadow: 0 0 8px var(--accent-color); }
+  50% { opacity: 0.7; text-shadow: 0 0 2px var(--accent-color); }
+}
+
+/* Animations */
+.animate-slide-up {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: slide-up 0.8s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+}
+
+@keyframes slide-up {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Diagram wrapper adjustment */
+#react-flow-root {
+  margin-top: 80px;
+}
+
 .metro-scroll-container {
   overflow-x: auto;
   border: 1px solid var(--border-color);
@@ -57,7 +149,7 @@
   white-space: nowrap;
   font-family: var(--font-sans);
   font-weight: 700;
-  font-size: 0.8rem;
+  font-size: 1.1rem;
   color: var(--text-color);
   pointer-events: none;
   background: rgba(5,5,5,0.85);
@@ -181,7 +273,7 @@
 .studio-modules {
   display: flex;
   flex-direction: column;
-  gap: 2px;
+  gap: 10px;
 }
 .module-card {
   border: 1px solid var(--border-color);
@@ -247,4 +339,181 @@
 }
 @media (max-width: 700px) {
   .npc-grid { grid-template-columns: repeat(2,1fr); }
+}
+
+/* ===========================
+   ENGINE INFOGRAPHIC
+=========================== */
+
+#engine-infographic {
+  padding: 80px 40px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+/* --- Tab bar --- */
+.infographic-tabs {
+  display: flex;
+  gap: 0;
+  margin-top: 40px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.infographic-tab {
+  background: none;
+  border: none;
+  border-bottom: 2px solid transparent;
+  padding: 14px 28px;
+  cursor: pointer;
+  color: var(--muted-color);
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  margin-bottom: -1px;
+  transition: color 0.2s, border-color 0.2s;
+}
+
+.infographic-tab .mono {
+  color: var(--accent-color);
+  margin-right: 6px;
+}
+
+.infographic-tab:hover {
+  color: var(--text-color);
+}
+
+.infographic-tab.active {
+  color: var(--text-color);
+  border-bottom-color: var(--accent-color);
+}
+
+/* --- Two-column stage --- */
+.infographic-stage {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 0;
+  margin-top: 0;
+  border: 1px solid var(--border-color);
+  border-top: none;
+  min-height: 420px;
+}
+
+/* --- Left nav list --- */
+.infographic-nav {
+  display: flex;
+  flex-direction: column;
+  border-right: 1px solid var(--border-color);
+}
+
+.infographic-nav-item {
+  background: none;
+  border: none;
+  border-bottom: 1px solid var(--border-color);
+  padding: 20px 24px;
+  cursor: pointer;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  transition: background 0.2s;
+}
+
+.infographic-nav-item:last-child {
+  border-bottom: none;
+}
+
+.infographic-nav-item:hover {
+  background: rgba(255,255,255,0.03);
+}
+
+.infographic-nav-item.active {
+  background: rgba(255, 77, 0, 0.06);
+  border-left: 2px solid var(--accent-color);
+}
+
+.nav-item-tag {
+  font-size: 0.65rem;
+  color: var(--accent-color);
+  letter-spacing: 0.1em;
+}
+
+.nav-item-label {
+  font-size: 0.78rem;
+  color: var(--text-color);
+  font-family: var(--font-sans);
+  line-height: 1.4;
+}
+
+/* --- Right detail panel --- */
+.infographic-detail {
+  padding: 40px 48px;
+}
+
+.detail-tag {
+  font-size: 0.65rem;
+  color: var(--accent-color);
+  letter-spacing: 0.12em;
+  margin-bottom: 12px;
+}
+
+.detail-title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--text-color);
+  margin-bottom: 20px;
+  letter-spacing: 0.01em;
+}
+
+.detail-body {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: rgba(240,240,240,0.75);
+  max-width: 620px;
+  margin-bottom: 28px;
+}
+
+.detail-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.detail-list li {
+  padding-left: 20px;
+  position: relative;
+  font-size: 0.8rem;
+  font-family: var(--font-mono);
+  color: rgba(240,240,240,0.55);
+  line-height: 1.5;
+}
+
+.detail-list li::before {
+  content: '—';
+  position: absolute;
+  left: 0;
+  color: var(--accent-color);
+  opacity: 0.6;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .infographic-stage {
+    grid-template-columns: 1fr;
+  }
+  .infographic-nav {
+    border-right: none;
+    border-bottom: 1px solid var(--border-color);
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .infographic-nav-item {
+    border-bottom: none;
+    border-right: 1px solid var(--border-color);
+    flex-direction: row;
+    align-items: center;
+    padding: 14px 18px;
+  }
 }

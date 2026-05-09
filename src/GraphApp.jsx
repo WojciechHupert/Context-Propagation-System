@@ -48,7 +48,7 @@ export default function GraphApp() {
         width: '100%',
         height: '100%',
         zIndex: 0,
-        opacity: isActive ? 1 : 0.25, // semi-transparent initially
+        opacity: isActive ? 1 : 0.5, // visible initially
         transition: 'opacity 2s ease-in-out',
         pointerEvents: isActive ? 'auto' : 'none',
       }}

@@ -2,7 +2,7 @@
 
 > STATUS: CORE BASELINE STABILIZED, NOT FEATURE-COMPLETE (MAY 6, 2026).
 >
-> This document tracks the evolution of the runtime memory baseline from simple storage to the full Moirai Continuity Engine.
+> This document tracks the evolution of the runtime memory baseline from simple storage to the full Moirai Engine.
 
 ---
 

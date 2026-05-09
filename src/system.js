@@ -24,7 +24,7 @@ const nodeData = {
     list: ["<strong>Metadata:</strong> ImportanceScore, PrivacyLevel", "<strong>Tracing:</strong> Tracks drift and mutation"]
   },
   engine: {
-    title: "Continuity Engine",
+    title: "Moirai Engine",
     body: "Global social propagation authority. Runs 60s autonomous cycles to identify 'shareable' memories and route them to eligible NPCs.",
     list: ["<strong>Routing:</strong> Associative logic via NarrativeNetworks"]
   },
@@ -62,7 +62,7 @@ const nodeData = {
   },
   rej_eligibility: {
     title: "Rejected: Private Memory",
-    body: "Memories tagged with PrivacyLevel == 'private' are blocked from the Continuity Engine. They remain internal to the original NPC.",
+    body: "Memories tagged with PrivacyLevel == 'private' are blocked from the Moirai Engine. They remain internal to the original NPC.",
     list: ["<strong>Security:</strong> Prevents secret leakage"]
   },
   rej_resonance: {

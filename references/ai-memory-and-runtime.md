@@ -28,7 +28,7 @@
 
 ## 2. Implementation Status (May 2026)
 
-The Moirai Continuity Engine is partially implemented. The canonical specification remains the target architecture, not a claim of full completion.
+The Moirai Engine is partially implemented. The canonical specification remains the target architecture, not a claim of full completion.
 
 ### Current Stable Features
 

@@ -6,7 +6,7 @@
 
 ## What This Game Is
 
-Lelit Distrikt 2 is a localized Mediterranean social simulation. Inside a sealed dome, the player unravels a narrative web powered by local AI inference and the **Moirai Continuity Engine**. The focus is on observation, conversation, and the long-term consequences of inter-character memory.
+Lelit Distrikt 2 is a localized Mediterranean social simulation. Inside a sealed dome, the player unravels a narrative web powered by local AI inference and the **Moirai Engine**. The focus is on observation, conversation, and the long-term consequences of inter-character memory.
 
 ---
 
@@ -23,7 +23,7 @@ Lelit Distrikt 2 is a localized Mediterranean social simulation. Inside a sealed
 
 ## Active Features (Current Stable Baseline)
 
-### 1. The Moirai Continuity Engine
+### 1. The Moirai Engine
 
 A cognitive persistence layer with real transcript storage, memory extraction, and propagation support.
 

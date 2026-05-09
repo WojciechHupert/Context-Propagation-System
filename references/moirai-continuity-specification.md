@@ -1,11 +1,11 @@
-# Moirai Continuity Engine Specification
+# Moirai Engine Specification
 
 > Status: active specification plus current-state notes
 > Last updated: May 7, 2026
 
 ## 1. Executive Summary
 
-The Moirai Continuity Engine is the cognitive backbone of Lelit Distrikt 2. It governs persistence, evolution, and social transfer of information across the NPC population. The target design treats memories as dynamic, traceable records rather than simple quest flags.
+The Moirai Engine is the cognitive backbone of Lelit Distrikt 2. It governs persistence, evolution, and social transfer of information across the NPC population. The target design treats memories as dynamic, traceable records rather than simple quest flags.
 
 This document describes both the intended architecture and the current operational constraints where they materially differ.
 

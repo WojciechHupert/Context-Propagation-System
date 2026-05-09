@@ -4,7 +4,7 @@ import react from '@vitejs/plugin-react'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: '/MoiraiStudio/',
+  base: '/Moirai_Website/',
   plugins: [react()],
   build: {
     rollupOptions: {

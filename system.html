@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/moirai-logo.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MOIRAI | Metro Architecture</title>
+    <meta name="description" content="Metro-style deep dive into the Moirai Engine" />
+  </head>
+  <body>
+    <div class="grid-overlay"></div>
+
+    <div class="main-container">
+      <header class="site-header">
+        <div class="logo"><a href="/">MOIRAI</a></div>
+        <nav style="display:flex;gap:24px;margin-right:auto;margin-left:40px;">
+          <a href="/system.html" class="mono text-accent" style="text-underline-offset:4px;text-decoration:underline;">SYSTEM_ARCHITECTURE</a>
+        </nav>
+        <div class="system-status">
+          <div class="status-item">
+            <span class="mono muted">Status</span>
+            <span class="mono text-accent" id="status-val">Operational.04</span>
+          </div>
+          <div class="status-item">
+            <span class="mono muted">DB</span>
+            <span class="mono">SQLite3_CANONICAL</span>
+          </div>
+        </div>
+      </header>
+
+      <main>
+        <section class="system-hero">
+          <div class="section-header">
+            <span class="mono text-accent">// 01 — ARCHITECTURE.METRO</span>
+            <h2 style="margin-top:10px;">CONTINUITY NETWORK</h2>
+            <p class="hero-description" style="margin-top:20px;max-width:760px;">
+              The Moirai Continuity Engine operates as two distinct flows. The <strong style="color:#ff4d00;">Write Path</strong> (left) traces how conversation becomes persistent memory and propagates socially through 5 logic gates. The <strong style="color:#00aaff;">Read Path</strong> (right) shows how stored memories are retrieved, filtered through human-like recall, and injected into NPC dialogue — a completely separate process that happens when a player approaches an NPC.
+            </p>
+          </div>
+
+          <div id="react-flow-root"></div>
+        </section>
+
+        <!-- PART 2: MOIRAI STUDIO -->
+        <section class="studio-section" id="studio">
+          <div class="section-header">
+            <span class="mono text-accent">// 02 — ADMINISTRATION.LAYER</span>
+            <h2 style="margin-top:10px;">MOIRAI STUDIO PRO</h2>
+            <p class="hero-description" style="margin-top:20px;max-width:760px;">
+              A standalone IDE-style administration suite that reads directly from the shared canonical SQLite database.
+            </p>
+          </div>
+          <div class="studio-layout">
+            <!-- Studio modules -->
+            <div class="studio-modules" style="display:flex; flex-direction:column; gap:10px;">
+              <div class="module-card interactive-node" data-info="studio-sys">
+                <div class="module-tag mono">SYS</div>
+                <div class="module-title">Systems / Sanctum</div>
+                <p class="module-desc">Health telemetry. Shows active conversation turns, verified memories, and DB latency.</p>
+              </div>
+              <div class="module-card interactive-node" data-info="studio-sub">
+                <div class="module-tag mono">SUB</div>
+                <div class="module-title">Subjects / Subject Weaver</div>
+                <p class="module-desc">Identity editing for all 6 NPCs. Compiles directly to runtime SystemPrompt.</p>
+              </div>
+              <div class="module-card interactive-node" data-info="studio-arc">
+                <div class="module-tag mono">ARC</div>
+                <div class="module-title">Archives / Oracle</div>
+                <p class="module-desc">Propagation trace with hop counters. Mutation audit and flux visualization.</p>
+              </div>
+            </div>
+            
+            <div class="studio-inspector">
+              <div class="info-panel" style="border: 1px solid var(--border-color); background: rgba(5,5,5,0.85); padding: 36px;">
+                <div class="info-header">
+                  <span class="mono text-accent">// STUDIO_DETAILS</span>
+                  <h3 id="studio-panel-title" style="margin-top:16px;font-size:1.5rem;">Select Module</h3>
+                </div>
+                <div class="info-content" id="studio-panel-content" style="margin-top:20px;">
+                  <p class="mono muted">Waiting for selection...</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+      </main>
+    </div>
+    <script type="module" src="/src/system.jsx"></script>
+  </body>
+</html>

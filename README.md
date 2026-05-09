@@ -1,4 +1,7 @@
 # Moirai Website (Moirai Studio Pro Visualization)
+[![Deploy static content to Pages](https://github.com/WojciechHupert/Moirai_Website/actions/workflows/deploy.yml/badge.svg)](https://github.com/WojciechHupert/Moirai_Website/actions/workflows/deploy.yml)
+
+[**Live Demo**](https://WojciechHupert.github.io/Moirai_Website/)
 
 This repository contains the web-based visualization and administrative interface for the **Lelit Distrikt 2** project and its **Moirai Engine**.
 

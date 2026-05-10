@@ -9,15 +9,11 @@ This repository contains the website for the **Moirai Engine**.
 
 Moirai is a high-performance cognitive persistence engine designed to manage the "threads of life" for subjects within the Lelit Distrikt simulation. This website serves as the primary observation layer—Moirai Studio—allowing researchers and administrators to audit shared truths, memory propagation, and the evolution of digital consciousness.
 
-## Core Components
+## Core Component
 
-### 1. Moirai Engine (Persistence)
+### Moirai Engine (Persistence)
 A dual-layer memory model that separates canonical historical truth from volatile, humanized recall. It ensures that subjects remember their past with the nuance, emotion, and occasional drift characteristic of human thought.
 
-### 2. Moirai Studio (Visualization)
-- **3D Social Network:** An immersive force-directed graph visualizing real-time relationship shifts and social clusters.
-- **Metro System Map:** A technical schematic of the memory processing pipeline, from sensory ingestion to social propagation.
-- **Administrative Suite:** Diagnostic tools for monitoring neural vitals and historical integrity.
 
 ## Tech Stack
 

@@ -1,4 +1,4 @@
-# Moirai Website (Moirai Studio Pro Visualization)
+# Moirai Website (Moirai Studio Visualization)
 [![Deploy static content to Pages](https://github.com/WojciechHupert/Moirai_Website/actions/workflows/deploy.yml/badge.svg)](https://github.com/WojciechHupert/Moirai_Website/actions/workflows/deploy.yml)
 
 [**Live Demo**](https://WojciechHupert.github.io/Moirai_Website/)

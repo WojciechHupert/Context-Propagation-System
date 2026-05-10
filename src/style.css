@@ -609,15 +609,18 @@ code {
 
 /* Responsive adjustments for Simulation section */
 @media (max-width: 1024px) {
-  .experience-overlay {
+  .experience-container {
     grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .experience-overlay {
     background: rgba(5, 5, 5, 0.9);
     padding: 60px 20px;
   }
   .experience-brand-side {
     align-items: flex-start;
     margin-top: 0;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
   }
   .experience-brand-text {
     text-align: left;

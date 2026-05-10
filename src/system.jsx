@@ -358,7 +358,7 @@ const SystemDiagram = () => {
                 maxWidth: '800px', 
                 marginTop: '10px' 
               }}>
-                The Moirai Continuity Engine functions as a sophisticated cognitive architecture structured across three core domains. The <strong style={{ color: 'var(--accent-color)' }}>Write Path</strong> captures and distills conversations into persistent memory, facilitating social propagation through specialized logic gates. Complementing this, the <strong style={{ color: '#a855f7' }}>Action Lifecycle</strong> manages the flow of structured intents from initial extraction through to completion. Finally, the <strong style={{ color: '#3b82f6' }}>Read Path</strong> governs how these records are retrieved and translated into natural interactions.
+                The Moirai Engine functions as a sophisticated cognitive architecture structured across three core domains. The <strong style={{ color: 'var(--accent-color)' }}>Write Path</strong> captures and distills conversations into persistent memory, facilitating social propagation through specialized logic gates. Complementing this, the <strong style={{ color: '#a855f7' }}>Action Lifecycle</strong> manages the flow of structured intents from initial extraction through to completion. Finally, the <strong style={{ color: '#3b82f6' }}>Read Path</strong> governs how these records are retrieved and translated into natural interactions.
               </p>
               <p style={{ 
                 fontSize: '12px', 

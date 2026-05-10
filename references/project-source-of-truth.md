@@ -1,6 +1,6 @@
 # Lelit Distrikt 2 Project Source Of Truth
 
-> Last updated: May 8, 2026.
+> Last updated: May 10, 2026.
 >
 > This is the primary canonical document for project state, feature status, roadmap direction, and marketing-safe claims.
 
@@ -17,7 +17,8 @@ Lelit Distrikt 2 is a localized Mediterranean social simulation. Inside a sealed
 - **Runtime Conversation Layer:** `UPlayerConversationComponent` owns live NPC chat, transcript replay, repair retries, and maintenance triggering.
 - **Memory Infrastructure:** UE runtime and Moirai Studio share `%LOCALAPPDATA%/LelitDistrikt2/MoiraiData/ConversationMemory.db`.
 - **NPC Social Circle:** Standardized IDs `NPC1` - `NPC6`.
-- **Administration:** **Moirai Studio Pro** for archive inspection, persona editing, and Studio-side chat.
+- **Administration:** **Moirai Studio Pro** (Desktop) and **Moirai Website** (Public Observation Layer) for archive inspection, persona editing, and Studio-side chat.
+- **Deployment:** Live on GitHub Pages at `https://WojciechHupert.github.io/Moirai_Website/`.
 
 ---
 

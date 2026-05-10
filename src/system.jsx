@@ -350,6 +350,26 @@ const SystemDiagram = () => {
                 ZERO PERSISTENT STATE OUTSIDE THE CANONICAL DATABASE
               </div>
             </div>
+            <div>
+              <p style={{ 
+                fontSize: '12px', 
+                color: 'rgba(255,255,255,0.6)', 
+                lineHeight: 1.6, 
+                maxWidth: '800px', 
+                marginTop: '10px' 
+              }}>
+                The Moirai Continuity Engine functions as a sophisticated cognitive architecture structured across three core domains. The <strong style={{ color: 'var(--accent-color)' }}>Write Path</strong> captures and distills conversations into persistent memory, facilitating social propagation through specialized logic gates. Complementing this, the <strong style={{ color: '#a855f7' }}>Action Lifecycle</strong> manages the flow of structured intents from initial extraction through to completion. Finally, the <strong style={{ color: '#3b82f6' }}>Read Path</strong> governs how these records are retrieved and translated into natural interactions.
+              </p>
+              <p style={{ 
+                fontSize: '12px', 
+                color: 'rgba(255,255,255,0.6)', 
+                lineHeight: 1.6, 
+                maxWidth: '800px', 
+                marginTop: '12px' 
+              }}>
+                The entire network is anchored by a <strong style={{ color: '#fff' }}>Dual-Layer</strong> model: Layer 1 maintains the canonical truth within secure storage, while Layer 2 applies dynamic filters. This ensures Subjects recall information with human-like nuance, rather than simply reciting database entries.
+              </p>
+            </div>
           </div>
         </div>
       </div>

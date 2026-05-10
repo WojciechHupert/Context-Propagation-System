@@ -504,7 +504,7 @@ code {
   position: relative;
   min-height: 700px;
   display: flex;
-  background-image: url('/Image_Apr_30_09_15_42.png');
+  background-color: #080808;
   background-size: cover;
   background-position: center;
   padding: 0;

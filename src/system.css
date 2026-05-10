@@ -20,7 +20,7 @@
 }
 
 .system-hero-content {
-  max-width: 1000px;
+  width: 100%;
   position: relative;
   z-index: 5;
 }
@@ -45,7 +45,7 @@
   font-size: 1.25rem;
   line-height: 1.7;
   color: var(--muted-color);
-  max-width: 720px;
+  width: 100%;
   margin-bottom: 48px;
 }
 
@@ -516,4 +516,14 @@
     align-items: center;
     padding: 14px 18px;
   }
+}
+
+/* --- EDITING TOOLS SUPPORT --- */
+.reversed-edge .react-flow__edge-path {
+  animation: dashdraw-reverse 0.5s linear infinite !important;
+}
+
+@keyframes dashdraw-reverse {
+  from { stroke-dashoffset: 0; }
+  to { stroke-dashoffset: 20; }
 }

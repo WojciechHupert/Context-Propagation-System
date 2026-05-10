@@ -504,9 +504,10 @@ code {
   position: relative;
   min-height: 700px;
   display: flex;
-  background-color: #080808;
+  background-image: url('/lelit-bg.png');
   background-size: cover;
   background-position: center;
+  background-attachment: fixed;
   padding: 0;
   overflow: hidden;
   border-top: 1px solid var(--border-color);

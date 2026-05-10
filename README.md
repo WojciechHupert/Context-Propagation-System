@@ -3,11 +3,11 @@
 
 [**Live Demo**](https://WojciechHupert.github.io/Moirai_Website/)
 
-This repository contains the web-based visualization and administrative interface for the **Lelit Distrikt 2** project and its **Moirai Engine**.
+This repository contains the website for the **Moirai Engine**.
 
 ## Vision
 
-Moirai is a clinical, high-performance cognitive persistence engine designed to manage the "threads of life" for subjects within the Lelit Distrikt simulation. This website serves as the primary observation layer—Moirai Studio—allowing researchers and administrators to audit shared truths, memory propagation, and the evolution of digital consciousness.
+Moirai is a high-performance cognitive persistence engine designed to manage the "threads of life" for subjects within the Lelit Distrikt simulation. This website serves as the primary observation layer—Moirai Studio—allowing researchers and administrators to audit shared truths, memory propagation, and the evolution of digital consciousness.
 
 ## Core Components
 

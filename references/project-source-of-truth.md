@@ -1,4 +1,11 @@
-# Lelit Distrikt 2 Project Source Of Truth
+# Lelit Distrikt Project Source Of Truth
+
+The Lelit Distrikt simulation is a research project into persistent NPC narrative memory and social propagation.
+
+## Core Pillars
+- **Persistence:** Every memory is a durable record in a shared database.
+- **Propagation:** Information travels naturally between characters based on social ties.
+- **Continuity:** The system maintains a consistent timeline across sessions.
 
 > Last updated: May 10, 2026.
 >
@@ -6,7 +13,7 @@
 
 ## What This Game Is
 
-Lelit Distrikt 2 is a localized Mediterranean social simulation. Inside a sealed dome, the player unravels a narrative web powered by local AI inference and the **Moirai Engine**. The focus is on observation, conversation, and the long-term consequences of inter-character memory.
+Lelit Distrikt is a localized Mediterranean social simulation. Inside a sealed dome, the player unravels a narrative web powered by local AI inference and the **Moirai Engine**. The focus is on observation, conversation, and the long-term consequences of inter-character memory.
 
 ---
 
@@ -18,6 +25,10 @@ Lelit Distrikt 2 is a localized Mediterranean social simulation. Inside a sealed
 - **Memory Infrastructure:** UE runtime and Moirai Studio share `%LOCALAPPDATA%/LelitDistrikt2/MoiraiData/ConversationMemory.db`.
 - **NPC Social Circle:** Standardized IDs `NPC1` - `NPC6`.
 - **Administration:** **Moirai Studio Pro** (Desktop) and **Moirai Website** (Public Observation Layer) for archive inspection, persona editing, and Studio-side chat.
+- **Website Structure:** 
+    - `index.html`: Clean high-level vision and origin.
+    - `foundations.html`: Technical pillars (Neural Records, Propagation, Mandate).
+    - `system.html`: Interactive architecture and development roadmap.
 - **Deployment:** Live on GitHub Pages at `https://WojciechHupert.github.io/Moirai_Website/`.
 
 ---
@@ -26,7 +37,7 @@ Lelit Distrikt 2 is a localized Mediterranean social simulation. Inside a sealed
 
 ### 1. The Moirai Engine
 
-A cognitive persistence layer with real transcript storage, memory extraction, and propagation support.
+The Moirai Engine is the cognitive backbone of Lelit Distrikt. It governs persistence, evolution, and social transfer of information across the NPC population. The target design treats memories as dynamic, traceable records rather than simple quest flags.
 
 - **Temporal Chaining:** Chronological linking of memories via `PreviousMemoryId`.
 - **Associative Routing:** Propagation prefers shared groups first, with secondary tag and network resonance.

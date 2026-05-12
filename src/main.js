@@ -35,6 +35,8 @@ document.addEventListener('DOMContentLoaded', () => {
   // System Log Simulation
   const logContainer = document.getElementById('log-container');
   const logMessages = [
+    '> NEURAL_RECORD: New high-fidelity fact extracted [Type: IDT]',
+    '> DURABLE_STORAGE: Persisting cognitive preference for Subject 2',
     '> KNOWLEDGE_FLOW: Subject 5 → Subject 2 [Social Hop: 1]',
     '> RECALL_FILTER: Fading older memory details for Subject 4',
     '> SYNTHESIS: Distilling durable facts from Subject 1 interactions',

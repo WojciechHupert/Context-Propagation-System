@@ -4,7 +4,7 @@ These instructions are foundational for any agent working on the Moirai Website 
 
 ## Project Context
 
-The Moirai Website is a visualization layer for the **Moirai Engine**, which handles cognitive persistence for NPCs in the **Lelit Distrikt 2** simulation (Unreal Engine 5.7).
+The Moirai Website is a visualization layer for the **Moirai Engine**, which handles cognitive persistence for NPCs in the **Lelit Distrikt** simulation (Unreal Engine 5.7).
 
 ## Architectural Guidelines
 

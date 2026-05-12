@@ -5,7 +5,7 @@
 
 ## 1. Executive Summary
 
-The Moirai Engine is the cognitive backbone of Lelit Distrikt 2. It governs persistence, evolution, and social transfer of information across the NPC population. The target design treats memories as dynamic, traceable records rather than simple quest flags.
+The Moirai Engine is the cognitive backbone of Lelit Distrikt. It governs persistence, evolution, and social transfer of information across the NPC population. The target design treats memories as dynamic, traceable records rather than simple quest flags.
 
 This document describes both the intended architecture and the current operational constraints where they materially differ.
 
@@ -25,6 +25,7 @@ Information spreads through social and semantic resonance rather than random bro
 
 - **Group-first rule:** Memories prefer propagation between NPCs sharing `ShareGroupName`.
 - **Secondary resonance rule:** Tags and narrative networks provide a fallback resonance path.
+- **Propagation Limit:** Information transfer is capped at 10 social "Hops" to maintain narrative coherence and simulate natural information decay.
 - **Recipient ownership:** Propagation creates a new recipient-owned record while preserving a source link through `SourceMemoryId`.
 
 ### 2.3 Mutation Tracking
@@ -119,6 +120,15 @@ The currently verified operational path is:
 5. Moirai Studio reads those same records from the shared canonical DB for archive and interaction monitoring.
 
 This path was verified against the canonical database on May 7, 2026.
+
+### 4.6 Autonomous Cycle (v3.3)
+
+To maintain a living simulation, the engine executes a recurring background process.
+
+- **Trigger:** Periodic timer (typically every 5-10 minutes) or "District Tick."
+- **Scope:** Processes all `ActionRecords` in a `pending` state across the entire NPC population.
+- **Behavior:** NPCs perform autonomous social checks. If resonance gates pass, information propagates without player involvement, creating a dynamic narrative environment even during player absence.
+- **Safety:** Propagation is strictly capped at the 10-hop limit to prevent infinite feedback loops.
 
 ### 4.6 Known Operational Constraints
 

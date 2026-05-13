@@ -18,7 +18,7 @@ import '@xyflow/react/dist/style.css';
 import './style.css';
 import './system.css';
 
-const STORAGE_KEY = 'moirai-system-diagram-v1';
+const STORAGE_KEY = 'moirai-system-diagram-v2';
 
 const nodeInfo = {
   node_01: {
@@ -113,9 +113,9 @@ const layout = {
     truth: 1540,
     continuity: 1540,
     lifecycle: 1540,
-    buckets: 2060,
-    filter: 2360,
-    output: 2660
+    buckets: 2080,
+    filter: 2080,
+    output: 2080
   }
 };
 
@@ -191,11 +191,11 @@ const DEFAULT_NODES = [
   { id: 'node_03', type: 'modern', position: { x: layout.continuityX, y: layout.y.continuity }, data: buildNodeData('node_03', '03: Continuity Core', THEME.purple), width: layout.nodeWidth, zIndex: 100 },
   { id: 'action_lifecycle', type: 'modern', position: { x: layout.rightRailX, y: layout.y.lifecycle }, data: buildNodeData('action_lifecycle', 'Action Lifecycle State Machine', THEME.purple), width: layout.sideWidth, zIndex: 100 },
   { id: 'recall_buckets', type: 'modern', position: { x: layout.spineX, y: layout.y.buckets }, data: buildNodeData('recall_buckets', 'Recall Buckets', THEME.blue), width: layout.nodeWidth, zIndex: 100 },
-  { id: 'recall_filter', type: 'modern', position: { x: layout.spineX, y: layout.y.filter }, data: buildNodeData('recall_filter', 'Recall Filter & Synthesis', THEME.blue), width: layout.nodeWidth, zIndex: 100 },
-  { id: 'subject_output', type: 'modern', position: { x: layout.spineX, y: layout.y.output }, data: buildNodeData('subject_output', 'Subject Dialogue Output', THEME.blue), width: layout.nodeWidth, zIndex: 100 },
+  { id: 'recall_filter', type: 'modern', position: { x: layout.continuityX, y: layout.y.filter }, data: buildNodeData('recall_filter', 'Recall Filter & Synthesis', THEME.blue), width: layout.nodeWidth, zIndex: 100 },
+  { id: 'subject_output', type: 'modern', position: { x: layout.rightRailX, y: layout.y.output }, data: buildNodeData('subject_output', 'Subject Dialogue Output', THEME.blue), width: layout.sideWidth, zIndex: 100 },
   { id: 'area_write', type: 'area', position: { x: 360, y: 290 }, data: buildNodeData('area_write', 'Layer 1: Canonical System Memory (Write Path)', THEME.teal, { bgColor: 'rgba(0,229,255,0.03)', effect: 'none' }), width: 650, height: 1040, zIndex: 5 },
-  { id: 'area_authority', type: 'area', position: { x: 360, y: 1410 }, data: buildNodeData('area_authority', 'Authority & Continuity Core', '#ffffff', { bgColor: 'rgba(255,255,255,0.025)', effect: 'none' }), width: 1460, height: 660, zIndex: 5 },
-  { id: 'area_read', type: 'area', position: { x: 360, y: 1970 }, data: buildNodeData('area_read', 'Layer 2: Volatile Character Recall (Read Path)', THEME.blue, { bgColor: 'rgba(59,130,246,0.03)', effect: 'none' }), width: 650, height: 900, zIndex: 5 }
+  { id: 'area_authority', type: 'area', position: { x: 360, y: 1410 }, data: buildNodeData('area_authority', 'Authority & Continuity Core', '#ffffff', { bgColor: 'rgba(255,255,255,0.025)', effect: 'none' }), width: 1460, height: 460, zIndex: 5 },
+  { id: 'area_read', type: 'area', position: { x: 360, y: 1950 }, data: buildNodeData('area_read', 'Layer 2: Volatile Character Recall (Read Path)', THEME.blue, { bgColor: 'rgba(59,130,246,0.03)', effect: 'none' }), width: 1460, height: 460, zIndex: 5 }
 ];
 
 const DEFAULT_EDGES = [
@@ -204,8 +204,8 @@ const DEFAULT_EDGES = [
   makeEdge({ id: 'w3', source: 'logic_gates', target: 'persist_turn', sourceHandle: 'b', targetHandle: 't', label: 'Eligible Facts', color: THEME.purple, width: 2, animated: true, type: 'smoothstep', dash: 'solid', glow: true, marker: 'arrow' }),
   makeEdge({ id: 'w4', source: 'persist_turn', target: 'node_04', sourceHandle: 'b', targetHandle: 't', label: 'Durable Commitment', color: THEME.teal, width: 4, animated: true, type: 'smoothstep', dash: 'solid', glow: true, marker: 'arrow' }),
   makeEdge({ id: 'r1', source: 'node_04', target: 'recall_buckets', sourceHandle: 'b', targetHandle: 't', label: 'Context Hydration', color: THEME.blue, width: 3, animated: false, type: 'smoothstep', dash: 'solid', glow: false, marker: 'arrow' }),
-  makeEdge({ id: 'r2', source: 'recall_buckets', target: 'recall_filter', sourceHandle: 'b', targetHandle: 't', label: 'Selective Recall', color: THEME.blue, width: 2, animated: false, type: 'smoothstep', dash: 'solid', glow: false, marker: 'arrow' }),
-  makeEdge({ id: 'r3', source: 'recall_filter', target: 'subject_output', sourceHandle: 'b', targetHandle: 't', label: 'Performance Synthesis', color: THEME.blue, width: 4, animated: true, type: 'smoothstep', dash: 'solid', glow: false, marker: 'arrow' }),
+  makeEdge({ id: 'r2', source: 'recall_buckets', target: 'recall_filter', sourceHandle: 'r', targetHandle: 'l', label: 'Selective Recall', color: THEME.blue, width: 2, animated: false, type: 'smoothstep', dash: 'solid', glow: false, marker: 'arrow' }),
+  makeEdge({ id: 'r3', source: 'recall_filter', target: 'subject_output', sourceHandle: 'r', targetHandle: 'l', label: 'Performance Synthesis', color: THEME.blue, width: 4, animated: true, type: 'smoothstep', dash: 'solid', glow: false, marker: 'arrow' }),
   makeEdge({ id: 'l1', source: 'node_04', target: 'node_03', sourceHandle: 'r', targetHandle: 'l', label: 'State Polling', color: THEME.purple, width: 3, animated: true, type: 'smoothstep', dash: 'solid', glow: false, marker: 'arrow' }),
   makeEdge({ id: 'l2', source: 'node_03', target: 'action_lifecycle', sourceHandle: 'r', targetHandle: 'l', label: 'Evaluation', color: THEME.purple, width: 2, animated: false, type: 'smoothstep', dash: 'solid', glow: false, marker: 'arrow' }),
   makeEdge({ id: 'l3', source: 'node_03', target: 'node_02', sourceHandle: 'bt', targetHandle: 'rt', label: 'Autonomous Trigger', color: THEME.purple, width: 5, animated: true, type: 'smoothstep', dash: 'dashed', glow: false, marker: 'arrow' }),

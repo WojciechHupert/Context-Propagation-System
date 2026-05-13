@@ -13,6 +13,7 @@ export default defineConfig({
         foundations: resolve(__dirname, 'foundations.html'),
         blog: resolve(__dirname, 'blog.html'),
         system: resolve(__dirname, 'system.html'),
+        contact: resolve(__dirname, 'contact.html'),
       },
     },
   },

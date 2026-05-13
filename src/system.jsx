@@ -182,37 +182,34 @@ const makeEdge = (config) => {
 };
 
 const DEFAULT_NODES = [
-  { id: 'node_05', type: 'modern', position: { x: layout.rightRailX, y: layout.y.dashboard }, data: buildNodeData('node_05', '05: Sanctum Dashboard', '#00ffcc', { pulseDelay: '1.15s' }), width: layout.sideWidth, zIndex: 100 },
+  { id: 'node_05', type: 'modern', position: { x: 1153.13, y: 792.483 }, data: buildNodeData('node_05', '05: Sanctum Dashboard', '#00ffcc', { pulseDelay: '1.15s' }), width: 350, zIndex: 100 },
   { id: 'node_01', type: 'modern', position: { x: layout.spineX, y: layout.y.interaction }, data: buildNodeData('node_01', '01: Interaction Surface', THEME.teal, { pulseDelay: '0s' }), width: layout.nodeWidth, zIndex: 100 },
-  { id: 'node_02', type: 'modern', position: { x: layout.spineX, y: layout.y.engine }, data: buildNodeData('node_02', '02: Neural Engine', THEME.purple, { pulseDelay: '0.2s' }), width: layout.nodeWidth, zIndex: 100 },
-  { id: 'logic_gates', type: 'modern', position: { x: layout.spineX, y: layout.y.gates }, data: buildNodeData('logic_gates', 'Logic Gates (Governor)', THEME.purple, { pulseDelay: '0.42s' }), width: layout.nodeWidth, zIndex: 100 },
-  { id: 'persist_turn', type: 'modern', position: { x: layout.spineX, y: layout.y.persist }, data: buildNodeData('persist_turn', 'Commit & Serialization', THEME.teal, { pulseDelay: '0.62s' }), width: layout.nodeWidth, zIndex: 100 },
+  { id: 'node_02', type: 'modern', position: { x: 481.218, y: 566.391 }, data: buildNodeData('node_02', '02: Neural Engine', THEME.purple, { pulseDelay: '0.2s' }), width: layout.nodeWidth, zIndex: 100 },
+  { id: 'logic_gates', type: 'modern', position: { x: 482.437, y: 803.747 }, data: buildNodeData('logic_gates', 'Logic Gates (Governor)', THEME.purple, { pulseDelay: '0.42s' }), width: layout.nodeWidth, zIndex: 100 },
+  { id: 'persist_turn', type: 'modern', position: { x: 481.218, y: 1036.48 }, data: buildNodeData('persist_turn', 'Commit & Serialization', THEME.teal, { pulseDelay: '0.62s' }), width: layout.nodeWidth, zIndex: 100 },
   { id: 'node_04', type: 'modern', position: { x: layout.spineX, y: layout.y.truth }, data: buildNodeData('node_04', '04: System Truth', '#ffffff', { pulseDelay: '0.86s' }), width: layout.nodeWidth, zIndex: 100 },
-  { id: 'node_03', type: 'modern', position: { x: layout.continuityX, y: layout.y.continuity }, data: buildNodeData('node_03', '03: Continuity Core', THEME.purple), width: layout.nodeWidth, zIndex: 100 },
-  { id: 'action_lifecycle', type: 'modern', position: { x: layout.rightRailX, y: layout.y.lifecycle }, data: buildNodeData('action_lifecycle', 'Action Lifecycle State Machine', THEME.purple), width: layout.sideWidth, zIndex: 100 },
+  { id: 'node_03', type: 'modern', position: { x: 1253.89, y: 1547.31 }, data: buildNodeData('node_03', '03: Continuity Core', THEME.purple), width: layout.nodeWidth, zIndex: 100 },
+  { id: 'action_lifecycle', type: 'modern', position: { x: 858.276, y: 1717.67 }, data: buildNodeData('action_lifecycle', 'Action Lifecycle State Machine', THEME.purple), width: 390, zIndex: 100 },
   { id: 'recall_buckets', type: 'modern', position: { x: layout.spineX, y: layout.y.buckets }, data: buildNodeData('recall_buckets', 'Recall Buckets', THEME.blue), width: layout.nodeWidth, zIndex: 100 },
-  { id: 'recall_filter', type: 'modern', position: { x: layout.continuityX, y: layout.y.filter }, data: buildNodeData('recall_filter', 'Recall Filter & Synthesis', THEME.blue), width: layout.nodeWidth, zIndex: 100 },
-  { id: 'subject_output', type: 'modern', position: { x: layout.rightRailX, y: layout.y.output }, data: buildNodeData('subject_output', 'Subject Dialogue Output', THEME.blue), width: layout.sideWidth, zIndex: 100 },
-  { id: 'area_write', type: 'area', position: { x: 360, y: 290 }, data: buildNodeData('area_write', 'Layer 1: Canonical System Memory (Write Path)', THEME.teal, { bgColor: 'rgba(0,229,255,0.03)', effect: 'none' }), width: 650, height: 1040, zIndex: 5 },
-  { id: 'area_authority', type: 'area', position: { x: 360, y: 1410 }, data: buildNodeData('area_authority', 'Authority & Continuity Core', '#ffffff', { bgColor: 'rgba(255,255,255,0.025)', effect: 'none' }), width: 1460, height: 460, zIndex: 5 },
-  { id: 'area_read', type: 'area', position: { x: 360, y: 1950 }, data: buildNodeData('area_read', 'Layer 2: Volatile Character Recall (Read Path)', THEME.blue, { bgColor: 'rgba(59,130,246,0.03)', effect: 'none' }), width: 1460, height: 460, zIndex: 5 }
+  { id: 'recall_filter', type: 'modern', position: { x: 1247.79, y: 2080 }, data: buildNodeData('recall_filter', 'Recall Filter & Synthesis', THEME.blue), width: layout.nodeWidth, zIndex: 100 },
+  { id: 'subject_output', type: 'modern', position: { x: 882.644, y: 2259.1 }, data: buildNodeData('subject_output', 'Subject Dialogue Output', THEME.blue), width: 350, zIndex: 100 },
+  { id: 'area_write', type: 'area', position: { x: 360, y: 290 }, data: buildNodeData('area_write', 'Layer 1: Canonical System Memory', THEME.teal, { bgColor: 'rgba(0,229,255,0.03)', effect: 'none' }), width: 650, height: 1040, zIndex: 5 },
+  { id: 'area_authority', type: 'area', position: { x: 362.437, y: 1458.74 }, data: buildNodeData('area_authority', 'Authority & Continuity Core', '#ffffff', { bgColor: 'rgba(255,255,255,0.025)', effect: 'none' }), width: 1460, height: 460, zIndex: 5 },
+  { id: 'area_read', type: 'area', position: { x: 363.655, y: 1988.99 }, data: buildNodeData('area_read', 'Layer 2: Volatile Character Recall', THEME.blue, { bgColor: 'rgba(59,130,246,0.03)', effect: 'none' }), width: 1460, height: 460, zIndex: 5 }
 ];
 
 const DEFAULT_EDGES = [
   makeEdge({ id: 'w1', source: 'node_01', target: 'node_02', sourceHandle: 'b', targetHandle: 't', label: 'Payload Delivery', color: THEME.teal, width: 3, animated: true, type: 'smoothstep', dash: 'solid', glow: true, marker: 'arrow' }),
   makeEdge({ id: 'w2', source: 'node_02', target: 'logic_gates', sourceHandle: 'b', targetHandle: 't', label: 'Intent Synthesis', color: THEME.purple, width: 2, animated: true, type: 'smoothstep', dash: 'solid', glow: true, marker: 'arrow' }),
   makeEdge({ id: 'w3', source: 'logic_gates', target: 'persist_turn', sourceHandle: 'b', targetHandle: 't', label: 'Eligible Facts', color: THEME.purple, width: 2, animated: true, type: 'smoothstep', dash: 'solid', glow: true, marker: 'arrow' }),
-  makeEdge({ id: 'w4', source: 'persist_turn', target: 'node_04', sourceHandle: 'b', targetHandle: 't', label: 'Durable Commitment', color: THEME.teal, width: 4, animated: true, type: 'smoothstep', dash: 'solid', glow: true, marker: 'arrow' }),
+  makeEdge({ id: 'xy-edge__persist_turnb-node_04l', source: 'persist_turn', target: 'node_04', sourceHandle: 'b', targetHandle: 'l', label: 'Durable Commitment', color: THEME.teal, width: 4, animated: true, type: 'smoothstep', dash: 'solid', glow: true, marker: 'arrow' }),
   makeEdge({ id: 'r1', source: 'node_04', target: 'recall_buckets', sourceHandle: 'b', targetHandle: 't', label: 'Context Hydration', color: THEME.blue, width: 3, animated: false, type: 'smoothstep', dash: 'solid', glow: false, marker: 'arrow' }),
   makeEdge({ id: 'r2', source: 'recall_buckets', target: 'recall_filter', sourceHandle: 'r', targetHandle: 'l', label: 'Selective Recall', color: THEME.blue, width: 2, animated: false, type: 'smoothstep', dash: 'solid', glow: false, marker: 'arrow' }),
-  makeEdge({ id: 'r3', source: 'recall_filter', target: 'subject_output', sourceHandle: 'r', targetHandle: 'l', label: 'Performance Synthesis', color: THEME.blue, width: 4, animated: true, type: 'smoothstep', dash: 'solid', glow: false, marker: 'arrow' }),
+  makeEdge({ id: 'xy-edge__recall_filterb-subject_outputrt', source: 'recall_filter', target: 'subject_output', sourceHandle: 'b', targetHandle: 'rt', label: 'Performance Synthesis', color: THEME.blue, width: 4, animated: true, type: 'smoothstep', dash: 'solid', glow: false, marker: 'arrow' }),
   makeEdge({ id: 'l1', source: 'node_04', target: 'node_03', sourceHandle: 'r', targetHandle: 'l', label: 'State Polling', color: THEME.purple, width: 3, animated: true, type: 'smoothstep', dash: 'solid', glow: false, marker: 'arrow' }),
-  makeEdge({ id: 'l2', source: 'node_03', target: 'action_lifecycle', sourceHandle: 'r', targetHandle: 'l', label: 'Evaluation', color: THEME.purple, width: 2, animated: false, type: 'smoothstep', dash: 'solid', glow: false, marker: 'arrow' }),
-  makeEdge({ id: 'l3', source: 'node_03', target: 'node_02', sourceHandle: 'bt', targetHandle: 'rt', label: 'Autonomous Trigger', color: THEME.purple, width: 5, animated: true, type: 'smoothstep', dash: 'dashed', glow: false, marker: 'arrow' }),
-  makeEdge({ id: 'o1', source: 'node_02', target: 'node_05', sourceHandle: 'r', targetHandle: 'l', label: 'Neural Stream', color: '#00ffcc', width: 3, animated: true, type: 'smoothstep', dash: 'solid', glow: true, marker: 'arrow' }),
-  makeEdge({ id: 'o2', source: 'node_04', target: 'node_05', sourceHandle: 'r', targetHandle: 'l', label: 'Heartbeat Pulse', color: '#00ffcc', width: 2, animated: true, type: 'smoothstep', dash: 'dashed', glow: true, marker: 'arrow' }),
-  makeEdge({ id: 'o3', source: 'node_05', target: 'node_03', sourceHandle: 'b', targetHandle: 'r', label: 'Safety Governor', color: THEME.danger, width: 3, animated: false, type: 'smoothstep', dash: 'solid', glow: false, marker: 'arrow' }),
-  makeEdge({ id: 'a1', source: 'node_04', target: 'node_01', sourceHandle: 'ls', targetHandle: 'ls', label: 'Context Authority', color: '#ffffff', width: 2, animated: false, type: 'smoothstep', dash: 'dotted', glow: false, marker: 'arrow' })
+  makeEdge({ id: 'xy-edge__node_03b-action_lifecyclert', source: 'node_03', target: 'action_lifecycle', sourceHandle: 'b', targetHandle: 'rt', label: 'Evaluation', color: THEME.purple, width: 2, animated: false, type: 'smoothstep', dash: 'solid', glow: false, marker: 'arrow' }),
+  makeEdge({ id: 'xy-edge__node_02r-node_05t', source: 'node_02', target: 'node_05', sourceHandle: 'r', targetHandle: 't', label: 'Neural Stream', color: '#00ffcc', width: 3, animated: true, type: 'smoothstep', dash: 'solid', glow: true, marker: 'arrow' }),
+  makeEdge({ id: 'xy-edge__node_04ts-node_05bt', source: 'node_04', target: 'node_05', sourceHandle: 'ts', targetHandle: 'bt', label: 'Heartbeat Pulse', color: '#00ffcc', width: 2, animated: true, type: 'smoothstep', dash: 'dashed', glow: true, marker: 'arrow' })
 ];
 
 const cloneDiagram = (diagram) => JSON.parse(JSON.stringify(diagram));
@@ -228,7 +225,7 @@ const loadSavedDiagram = () => {
   }
 };
 
-const AreaNode = ({ data, selected }) => (
+const AreaNode = ({ data }) => (
   <div
     style={{
       width: '100%',
@@ -295,14 +292,14 @@ const ModernNode = ({ data, selected }) => (
         {data.label}
       </span>
     </div>
-    <Handle type="target" position={Position.Top} id="t" style={{ background: '#fff', width: '8px', height: '8px' }} />
-    <Handle type="source" position={Position.Bottom} id="b" style={{ background: '#fff', width: '8px', height: '8px' }} />
-    <Handle type="source" position={Position.Top} id="ts" style={{ background: '#fff', width: '8px', height: '8px', opacity: 0 }} />
-    <Handle type="target" position={Position.Bottom} id="bt" style={{ background: '#fff', width: '8px', height: '8px', opacity: 0 }} />
-    <Handle type="target" position={Position.Left} id="l" style={{ background: '#fff', width: '8px', height: '8px' }} />
-    <Handle type="source" position={Position.Right} id="r" style={{ background: '#fff', width: '8px', height: '8px' }} />
-    <Handle type="source" position={Position.Left} id="ls" style={{ background: '#fff', width: '8px', height: '8px', opacity: 0 }} />
-    <Handle type="target" position={Position.Right} id="rt" style={{ background: '#fff', width: '8px', height: '8px', opacity: 0 }} />
+    <Handle type="target" position={Position.Top} id="t" style={{ background: '#fff', width: '8px', height: '8px', opacity: 0, pointerEvents: 'none' }} />
+    <Handle type="source" position={Position.Bottom} id="b" style={{ background: '#fff', width: '8px', height: '8px', opacity: 0, pointerEvents: 'none' }} />
+    <Handle type="source" position={Position.Top} id="ts" style={{ background: '#fff', width: '8px', height: '8px', opacity: 0, pointerEvents: 'none' }} />
+    <Handle type="target" position={Position.Bottom} id="bt" style={{ background: '#fff', width: '8px', height: '8px', opacity: 0, pointerEvents: 'none' }} />
+    <Handle type="target" position={Position.Left} id="l" style={{ background: '#fff', width: '8px', height: '8px', opacity: 0, pointerEvents: 'none' }} />
+    <Handle type="source" position={Position.Right} id="r" style={{ background: '#fff', width: '8px', height: '8px', opacity: 0, pointerEvents: 'none' }} />
+    <Handle type="source" position={Position.Left} id="ls" style={{ background: '#fff', width: '8px', height: '8px', opacity: 0, pointerEvents: 'none' }} />
+    <Handle type="target" position={Position.Right} id="rt" style={{ background: '#fff', width: '8px', height: '8px', opacity: 0, pointerEvents: 'none' }} />
   </div>
 );
 
@@ -721,7 +718,7 @@ const SystemDiagram = () => {
           marginTop: '24px',
           marginLeft: '-40px',
           marginRight: '-40px',
-          height: '1580px',
+          height: '1880px',
           width: 'calc(100% + 80px)',
           border: '1px solid rgba(255,255,255,0.2)',
           background: THEME.bg
@@ -749,7 +746,7 @@ const SystemDiagram = () => {
           onPaneClick={() => setSelectedEdgeId(null)}
           nodeTypes={nodeTypes}
           fitView
-          fitViewOptions={{ padding: 0.035, minZoom: 0.3 }}
+          fitViewOptions={{ padding: 0.08, minZoom: 0.3 }}
           minZoom={0.1}
           maxZoom={2.5}
           nodesDraggable={false}
@@ -766,7 +763,7 @@ const SystemDiagram = () => {
         >
           <Background color="rgba(255,255,255,0.03)" gap={30} size={1} />
           <div style={{ position: 'absolute', top: '20px', right: '20px', zIndex: 1000 }}>
-            <CustomZoomControls onZoomIn={() => zoomIn()} onZoomOut={() => zoomOut()} onFitView={() => fitView({ padding: 0.035, minZoom: 0.3 })} />
+            <CustomZoomControls onZoomIn={() => zoomIn()} onZoomOut={() => zoomOut()} onFitView={() => fitView({ padding: 0.08, minZoom: 0.3 })} />
           </div>
         </ReactFlow>
 

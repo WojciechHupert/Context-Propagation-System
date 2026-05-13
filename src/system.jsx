@@ -265,6 +265,9 @@ const AreaNode = ({ data }) => (
 const ModernNode = ({ data, selected }) => (
   <div
     className={`custom-node-modern ${selected ? 'active' : ''} ${data.effect === 'pulse' ? 'pulse-node' : ''}`}
+    role="button"
+    tabIndex={0}
+    aria-label={`Open details for ${data.label}`}
     style={{
       width: '100%',
       minHeight: '110px',
@@ -291,6 +294,7 @@ const ModernNode = ({ data, selected }) => (
       <span style={{ fontFamily: 'var(--font-mono)', fontSize: '1.15rem', fontWeight: '700', letterSpacing: '0.02em', color: '#fff', textShadow: '0 2px 4px rgba(0,0,0,0.8)' }}>
         {data.label}
       </span>
+      <span className="node-hover-hint">Click to inspect</span>
     </div>
     <Handle type="target" position={Position.Top} id="t" style={{ background: '#fff', width: '8px', height: '8px', opacity: 0, pointerEvents: 'none' }} />
     <Handle type="source" position={Position.Bottom} id="b" style={{ background: '#fff', width: '8px', height: '8px', opacity: 0, pointerEvents: 'none' }} />

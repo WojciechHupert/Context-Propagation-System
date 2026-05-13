@@ -4,6 +4,16 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="moirai-logo.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-X81LJ6XFMR"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-X81LJ6XFMR');
+    </script>
     
     <title>MOIRAI | System Architecture</title>
     <meta name="description" content="Detailed visualization of the Moirai Engine architecture and cognitive memory processing." />
@@ -33,13 +43,13 @@
         <div class="header-inner">
           <div class="logo"><a href="./">MOIRAI</a></div>
           <nav class="site-nav">
-            <a href="./" class="nav-link">About</a>
+            <a href="./" class="nav-link">Home</a>
             <a href="foundations.html" class="nav-link">Technology</a>
-            <a href="system.html" class="nav-link">Architecture</a>
+            <a href="system.html" class="nav-link active">Architecture</a>
             <a href="blog.html" class="nav-link">Blog</a>
+            <a href="contact.html" class="nav-link">Contact</a>
           </nav>
           <div class="header-actions">
-            <a href="mailto:whupert@gmail.com" class="contact-button">Contact</a>
             <button class="mobile-menu-toggle" id="menuToggle" aria-label="Toggle Menu">
               <span></span>
               <span></span>
@@ -58,8 +68,8 @@
             <h1 class="hero-title animate-slide-up" style="animation-delay: 0.1s; font-size: clamp(3rem, 10vw, 8rem); white-space: nowrap;">Moirai Engine</h1>
             
             <div class="hero-description full-width animate-slide-up" style="animation-delay: 0.2s; margin-top: 40px; border-top: 1px solid var(--border-color); padding-top: 40px; font-size: 0.95rem;">
-              <p style="margin-bottom: 24px;">The Moirai Engine functions as a sophisticated cognitive architecture structured across three core domains. The <strong style="color: var(--accent-color);">Write Path</strong> captures and distills conversations into persistent memory, facilitating social propagation through specialized logic gates. Complementing this, the <strong style="color: #a855f7;">Action Lifecycle</strong> manages the flow of structured intents from initial extraction through to completion. Finally, the <strong style="color: #3b82f6;">Read Path</strong> governs how these records are retrieved and translated into natural interactions.</p>
-              <p>The entire network is anchored by a <strong style="color: #fff;">Dual-Layer</strong> model: Layer 1 maintains the canonical truth within secure storage, while Layer 2 applies dynamic filters. This ensures Subjects recall information with human-like nuance, rather than simply reciting database entries.</p>
+              <p style="margin-bottom: 24px;">The Moirai Engine has evolved from a linear pipeline into a <strong style="color: var(--accent-color);">Recursive Cognitive Loop</strong>. The system coordinates the flow of information through a <strong style="color: var(--accent-color);">Structured Data Synthesis</strong> (SDS) layer, generating bulleted FACT: and EXCHANGE: reports that drive autonomous inference cycles. This allows for complex, multi-hop social propagation strictly governed by a 10-hop safety limit.</p>
+              <p>The entire stack is anchored by a <strong style="color: #fff;">UTC-Synchronized System Truth</strong>, ensuring perfect temporal authority across Unreal Engine, Python, and the WebUI. Real-time telemetry is streamed directly to the <strong style="color: #00ffcc;">Sanctum Dashboard</strong>, providing full observability into every neural pulse and autonomous thought.</p>
             </div>
           </div>
 
@@ -79,10 +89,11 @@
           <div class="footer-column center">
             <span class="footer-label mono text-accent">NAVIGATE</span>
             <div class="footer-nav">
-              <a href="./" class="footer-link">About</a>
+              <a href="./" class="footer-link">Home</a>
               <a href="foundations.html" class="footer-link">Technology</a>
-              <a href="system.html" class="footer-link">Architecture</a>
+              <a href="system.html" class="footer-link active">Architecture</a>
               <a href="blog.html" class="footer-link">Blog</a>
+              <a href="contact.html" class="footer-link">Contact</a>
             </div>
           </div>
   

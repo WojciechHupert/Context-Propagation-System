@@ -1,0 +1,23 @@
+User-agent: *
+Allow: /
+
+# Specific guidance for AI crawlers
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+# Knowledge Graph context
+Info: https://wojciechhupert.github.io/Moirai_Website/system.html
+Description: Moirai Engine is a cognitive persistence layer for digital society simulations in Unreal Engine 5.7.
+Keywords: Moirai Engine, Lelit Distrikt, NPC memory, cognitive persistence, neural records, social propagation.

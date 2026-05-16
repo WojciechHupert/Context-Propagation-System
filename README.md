@@ -1,17 +1,17 @@
-# Moirai Website (Moirai Studio Visualization)
+# CPS Website (CPS Studio Visualization)
 [![Deploy static content to Pages](https://github.com/WojciechHupert/Moirai_Website/actions/workflows/deploy.yml/badge.svg)](https://github.com/WojciechHupert/Moirai_Website/actions/workflows/deploy.yml)
 
 [**Live Demo**](https://WojciechHupert.github.io/Moirai_Website/)
 
-This repository contains the website for the **Moirai Engine**.
+This repository contains the website for the **CPS (Context Propagation System) Engine**.
 
 ## Vision
 
-Moirai is a high-performance cognitive persistence engine designed to manage the "threads of life" for subjects within the Lelit Distrikt simulation. This website serves as the primary observation layer—Moirai Studio—allowing researchers and administrators to audit shared truths, memory propagation, and the evolution of digital consciousness.
+CPS is an experimental continuity and social-memory system designed to manage the narrative threads for authored AI characters within the Lelit Distrikt simulation. This website serves as the primary observation layer—CPS Studio—allowing researchers and administrators to audit shared truths, memory propagation, and the evolution of digital consciousness.
 
 ## Core Component
 
-### Moirai Engine (Persistence)
+### CPS Engine (Persistence)
 A dual-layer memory model that separates canonical historical truth from volatile, humanized recall. It ensures that subjects remember their past with the nuance, emotion, and occasional drift characteristic of human thought.
 
 

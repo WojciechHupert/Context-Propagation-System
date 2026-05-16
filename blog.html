@@ -15,7 +15,7 @@
 
       gtag('config', 'G-X81LJ6XFMR');
     </script>
-    <title>MOIRAI | Development Journal</title>
+    <title>CPS | Development Journal</title>
     <link rel="stylesheet" href="src/style.css" />
     <style>
       .blog-page-container {
@@ -123,7 +123,7 @@
     <div class="main-container">
       <header class="site-header">
         <div class="header-inner">
-          <div class="logo"><a href="./">MOIRAI</a></div>
+          <div class="logo"><a href="./">CPS</a></div>
           <nav class="site-nav">
             <a href="./" class="nav-link">Home</a>
             <a href="foundations.html" class="nav-link">Technology</a>
@@ -160,37 +160,37 @@
           <p class="post-subtitle mono" style="margin-top: -12px; color: var(--accent-color); font-size: 0.8rem;">Lelit Distrikt Narrative Foundry</p>
 
           <div class="post-content" style="margin-top: 48px;">
-            <p>Today, I am pleased to announce the deployment of <strong>v3.3 of the Moirai Narrative Engine</strong>. This update marks a significant milestone in my effort to create a truly autonomous social ecosystem within the brutalist confines of Lelit Distrikt.</p>
+            <p>Today, I am pleased to announce the deployment of <strong>v3.3 of the CPS Engine</strong>. This update marks a significant milestone in my effort to build an experimental continuity architecture for authored AI characters within Lelit Distrikt.</p>
             
-            <p>In previous versions, the NPCs were reactive and waited for you to initiate a conversation before they processed the world. With v3.3, the district has truly "woken up."</p>
+            <p>In previous versions, the characters were reactive and waited for the player to initiate interaction before they processed the world. With v3.3, the system supports a more bounded autonomous capability.</p>
 
             <h2>The Breakthrough: Autonomous Social Propagation</h2>
-            <p>The headline feature of this update is the <strong>Autonomous Narrative Cycle</strong>. Managed by a dedicated background thread, the NPCs now possess their own internal clock. Even when you are not present in the district, the residents remain active:</p>
+            <p>The headline feature of this update is the <strong>Autonomous Narrative Cycle</strong>. Managed by a background process, the authored characters now possess their own internal state. Even when the player is not present, the characters remain active:</p>
             <ul>
-              <li><strong>Meeting & Sharing</strong>: NPCs now autonomously decide to meet and share information.</li>
-              <li><strong>10-Hop Continuity</strong>: I have doubled the narrative chain limit. Information can now travel through up to 10 different characters, allowing rumors and secrets to spread organically across the entire social graph.</li>
-              <li><strong>Cognitive Reflection</strong>: NPCs now perform "Internal Reflections," where they process past interactions to reach new narrative conclusions and observations about the state of the district.</li>
+              <li><strong>Exchange & Propagation</strong>: Characters now autonomously trigger interactions to propagate information.</li>
+              <li><strong>10-Hop Continuity</strong>: Information can now travel through up to 10 character nodes, allowing rumors and information to spread across the social graph.</li>
+              <li><strong>Internal Reflection</strong>: Characters now perform 'Internal Reflections,' where they process past interactions to reach new observations about the district state.</li>
             </ul>
 
             <h2>The Authenticity Mandate</h2>
-            <p>One of my core design principles is that NPCs should be <em>residents</em>, not "AI Assistants." To enforce this, I implemented the <strong>Authenticity Mandate</strong>. This technical guardrail prevents NPCs from roleplaying scene transitions or acting as helpful AI.</p>
-            <p>When you speak to "The Archivist" or "The Mechanic," you are speaking to a persona that is unwavering. They stay in character, respect the established 20-turn conversational history, and prioritize their own specialized knowledge domains over being "universally helpful."</p>
+            <p>A core design principle is that authored characters should be residents of the simulation, not AI assistants. To enforce this, I implemented the <strong>Authenticity Mandate</strong>. This technical guardrail prevents characters from roleplaying scene transitions or acting as helpful AI.</p>
+            <p>When you interact with the characters, you are interacting with an authored persona. They stay in character, respect the established 20-turn conversational history, and prioritize their own domain knowledge over generic assistant behavior.</p>
 
-            <h2>From "Chat" to "Neural Records"</h2>
-            <p>I have fundamentally changed how the engine "remembers." I moved away from vague prose summaries in favor of <strong>Structured Narrative Reports</strong>. Every interaction now generates bulleted <code>FACTS</code> and <code>EXCHANGES</code>.</p>
-            <p>This ensures that the AI Extractor captures high-fidelity, durable memories with near-perfect accuracy. These <strong>Neural Records</strong> are the lifeblood of the district, ensuring that every secret told and every plan made has a lasting impact on the simulation's future state.</p>
+            <h2>From 'Chat' to 'Neural Records'</h2>
+            <p>I have fundamentally changed how the engine manages memory. I moved away from vague prose summaries in favor of <strong>Structured Narrative Reports</strong>. Every interaction now generates bulleted <code>FACTS</code> and <code>EXCHANGES</code>.</p>
+            <p>This ensures that the extractor captures durable, inspectable records. These <strong>Neural Records</strong> are the lifeblood of the simulation, ensuring that interactions have a lasting impact on future state.</p>
 
-            <h2>Seeing the Matrix: The Sanctum Dashboard</h2>
-            <p>To support these complex systems, I overhauled the <strong>Moirai Studio</strong> (Sanctum) with a high-visibility diagnostic dashboard. You can now monitor:</p>
+            <h2>Seeing the System: CPS Studio</h2>
+            <p>To support these complex systems, I overhauled <strong>CPS Studio</strong> with a high-visibility diagnostic dashboard. You can now monitor:</p>
             <ul>
               <li><strong>Memory Growth</strong>: Real-time tracking of Neural Records as they are formed.</li>
-              <li><strong>Inference Stream</strong>: A live log of every autonomous thought and social exchange.</li>
+              <li><strong>Inference Stream</strong>: A live log of autonomous thought and social exchange.</li>
               <li><strong>Foundation Pulse</strong>: Instant feedback on database latency and system stability.</li>
             </ul>
 
-            <h2>What's Next?</h2>
-            <p>With the core narrative loop (Conversation -> Synthesis -> Propagation -> Memory) now closed and functioning autonomously, the next phase will focus on <strong>Emotional Persistence</strong>. I will integrate NPC "States of Mind" (Primary and Secondary emotions) directly into the propagation logic, ensuring that a "Haunted" NPC shares news very differently from one who is "Focused" or "Serene."</p>
-            <p>Lelit Distrikt is no longer just a place to visit. It is a world that continues to evolve, whether you are there to witness it or not.</p>
+            <h2>Experimental Roadmap</h2>
+            <p>With the core narrative loop (Interaction -> Synthesis -> Propagation -> Memory) now functional as an experimental substrate, the next phase will focus on <strong>Emotional Persistence</strong>. I will integrate character 'States of Mind' (Primary and Secondary emotions) directly into the propagation logic, ensuring that information is framed and shared differently based on the character's internal state.</p>
+            <p>Lelit Distrikt continues to evolve as an authored demonstrator for CPS behavior.</p>
             
             <p class="mono" style="margin-top: 64px; color: var(--accent-color); font-style: italic; font-size: 0.9rem;">
               Stay synchronized. The district is watching.
@@ -199,15 +199,15 @@
         </article>
 
         <div class="traditional-footer">
-          MOIRAI_FOUNDATION // COGNITIVE_PERSISTENCE_RESEARCH // 2026
+          CPS_FOUNDATION // CONTEXT_PROPAGATION_RESEARCH // 2026
         </div>
       </main>
       <footer class="site-footer">
         <div class="footer-grid">
           <div class="footer-column">
-            <div class="logo">MOIRAI</div>
+            <div class="logo">CPS</div>
             <p class="footer-credits" style="margin-top: 12px; max-width: 260px;">
-              Cognitive persistence engine. A precisely engineered societal simulation.
+              Context Propagation System. A precisely engineered societal simulation.
             </p>
           </div>
           
@@ -234,5 +234,6 @@
       </footer>
     </div>
     <script type="module" src="src/navigation.js"></script>
+    <script type="module" src="src/main.js"></script>
   </body>
 </html>

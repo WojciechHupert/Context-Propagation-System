@@ -67,4 +67,5 @@ npm run build
 
 *Created by: Wojciech Hupert // Shapeseeds*
 *This project is part of the Lelit Distrikt ecosystem.*
+<!-- Triggering deployment redeployment -->
 

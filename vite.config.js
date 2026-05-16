@@ -14,6 +14,7 @@ export default defineConfig({
         blog: resolve(__dirname, 'blog.html'),
         system: resolve(__dirname, 'system.html'),
         contact: resolve(__dirname, 'contact.html'),
+        purpose: resolve(__dirname, 'what-is-cps.html'),
       },
     },
   },

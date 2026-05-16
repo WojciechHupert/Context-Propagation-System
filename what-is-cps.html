@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Inter:wght@300;400;600;700;900&family=IBM+Plex+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/svg+xml" href="moirai-logo.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <title>CPS | What it is for</title>
+    <meta name="description" content="CPS is a continuity layer for authored AI worlds: a system for turning conversations into durable memory, deciding what can propagate, and making social lineage inspectable." />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://wojciechhupert.github.io/Moirai_Website/what-is-cps.html" />
+    <meta name="theme-color" content="#050505" />
+
+    <link rel="stylesheet" href="src/style.css">
+    <style>
+      .what-is-page {
+        padding: 140px 40px;
+        max-width: 900px;
+        margin: 0 auto;
+      }
+      .page-intro {
+        font-size: 1.5rem;
+        line-height: 1.6;
+        color: #fff;
+        margin-bottom: 64px;
+        border-left: 2px solid var(--accent-color);
+        padding-left: 32px;
+      }
+      .use-case-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 24px;
+        margin-bottom: 80px;
+      }
+      .use-case-card {
+        padding: 32px;
+        border: 1px solid var(--border-color);
+        background: rgba(255, 255, 255, 0.03);
+      }
+      .use-case-card h3 {
+        margin-top: 0;
+        font-size: 1.25rem;
+      }
+      .comparison-section {
+        background: rgba(255, 255, 255, 0.02);
+        padding: 48px;
+        border: 1px solid var(--border-color);
+      }
+      .distinction-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+        margin-top: 24px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="grid-overlay"></div>
+    
+    <div class="main-container">
+      <header class="site-header">
+        <div class="header-inner">
+          <div class="logo"><a href="./">CPS</a></div>
+          <nav class="site-nav">
+            <a href="./" class="nav-link">Home</a>
+            <a href="foundations.html" class="nav-link">Technology</a>
+            <a href="system.html" class="nav-link">Architecture</a>
+            <a href="what-is-cps.html" class="nav-link active">Purpose</a>
+            <a href="blog.html" class="nav-link">Blog</a>
+            <a href="contact.html" class="nav-link">Contact</a>
+          </nav>
+        </div>
+      </header>
+
+      <main class="what-is-page">
+        <h1 style="font-size: 4rem; margin-bottom: 48px;">What CPS Is For</h1>
+        
+        <p class="page-intro">
+          CPS is not a chatbot interface and it is not a general civilization simulator. It is a continuity layer for authored AI worlds: a system for turning conversations into durable memory, deciding what can propagate, tracking how information changes, and making those changes inspectable.
+        </p>
+
+        <div class="use-case-grid">
+          <div class="use-case-card">
+            <h3>Authored AI Worlds</h3>
+            <p>For narrative games, interactive fiction, digital theatre, and immersive installations where characters need memory and social consequence to sustain a fiction.</p>
+          </div>
+          <div class="use-case-card">
+            <h3>AI Character Development</h3>
+            <p>CPS Studio allows creators to inspect character knowledge, trace the origin of information, determine spread-ability, and review how it is later recalled.</p>
+          </div>
+          <div class="use-case-card">
+            <h3>Research Prototypes</h3>
+            <p>An experimental substrate for investigating memory lineage, rumor, trust, distortion, attribution, and social continuity in AI agents.</p>
+          </div>
+          <div class="use-case-card">
+            <h3>Cultural Demonstrations</h3>
+            <p>Supporting installations that explore how artificial societies remember, interpret, and misremember shared information.</p>
+          </div>
+        </div>
+
+        <section class="comparison-section">
+          <h2>CPS vs. Lelit Distrikt</h2>
+          <p>CPS is the underlying system. Lelit Distrikt is the first authored world built to demonstrate it.</p>
+          <div class="distinction-grid">
+            <div>
+              <h3>CPS Ecosystem</h3>
+              <p><strong>CPS:</strong> Stores, classifies, propagates, mutates, and exposes social memory.<br>
+              <strong>CPS Studio:</strong> The inspection and control surface.</p>
+            </div>
+            <div>
+              <h3>Lelit Distrikt</h3>
+              <p>The embodied demonstrator, narrative observatory, and emotional interface for the CPS layer.</p>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer class="site-footer">
+        <div class="footer-grid">
+          <div class="footer-column">
+            <div class="logo">CPS</div>
+            <p class="footer-credits" style="margin-top: 12px; max-width: 260px;">
+              Context Propagation System. Experimental continuity infrastructure for authored AI worlds.
+            </p>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <script type="module" src="src/navigation.js"></script>
+    <script type="module" src="src/main.js"></script>
+  </body>
+</html>

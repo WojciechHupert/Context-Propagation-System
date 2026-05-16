@@ -16,23 +16,23 @@
     </script>
     
     <title>CPS | System Architecture</title>
-    <meta name="description" content="Detailed visualization of the CPS Engine architecture and social-memory processing." />
+    <meta name="description" content="Detailed visualization of the CPS System architecture and social-memory processing." />
     <meta name="robots" content="index, follow" />
-    <link rel="canonical" href="https://wojciechhupert.github.io/Moirai_Website/system.html" />
+    <link rel="canonical" href="https://wojciechhupert.github.io/Moirai_Website/how-does-it-work.html" />
     <meta name="theme-color" content="#050505" />
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://wojciechhupert.github.io/Moirai_Website/system.html" />
+    <meta property="og:url" content="https://wojciechhupert.github.io/Moirai_Website/how-does-it-work.html" />
     <meta property="og:title" content="CPS | System Architecture" />
-    <meta property="og:description" content="Detailed visualization of the CPS Engine architecture and social-memory processing." />
+    <meta property="og:description" content="Detailed visualization of the CPS System architecture and social-memory processing." />
     <meta property="og:image" content="https://wojciechhupert.github.io/Moirai_Website/moirai-social-preview.png" />
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image" />
-    <meta property="twitter:url" content="https://wojciechhupert.github.io/Moirai_Website/system.html" />
+    <meta property="twitter:url" content="https://wojciechhupert.github.io/Moirai_Website/how-does-it-work.html" />
     <meta property="twitter:title" content="CPS | System Architecture" />
-    <meta property="twitter:description" content="Detailed visualization of the CPS Engine architecture and social-memory processing." />
+    <meta property="twitter:description" content="Detailed visualization of the CPS System architecture and social-memory processing." />
     <meta property="twitter:image" content="https://wojciechhupert.github.io/Moirai_Website/moirai-social-preview.png" />
   </head>
   <body>
@@ -44,10 +44,10 @@
           <div class="logo"><a href="./">CPS</a></div>
           <nav class="site-nav">
             <a href="./" class="nav-link">Home</a>
+            <a href="how-does-it-work.html" class="nav-link active">How Does It Work?</a>
+            <a href="use-cases.html" class="nav-link">Use Cases</a>
             <a href="foundations.html" class="nav-link">Technology</a>
-            <a href="system.html" class="nav-link active">Architecture</a>
-            <a href="what-is-cps.html" class="nav-link">Purpose</a>
-            <a href="blog.html" class="nav-link">Blog</a>
+            <a href="lelit-distrikt.html" class="nav-link">Lelit Distrikt</a>
             <a href="contact.html" class="nav-link">Contact</a>
           </nav>
           <div class="header-actions">
@@ -66,15 +66,25 @@
             <p class="mono text-dark-red animate-slide-up" style="font-size: 0.75rem; font-weight: 700; margin-bottom: 12px; animation-delay: 0.05s;">
               BOUNDED CONTINUITY ARCHITECTURE
             </p>
-            <h1 class="hero-title animate-slide-up" style="animation-delay: 0.1s; font-size: clamp(3rem, 10vw, 8rem); white-space: nowrap;">CPS Engine</h1>
+            <h1 class="hero-title animate-slide-up" style="animation-delay: 0.1s; font-size: clamp(3rem, 10vw, 8rem); white-space: nowrap;">How Does It Work?</h1>
             
             <div class="hero-description full-width animate-slide-up" style="animation-delay: 0.2s; margin-top: 40px; border-top: 1px solid var(--border-color); padding-top: 40px; font-size: 0.95rem;">
-              <p style="margin-bottom: 24px;">The CPS Engine has evolved into a <strong style="color: var(--accent-color);">bounded continuity architecture</strong> for authored AI societies. It defines the underlying social-memory substrate, coordinating information propagation through structured data synthesis. This provides an experimental framework for studying memory lineage, attribution, and how knowledge drifts within a controlled environment.</p>
-              <p>The system is comprised of three distinct tiers: the <strong style="color: #fff;">CPS layer</strong> (the underlying continuity and propagation substrate), <strong style="color: #fff;">CPS Studio</strong> (the suite for observability, inspection, moderation, and identity tooling), and <strong style="color: #fff;">Lelit Distrikt</strong> (the authored visual demonstrator). This architecture is currently a prototype designed to support future controlled studies of memory and propagation.</p>
+              <p style="margin-bottom: 24px;">CPS works by turning moments into memory and memory into social consequence.</p>
+              <p>A conversation, event, or observation enters the system. CPS extracts what matters, stores it as structured memory, classifies who should know it, and decides whether it can move through the social network. When information spreads, the recipient does not receive a perfect copy. They receive a situated version: with source, uncertainty, emotional weight, and possible distortion. CPS Studio then makes the process visible, so the creator can inspect how knowledge moved, changed, or failed to spread.</p>
             </div>
           </div>
 
           <div id="react-flow-root"></div>
+        </section>
+        <section id="architecture" style="padding: 80px 40px; max-width: 900px; margin: 0 auto;">
+          <h2 style="font-size: 3rem; margin-bottom: 40px;">The Four Layers</h2>
+          <p style="margin-bottom: 24px;"><strong>The interaction layer</strong> is where conversations, events, and observations enter. This can happen through a world like Lelit Distrikt, through Studio, or through another future interface.</p>
+          <p style="margin-bottom: 24px;"><strong>The continuity layer</strong> is where CPS stores, classifies, routes, and mutates information. This is where memory becomes more than a transcript. It gains source, ownership, confidence, privacy, emotional weight, and history.</p>
+          <p style="margin-bottom: 24px;"><strong>The observability layer</strong> is CPS Studio. This is where memory, lineage, propagation, and system behavior can be inspected. Without this layer, artificial social memory becomes a black box. With it, creators can see how information moved and why a later reaction happened.</p>
+          <p style="margin-bottom: 48px;"><strong>The experience layer</strong> is where a world such as Lelit Distrikt makes those invisible processes feel real. A player does not experience a database. They experience a character who heard something, misunderstood something, protected a secret, or remembered a previous moment.</p>
+          
+          <h2 style="font-size: 3rem; margin-bottom: 40px;">A Simple Flow</h2>
+          <p>Someone says something. CPS extracts what matters. The system decides whether it is private, shareable, or public. If the information can travel, another character or entity receives its own version. Over time, that version can be recalled, distorted, emotionally reframed, or passed forward again. CPS Studio keeps the path visible.</p>
         </section>
       </main>
 
@@ -91,9 +101,10 @@
             <span class="footer-label mono text-accent">NAVIGATE</span>
             <div class="footer-nav">
               <a href="./" class="footer-link">Home</a>
+              <a href="how-does-it-work.html" class="footer-link">How Does It Work?</a>
+              <a href="use-cases.html" class="footer-link">Use Cases</a>
               <a href="foundations.html" class="footer-link">Technology</a>
-              <a href="system.html" class="footer-link active">Architecture</a>
-              <a href="blog.html" class="footer-link">Blog</a>
+              <a href="lelit-distrikt.html" class="footer-link">Lelit Distrikt</a>
               <a href="contact.html" class="footer-link">Contact</a>
             </div>
           </div>

@@ -144,7 +144,7 @@
           <div class="footer-column">
             <div class="logo">CPS</div>
             <p class="footer-credits" style="margin-top: 12px; max-width: 260px;">
-              Context Propagation System. A precisely engineered societal simulation.
+              Context Propagation System. Experimental continuity infrastructure for authored AI worlds.
             </p>
           </div>
           
@@ -154,6 +154,7 @@
               <a href="./" class="footer-link">Home</a>
               <a href="foundations.html" class="footer-link">Technology</a>
               <a href="system.html" class="footer-link">Architecture</a>
+              <a href="what-is-cps.html" class="footer-link">Purpose</a>
               <a href="blog.html" class="footer-link">Blog</a>
               <a href="contact.html" class="footer-link active">Contact</a>
             </div>
@@ -173,5 +174,126 @@
 
     <script type="module" src="src/navigation.js"></script>
     <script type="module" src="src/main.js"></script>
+    <style>
+      .contact-page {
+        padding: 120px 40px;
+        max-width: 1100px;
+        margin: 0 auto;
+      }
+      .contact-hero {
+        padding-top: 40px;
+        padding-bottom: 80px;
+      }
+      
+      .contact-hero-grid {
+        display: grid;
+        grid-template-columns: 1fr 400px;
+        gap: 60px;
+        align-items: center;
+      }
+
+      .hero-photo-container {
+        position: relative;
+      }
+
+      .photo-wrapper {
+        aspect-ratio: 3/4;
+        width: 100%;
+        overflow: hidden;
+        border: 1px solid var(--border-color);
+        background: #0a0a0a;
+      }
+
+      .personal-photo {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        filter: grayscale(1) contrast(1.1);
+        transition: filter 0.5s ease;
+      }
+
+      .photo-wrapper:hover .personal-photo {
+        filter: grayscale(0) contrast(1);
+      }
+
+      .methods-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 24px;
+        margin-top: 40px;
+      }
+
+      .method-card {
+        display: flex;
+        align-items: flex-start;
+        gap: 24px;
+        padding: 40px;
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        position: relative;
+        text-decoration: none;
+        color: inherit;
+        border: 1px solid var(--border-color);
+        background: linear-gradient(180deg, rgba(255, 255, 255, 0.03), rgba(255, 255, 255, 0.015));
+      }
+
+      .method-card:hover {
+        border-color: var(--accent-color);
+        background: rgba(255, 77, 0, 0.05);
+        transform: translateY(-4px);
+      }
+
+      .method-icon {
+        color: var(--accent-color);
+        flex-shrink: 0;
+      }
+
+      .method-info h3 {
+        font-size: 1.5rem;
+        margin: 8px 0;
+        letter-spacing: -0.02em;
+        text-transform: none;
+      }
+
+      .method-info p {
+        color: var(--muted-color);
+        font-size: 0.9rem;
+      }
+
+      .method-arrow {
+        position: absolute;
+        top: 24px;
+        right: 24px;
+        opacity: 0.2;
+        transition: opacity 0.3s;
+      }
+
+      .method-card:hover .method-arrow {
+        opacity: 1;
+        color: var(--accent-color);
+      }
+
+      .animate-slide-up {
+        opacity: 0;
+        transform: translateY(20px);
+        animation: slide-up 0.8s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+      }
+
+      @keyframes slide-up {
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      @media (max-width: 1024px) {
+        .contact-hero-grid {
+          grid-template-columns: 1fr;
+          gap: 40px;
+        }
+        .hero-photo-container {
+          max-width: 500px;
+        }
+      }
+    </style>
   </body>
 </html>

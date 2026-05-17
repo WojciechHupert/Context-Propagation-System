@@ -10,8 +10,52 @@ if (graphMount) {
   root.render(React.createElement(GraphApp));
 }
 
+/**
+ * Lightbox System for CPS Studio Gallery
+ */
+function initLightbox() {
+  const lightbox = document.getElementById('lightbox');
+  const lightboxImg = document.getElementById('lightbox-img');
+  const captionText = document.getElementById('caption');
+  const closeBtn = document.querySelector('.close-modal');
+  const galleryTiles = document.querySelectorAll('.cps-interface-tile');
+
+  if (!lightbox || !lightboxImg || !galleryTiles.length) return;
+
+  galleryTiles.forEach(tile => {
+    tile.addEventListener('click', (e) => {
+      e.preventDefault();
+      const fullSrc = tile.getAttribute('data-full');
+      const img = tile.querySelector('img');
+      const altText = img ? img.getAttribute('alt') : '';
+
+      lightbox.style.display = 'block';
+      lightboxImg.src = fullSrc;
+      captionText.innerHTML = altText;
+      document.body.style.overflow = 'hidden'; // Prevent scrolling
+    });
+  });
+
+  const closeLightbox = () => {
+    lightbox.style.display = 'none';
+    document.body.style.overflow = '';
+  };
+
+  closeBtn?.addEventListener('click', closeLightbox);
+  lightbox.addEventListener('click', (e) => {
+    if (e.target === lightbox || e.target === lightboxImg || e.target === closeBtn) {
+      closeLightbox();
+    }
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') closeLightbox();
+  });
+}
+
 // Initialize the system
 document.addEventListener('DOMContentLoaded', () => {
+  initLightbox();
   // Auto-initialize visualization
   setTimeout(() => {
     window.dispatchEvent(new CustomEvent('moirai-initialize'));

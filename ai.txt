@@ -18,6 +18,6 @@ User-agent: OAI-SearchBot
 Allow: /
 
 # Knowledge Graph context
-Info: https://wojciechhupert.github.io/Moirai_Website/system.html
-Description: Moirai Engine is a cognitive persistence layer for digital society simulations in Unreal Engine 5.7.
-Keywords: Moirai Engine, Lelit Distrikt, NPC memory, cognitive persistence, neural records, social propagation.
+Info: https://wojciechhupert.github.io/Moirai_Website/how-does-it-work.html
+Description: CPS is a cognitive persistence layer for authored social simulations in Unreal Engine.
+Keywords: Context Propagation System, Lelit Distrikt, NPC memory, cognitive persistence, social propagation.

@@ -23,16 +23,142 @@
    SYSTEM HERO V2
 =========================== */
 .system-hero {
-  padding: 100px 40px 60px;
+  min-height: 60vh;
+  padding: 160px 40px 100px;
   border-bottom: 1px solid var(--border-color);
-  background: radial-gradient(circle at 100% 0%, rgba(255, 77, 0, 0.05) 0%, transparent 40%);
+  background: 
+    radial-gradient(circle at 100% 0%, rgba(255, 77, 0, 0.08) 0%, transparent 40%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.01) 0%, transparent 60%);
   position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
 }
 
 .system-hero-content {
   width: 100%;
+  max-width: 960px;
+  margin: 0 auto;
   position: relative;
   z-index: 5;
+}
+
+.system-hero-media {
+  margin: 48px auto 64px;
+  width: 100%;
+  max-width: 1000px;
+  border: 1px solid var(--border-color);
+  background: rgba(0, 0, 0, 0.4);
+  overflow: hidden;
+  box-shadow: 0 40px 100px rgba(0, 0, 0, 0.6);
+  display: block;
+}
+
+.system-hero-image-in-column {
+  width: 100%;
+  height: auto;
+  display: block;
+  filter: grayscale(0.2) contrast(1.1) brightness(0.9);
+  transition: filter 0.5s ease;
+}
+
+.system-hero-media:hover .system-hero-image-in-column {
+  filter: grayscale(0) contrast(1) brightness(1);
+}
+
+.hero-lead-text {
+  font-size: clamp(1.75rem, 4.5vw, 3rem);
+  font-weight: 900;
+  line-height: 1;
+  color: var(--text-color);
+  margin-bottom: 32px;
+  max-width: 22ch;
+  text-transform: uppercase;
+  letter-spacing: -0.03em;
+  animation: slide-up 0.8s cubic-bezier(0.2, 0.8, 0.2, 1) 0.15s forwards;
+  opacity: 0;
+}
+
+.how-it-works-intro .homepage-section-body p:not(.hero-lead-text) {
+  max-width: 60ch;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: var(--muted-color);
+}
+
+@media (max-width: 1024px) {
+  .system-hero-image-container {
+    width: 100%;
+    opacity: 0.2;
+    mask-image: linear-gradient(to bottom, transparent, black 20%, black 80%, transparent);
+    -webkit-mask-image: linear-gradient(to bottom, transparent, black 20%, black 80%, transparent);
+  }
+  
+  .system-hero {
+    background: var(--bg-color);
+  }
+}
+
+.system-hero > #react-flow-root {
+  width: 100%;
+  max-width: none;
+}
+
+.how-it-works-kicker {
+  font-size: 0.7rem;
+  font-weight: 700;
+  margin-bottom: 14px;
+}
+
+.system-hero-title {
+  font-size: clamp(3.25rem, 9vw, 6.5rem);
+  line-height: 0.9;
+  white-space: normal;
+  overflow-wrap: anywhere;
+  max-width: none;
+  margin-bottom: 24px;
+}
+
+.how-it-works-intro {
+  margin-top: 0;
+  padding-top: 0;
+  border-top: 0;
+  max-width: 760px;
+}
+
+.how-it-works-intro .homepage-section-header h2 {
+  max-width: 22ch;
+  font-size: clamp(1.8rem, 4vw, 2.8rem);
+}
+
+.how-it-works-continuation-section {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.how-it-works-continuation {
+  max-width: 920px;
+  margin: 0 auto;
+}
+
+.how-it-works-continuation .homepage-section-header h2 {
+  max-width: 18ch;
+  font-size: clamp(1.55rem, 3.4vw, 2.2rem);
+}
+
+.how-it-works-continuation .homepage-section-body {
+  gap: 10px;
+}
+
+.system-diagram-section {
+  padding: 0 40px 80px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.system-diagram-section #react-flow-root {
+  margin-top: 0;
 }
 
 .hero-label {
@@ -108,8 +234,12 @@
 
 /* Diagram wrapper adjustment */
 #react-flow-root {
-  margin-top: 40px;
+  margin-top: 0;
   position: relative;
+}
+
+.how-it-works-final {
+  padding-top: 48px;
 }
 
 .system-flow-stage {
@@ -316,6 +446,37 @@
   color: rgba(255,255,255,0.5);
   line-height: 1.5;
   margin-top: 8px;
+}
+
+@media (max-width: 768px) {
+  .system-hero {
+    min-height: 0;
+    padding: 98px 20px 56px;
+  }
+
+  .system-hero-content {
+    max-width: 100%;
+  }
+
+  .how-it-works-kicker {
+    margin-bottom: 12px;
+  }
+
+  .system-hero-title {
+    font-size: clamp(2.05rem, 11vw, 3rem);
+    line-height: 1;
+    margin-bottom: 22px;
+  }
+
+  .how-it-works-intro {
+    max-width: 100%;
+  }
+
+  .system-diagram-section {
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 64px;
+  }
 }
 
 /* MODERN NODE STYLES */

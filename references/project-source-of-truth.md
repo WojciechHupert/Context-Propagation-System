@@ -28,7 +28,8 @@ Lelit Distrikt is a localized Mediterranean social simulation. Inside a sealed d
 - **Website Structure:** 
     - `index.html`: Clean high-level vision and origin.
     - `foundations.html`: Technical pillars (Neural Records, Propagation, Mandate).
-    - `system.html`: Interactive architecture and development roadmap.
+    - `how-does-it-work.html`: Public explanation of CPS mechanics.
+    - `use-cases.html`: Public CPS use-case framing.
 - **Deployment:** Live on GitHub Pages at `https://WojciechHupert.github.io/Moirai_Website/`.
 
 ---

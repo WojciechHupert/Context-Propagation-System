@@ -11,10 +11,10 @@ export default defineConfig({
       input: {
         main: resolve(__dirname, 'index.html'),
         foundations: resolve(__dirname, 'foundations.html'),
+        howDoesItWork: resolve(__dirname, 'how-does-it-work.html'),
+        useCases: resolve(__dirname, 'use-cases.html'),
         blog: resolve(__dirname, 'blog.html'),
-        system: resolve(__dirname, 'system.html'),
         contact: resolve(__dirname, 'contact.html'),
-        purpose: resolve(__dirname, 'what-is-cps.html'),
       },
     },
   },

@@ -1,13 +1,17 @@
-# CPS Website (CPS Studio Visualization)
+# CPS Website
 [![Deploy static content to Pages](https://github.com/WojciechHupert/Moirai_Website/actions/workflows/deploy.yml/badge.svg)](https://github.com/WojciechHupert/Moirai_Website/actions/workflows/deploy.yml)
 
 [**Live Demo**](https://WojciechHupert.github.io/Moirai_Website/)
 
-This repository contains the website for the **CPS (Context Propagation System) Engine**.
+This folder contains the public website for the **CPS (Context Propagation System) Engine**.
+
+Local project-root path: `CPS-Website/`
 
 ## Vision
 
-CPS is an experimental continuity and social-memory system designed to manage the narrative threads for authored AI characters within the Lelit Distrikt simulation. This website serves as the primary observation layer—CPS Studio—allowing researchers and administrators to audit shared truths, memory propagation, and the evolution of digital consciousness.
+CPS is an experimental continuity and social-memory system designed to manage the narrative threads for authored AI characters within the Lelit Distrikt simulation. This website explains the public CPS concept, system architecture, use cases, and visual language.
+
+The internal operations app is separate: `tools/CPS_Studio/frontend-v3/` is CPS Studio for local runtime inspection and administration. It is not this public website.
 
 ## Core Component
 

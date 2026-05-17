@@ -15,7 +15,41 @@
 
       gtag('config', 'G-X81LJ6XFMR');
     </script>
-    <title>MOIRAI | Development Journal</title>
+    <title>CPS | Development Journal</title>
+    <meta name="description" content="Development notes and updates on CPS, Lelit Distrikt, structured memory, propagation, and experimental continuity systems." />
+    <meta name="author" content="Wojciech Hupert" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://wojciechhupert.github.io/Moirai_Website/blog.html" />
+    <meta name="theme-color" content="#050505" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="CPS" />
+    <meta property="og:url" content="https://wojciechhupert.github.io/Moirai_Website/blog.html" />
+    <meta property="og:title" content="CPS | Development Journal" />
+    <meta property="og:description" content="Development notes and updates on CPS, Lelit Distrikt, structured memory, propagation, and experimental continuity systems." />
+    <meta property="og:image" content="https://moirai-studio.pages.dev/moirai-social-preview.png" />
+
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://wojciechhupert.github.io/Moirai_Website/blog.html" />
+    <meta property="twitter:title" content="CPS | Development Journal" />
+    <meta property="twitter:description" content="Development notes and updates on CPS, Lelit Distrikt, structured memory, propagation, and experimental continuity systems." />
+    <meta property="twitter:image" content="https://moirai-studio.pages.dev/moirai-social-preview.png" />
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "name": "CPS | Development Journal",
+        "description": "Development notes and updates on CPS, Lelit Distrikt, structured memory, propagation, and experimental continuity systems.",
+        "url": "https://wojciechhupert.github.io/Moirai_Website/blog.html",
+        "isPartOf": {
+          "@type": "WebSite",
+          "name": "CPS",
+          "url": "https://wojciechhupert.github.io/Moirai_Website/"
+        }
+      }
+    </script>
+
     <style>
       .blog-page-container {
         max-width: 800px;
@@ -114,9 +148,40 @@
         font-size: 0.7rem;
         letter-spacing: 0.1em;
       }
+
+      @media (max-width: 768px) {
+        .blog-page-container {
+          padding: 88px 20px 72px;
+        }
+
+        .blog-post-traditional h1 {
+          font-size: clamp(2.2rem, 10vw, 3rem);
+          line-height: 1.05;
+        }
+
+        .blog-post-traditional .post-content {
+          font-size: 1rem;
+          line-height: 1.65;
+        }
+
+        .blog-post-traditional .post-content p {
+          margin-bottom: 24px;
+        }
+
+        .post-hero-traditional {
+          width: 100%;
+          height: auto;
+        }
+
+        .traditional-footer {
+          margin-top: 72px;
+          padding-top: 32px;
+        }
+      }
     </style>
-    <script type="module" crossorigin src="./assets/style-BB_D8aj2.js"></script>
-    <link rel="stylesheet" crossorigin href="./assets/style-BwrOYvVJ.css">
+    <script type="module" crossorigin src="./assets/jsx-runtime-CyOA-uNS.js"></script>
+    <script type="module" crossorigin src="./assets/main-BwU2qPR-.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/jsx-runtime-h_ybmHgQ.css">
   </head>
   <body>
     <div class="grid-overlay"></div>
@@ -124,12 +189,12 @@
     <div class="main-container">
       <header class="site-header">
         <div class="header-inner">
-          <div class="logo"><a href="./">MOIRAI</a></div>
+          <div class="logo"><a href="./">CPS</a></div>
           <nav class="site-nav">
             <a href="./" class="nav-link">Home</a>
-            <a href="foundations.html" class="nav-link">Technology</a>
-            <a href="system.html" class="nav-link">Architecture</a>
-            <a href="blog.html" class="nav-link active">Blog</a>
+            <a href="how-does-it-work.html" class="nav-link">How Does It Work?</a>
+            <a href="use-cases.html" class="nav-link">Use Cases</a>
+            <a href="foundations.html" class="nav-link">Foundations</a>
             <a href="contact.html" class="nav-link">Contact</a>
           </nav>
           <div class="header-actions">
@@ -158,40 +223,40 @@
           <img src="neural_propagation_dashboard.png" alt="Neural Propagation Dashboard" class="post-hero-traditional" />
 
           <h1>Development Update: Bridging the Neural Gap (v3.3)</h1>
-          <p class="post-subtitle mono" style="margin-top: -12px; color: var(--accent-color); font-size: 0.8rem;">Lelit Distrikt 2 Narrative Foundry</p>
+          <p class="post-subtitle mono" style="margin-top: -12px; color: var(--accent-color); font-size: 0.8rem;">Lelit Distrikt Narrative Foundry</p>
 
           <div class="post-content" style="margin-top: 48px;">
-            <p>Today, we are thrilled to announce the deployment of <strong>v3.3 of the Moirai Narrative Engine</strong>. This update marks a significant milestone in our quest to create a truly autonomous social ecosystem within the brutalist confines of Lelit Distrikt 2.</p>
+            <p>Today, I am pleased to announce the deployment of <strong>v3.3 of the CPS</strong>. This update marks a significant milestone in my effort to build an experimental continuity architecture for authored AI characters within Lelit Distrikt.</p>
             
-            <p>In previous versions, our NPCs were reactive—waiting for you to initiate a conversation before they processed the world. With v3.3, the district has truly "woken up."</p>
+            <p>In previous versions, the characters were reactive and waited for the player to initiate interaction before they processed the world. With v3.3, the system supports a more bounded autonomous capability.</p>
 
-            <h2>The Breakthrough: Autonomous Social Propagation</h2>
-            <p>The headline feature of this update is the <strong>Autonomous Narrative Cycle</strong>. Managed by a dedicated background thread, the NPCs now possess their own internal clock. Even when you aren't present in the district, the residents are active:</p>
+            <h2>Prototype Milestone: Controlled Social Propagation</h2>
+            <p>The headline feature of this update is the <strong>Autonomous Narrative Cycle</strong>. Managed by a background process, the authored characters can now generate structured internal-state reports and controlled social exchanges within the CPS prototype. Even when the player is not present, the characters remain active:</p>
             <ul>
-              <li><strong>Meeting & Sharing</strong>: NPCs now autonomously decide to meet and share information.</li>
-              <li><strong>10-Hop Continuity</strong>: We have doubled the narrative chain limit. Information can now travel through up to 10 different characters, allowing rumors and secrets to spread organically across the entire social graph.</li>
-              <li><strong>Cognitive Reflection</strong>: NPCs now perform "Internal Reflections," where they process past interactions to reach new narrative conclusions and observations about the state of the district.</li>
+              <li><strong>Exchange & Propagation</strong>: Characters now autonomously trigger interactions to propagate information.</li>
+              <li><strong>10-Hop Continuity</strong>: Information can now travel through up to 10 character nodes, allowing rumors and information to spread across the social graph.</li>
+              <li><strong>Internal Reflection</strong>: Characters now perform 'Internal Reflections,' where they process past interactions to reach new observations about the district state.</li>
             </ul>
 
             <h2>The Authenticity Mandate</h2>
-            <p>One of our core design principles is that NPCs should be <em>residents</em>, not "AI Assistants." To enforce this, we've implemented the <strong>Authenticity Mandate</strong>. This technical guardrail prevents NPCs from roleplaying scene transitions or acting as helpful AI.</p>
-            <p>When you speak to "The Archivist" or "The Mechanic," you are speaking to a persona that is unwavering. They stay in character, respect the established 20-turn conversational history, and prioritize their own specialized knowledge domains over being "universally helpful."</p>
+            <p>A core design principle is that authored characters should be residents of the simulation, not AI assistants. To enforce this, I implemented the <strong>Authenticity Mandate</strong>. This technical guardrail prevents characters from roleplaying scene transitions or acting as helpful AI.</p>
+            <p>When you interact with the characters, you are interacting with an authored persona. They stay in character, respect the established 20-turn conversational history, and prioritize their own domain knowledge over generic assistant behavior.</p>
 
-            <h2>From "Chat" to "Neural Records"</h2>
-            <p>We've fundamentally changed how the engine "remembers." We have moved away from vague prose summaries toward <strong>Structured Narrative Reports</strong>. Every interaction now generates bulleted <code>FACTS</code> and <code>EXCHANGES</code>.</p>
-            <p>This ensures that the AI Extractor captures high-fidelity, durable memories with near-perfect accuracy. These <strong>Neural Records</strong> are the lifeblood of the district, ensuring that every secret told and every plan made has a lasting impact on the simulation's future state.</p>
+            <h2>From 'Chat' to 'Neural Records'</h2>
+            <p>I have fundamentally changed how the system manages memory. I moved away from vague prose summaries in favor of <strong>Structured Narrative Reports</strong>. Every interaction now generates bulleted <code>FACTS</code> and <code>EXCHANGES</code>.</p>
+            <p>This ensures that the extractor captures durable, inspectable records. These <strong>Neural Records</strong> are the lifeblood of the simulation, ensuring that interactions have a lasting impact on future state.</p>
 
-            <h2>Seeing the Matrix: The Sanctum Dashboard</h2>
-            <p>To support these complex systems, we've overhauled the <strong>Moirai Studio</strong> (Sanctum) with a high-visibility diagnostic dashboard. You can now monitor:</p>
+            <h2>Seeing the System: CPS Studio</h2>
+            <p>To support these complex systems, I overhauled <strong>CPS Studio</strong> with a high-visibility diagnostic dashboard. You can now monitor:</p>
             <ul>
               <li><strong>Memory Growth</strong>: Real-time tracking of Neural Records as they are formed.</li>
-              <li><strong>Inference Stream</strong>: A live log of every autonomous thought and social exchange.</li>
+              <li><strong>Inference Stream</strong>: A live log of autonomous thought and social exchange.</li>
               <li><strong>Foundation Pulse</strong>: Instant feedback on database latency and system stability.</li>
             </ul>
 
-            <h2>What's Next?</h2>
-            <p>With the core narrative loop (Conversation -> Synthesis -> Propagation -> Memory) now closed and functioning autonomously, our next phase will focus on <strong>Emotional Persistence</strong>. We will be integrating NPC "States of Mind" (Primary and Secondary emotions) directly into the propagation logic, ensuring that a "Haunted" NPC shares news very differently than one who is "Focused" or "Serene."</p>
-            <p>Lelit Distrikt 2 is no longer just a place to visit; it is a world that continues to evolve, whether you are there to witness it or not.</p>
+            <h2>Experimental Roadmap</h2>
+            <p>With the core narrative loop (Interaction -> Synthesis -> Propagation -> Memory) now functional as an experimental substrate, the next phase will focus on <strong>Emotional Persistence</strong>. I will integrate character 'States of Mind' (Primary and Secondary emotions) directly into the propagation logic, ensuring that information is framed and shared differently based on the character's internal state.</p>
+            <p>Lelit Distrikt continues to evolve as an authored demonstrator for CPS behavior.</p>
             
             <p class="mono" style="margin-top: 64px; color: var(--accent-color); font-style: italic; font-size: 0.9rem;">
               Stay synchronized. The district is watching.
@@ -200,15 +265,15 @@
         </article>
 
         <div class="traditional-footer">
-          MOIRAI_FOUNDATION // COGNITIVE_PERSISTENCE_RESEARCH // 2026
+          CPS_FOUNDATION // CONTEXT_PROPAGATION_RESEARCH // 2026
         </div>
       </main>
       <footer class="site-footer">
         <div class="footer-grid">
           <div class="footer-column">
-            <div class="logo">MOIRAI</div>
+            <div class="logo">CPS</div>
             <p class="footer-credits" style="margin-top: 12px; max-width: 260px;">
-              Cognitive persistence engine. A precisely engineered societal simulation.
+              Context Propagation System. Experimental continuity infrastructure for authored AI worlds.
             </p>
           </div>
           
@@ -216,9 +281,9 @@
             <span class="footer-label mono text-accent">NAVIGATE</span>
             <div class="footer-nav">
               <a href="./" class="footer-link">Home</a>
-              <a href="foundations.html" class="footer-link">Technology</a>
-              <a href="system.html" class="footer-link">Architecture</a>
-              <a href="blog.html" class="footer-link active">Blog</a>
+              <a href="how-does-it-work.html" class="footer-link">How Does It Work?</a>
+              <a href="use-cases.html" class="footer-link">Use Cases</a>
+              <a href="foundations.html" class="footer-link">Foundations</a>
               <a href="contact.html" class="footer-link">Contact</a>
             </div>
           </div>
@@ -233,6 +298,6 @@
           </div>
         </div>
       </footer>
-    </div>
+    </div>
   </body>
 </html>

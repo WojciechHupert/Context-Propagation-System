@@ -18,16 +18,18 @@ function initLightbox() {
   const lightboxImg = document.getElementById('lightbox-img');
   const captionText = document.getElementById('caption');
   const closeBtn = document.querySelector('.close-modal');
-  const galleryTiles = document.querySelectorAll('.cps-interface-tile');
+  const lightboxTriggers = document.querySelectorAll('.cps-interface-tile, .cps-social-flow-container');
 
-  if (!lightbox || !lightboxImg || !galleryTiles.length) return;
+  if (!lightbox || !lightboxImg || !lightboxTriggers.length) return;
 
-  galleryTiles.forEach(tile => {
-    tile.addEventListener('click', (e) => {
+  lightboxTriggers.forEach(trigger => {
+    trigger.addEventListener('click', (e) => {
       e.preventDefault();
-      const fullSrc = tile.getAttribute('data-full');
-      const img = tile.querySelector('img');
+      const img = trigger.querySelector('img');
+      const fullSrc = img?.currentSrc || img?.getAttribute('src') || trigger.getAttribute('data-full');
       const altText = img ? img.getAttribute('alt') : '';
+
+      if (!fullSrc) return;
 
       lightbox.style.display = 'block';
       lightboxImg.src = fullSrc;

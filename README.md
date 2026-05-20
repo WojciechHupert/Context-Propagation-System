@@ -9,14 +9,20 @@ Local project-root path: `CPS-Website/`
 
 ## Vision
 
-CPS is an experimental continuity and social-memory system designed to manage the narrative threads for authored AI characters within the Lelit Distrikt simulation. This website explains the public CPS concept, system architecture, use cases, and visual language.
+CPS is an exploratory infrastructure for social memory: a prototype for worlds where information has consequences. It explores what happens when information does not disappear after a conversation, but enters a shared social memory that can propagate, mutate, be constrained, and later be recalled inside artificial social environments.
+
+Lelit Distrikt is one bounded visual endpoint for experiencing CPS through characters, atmosphere, and authored conversational theatre. It is not the system itself, and the current technical focus is not a game, a full society simulator, or an open-ended living world.
+
+This website explains the public CPS concept, system architecture, use cases, and visual language. CPS Studio is the separate proof and inspection surface for local runtime validation and administration.
 
 The internal operations app is separate: `tools/CPS_Studio/frontend-v3/` is CPS Studio for local runtime inspection and administration. It is not this public website.
 
 ## Core Component
 
 ### CPS Engine (Persistence)
-A dual-layer memory model that separates canonical historical truth from volatile, humanized recall. It ensures that subjects remember their past with the nuance, emotion, and occasional drift characteristic of human thought.
+A dual-layer memory model that separates canonical historical truth from volatile, humanized recall. CPS is responsible for making memory socially consequential by giving information lineage, containment rules, propagation paths, and the possibility of later recall with drift.
+
+Lelit Distrikt v1 remains a bounded demonstrator rather than a general life simulator. Its small cast and authored frame exist to make CPS inspectable, not to imply a complete society model.
 
 
 ## Tech Stack

@@ -23,33 +23,33 @@ const STORAGE_KEY = 'moirai-system-diagram-v2';
 const nodeInfo = {
   node_01: {
     title: 'Node 01: Interaction Surface',
-    body: 'This is where the engine starts listening. Dialogue and interaction signals arrive here before they are shaped into something the system can reason about.',
+    body: 'This is where the engine starts listening. Dialogue and interaction signals arrive here before they are shaped into something the system can reason about and preserve.',
     list: ['Captures live interactions', 'Prepares raw dialogue for processing', 'Separates direct talk from social context']
   },
   node_02: {
     title: 'Node 02: Neural Engine',
-    body: 'The reasoning core of the diagram. It turns conversation into structured meaning: what happened, what matters, and what should happen next.',
+    body: 'The reasoning core of the diagram. It turns conversation into structured meaning: what happened, what matters, and what should happen next inside the memory system.',
     list: ['Extracts facts and exchanges', 'Synthesizes likely intent', 'Supports fallback inference paths']
   },
   logic_gates: {
     title: 'The Logic Gates',
-    body: 'This is the judgment layer. Before information becomes durable or social, it is checked for safety, relevance, and whether it deserves to travel further.',
+    body: 'This is the judgment layer. Before information becomes durable or social, it is checked for safety, relevance, containment, and whether it deserves to travel further.',
     list: ['Checks privacy and eligibility', 'Tests relevance and emotional weight', 'Avoids redundant awareness']
   },
   persist_turn: {
     title: 'Commitment & Serialization',
-    body: "Once the system is confident, it commits the moment. This is where selected meaning becomes durable memory inside the district's long-term continuity.",
+    body: "Once the system is confident, it commits the moment. This is where selected meaning becomes durable social memory inside the system's long-term continuity.",
     list: ['Cleans the final record', 'Writes memory atomically', 'Links social propagation history']
   },
   node_04: {
     title: 'Node 04: System Truth',
-    body: "This is the engine's trusted memory anchor. It keeps the district coherent by holding onto the durable truth every other path can rely on.",
-    list: ['Maintains one reliable timeline', 'Stores durable memory safely', 'Feeds both simulation logic and live recall']
+    body: "This is the engine's trusted memory anchor. It keeps the environment coherent by holding onto the durable truth every other path can rely on.",
+    list: ['Maintains one reliable timeline', 'Stores durable memory safely', 'Feeds both propagation logic and live recall']
   },
   node_03: {
     title: 'Node 03: Continuity Core',
-    body: "This is the district's heartbeat. It decides when the world should think again, continue a thread, or trigger autonomous social behavior.",
-    list: ['Runs on a steady simulation pulse', 'Triggers autonomous follow-up safely', 'Keeps recursion governed and bounded']
+    body: "This is the system's heartbeat. It decides when the world should think again, continue a thread, or trigger autonomous social behavior.",
+    list: ['Runs on a steady system pulse', 'Triggers autonomous follow-up safely', 'Keeps recursion governed and bounded']
   },
   action_lifecycle: {
     title: 'Action Lifecycle State Machine',
@@ -73,7 +73,7 @@ const nodeInfo = {
   },
   node_05: {
     title: 'Node 05: Sanctum Dashboard',
-    body: 'Sanctum makes the invisible legible. It turns inference, pulses, and safeguards into something the team can inspect and steer with confidence.',
+    body: 'Sanctum makes the invisible legible. It turns inference, pulses, lineage, and safeguards into something the team can inspect and steer with confidence.',
     list: ['Shows live neural activity', 'Surfaces pulse telemetry clearly', 'Exposes safety controls for supervision']
   }
 };

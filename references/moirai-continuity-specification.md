@@ -5,9 +5,13 @@
 
 ## 1. Executive Summary
 
-The Moirai Engine is the cognitive backbone of Lelit Distrikt. It governs persistence, evolution, and social transfer of information across the NPC population. The target design treats memories as dynamic, traceable records rather than simple quest flags.
+The Moirai Engine is the current implementation core of CPS: an exploratory infrastructure for social memory and a prototype for worlds where information has consequences. Within the present demonstrator, it governs persistence, evolution, containment, and social transfer of information across a bounded NPC population. The target design treats memories as dynamic, traceable records rather than simple quest flags or disposable chat history.
+
+This specification does not define a validated scientific simulation or a full society model. It defines a bounded, inspectable prototype for open-ended information flow inside artificial social environments.
 
 This document describes both the intended architecture and the current operational constraints where they materially differ.
+
+The current technical work on lineage, duplicate suppression, private-memory blocking, and propagation depth is not incidental implementation detail. These mechanisms form the early grammar of social memory inside CPS.
 
 ## 2. Core Pillars of Continuity
 
@@ -18,6 +22,7 @@ Every memory unit is part of a larger narrative thread.
 - **Mechanism:** `MemoryRecords` include `PreviousMemoryId`.
 - **Logic:** When a new fact is synthesized, the engine can link it to the most recent owned memory for that NPC.
 - **Utility:** This allows NPCs and Studio tooling to reconstruct a coherent continuity trail.
+- **Conceptual role:** Lineage is how CPS knows where information came from and what later memories it influenced.
 
 ### 2.2 Associative Routing
 
@@ -27,6 +32,7 @@ Information spreads through social and semantic resonance rather than random bro
 - **Secondary resonance rule:** Tags and narrative networks provide a fallback resonance path.
 - **Propagation Limit:** Information transfer is capped at 10 social "Hops" to maintain narrative coherence and simulate natural information decay.
 - **Recipient ownership:** Propagation creates a new recipient-owned record while preserving a source link through `SourceMemoryId`.
+- **Conceptual role:** Propagation depth is not just a runtime constant. It is how CPS controls how far information is allowed to travel in the current proof loop.
 
 ### 2.3 Mutation Tracking
 
@@ -35,6 +41,15 @@ As information travels, the system preserves a trail of drift.
 - **Mutation tracking:** Propagated memories preserve `MutationCount` and `OriginalSummaryText`.
 - **Confidence drift:** Confidence can degrade through propagation and recall behavior.
 - **Audit visibility:** Studio can inspect drift over time through transcript, summary, and memory records.
+- **Conceptual role:** Mutation tracking allows CPS to distinguish remembered, retold, and distorted information rather than flattening them into one undifferentiated fact store.
+
+### 2.4 Containment And Recall
+
+Not every memory should become socially available just because it exists.
+
+- **Containment:** Privacy controls and private-memory blocking prevent automatically treating all information as public social knowledge.
+- **Recall:** Retrieval logic determines what becomes available again in conversation, and in what form.
+- **Conceptual role:** Containment and recall are how CPS models the difference between what was said, what was kept, what spread, and what can later matter.
 
 ## 3. Data Infrastructure
 
@@ -97,6 +112,7 @@ The runtime maintenance pass is a secondary LLM request operating on recent auth
 - **Trigger:** Turn threshold or session boundary.
 - **Focus:** Durable, transcript-grounded facts, explicit preferences, relationship changes, commitments, and follow-up actions.
 - **Guardrail:** Do not store assistant style notes, chain-of-thought, or speculative world facts.
+- **Conceptual role:** This is where transient conversation becomes durable social memory rather than disappearing as inert transcript.
 
 ### 4.4 Moirai Studio Pro
 
@@ -108,6 +124,8 @@ The Studio backend and frontend provide:
 - Manual transcript and memory moderation
 
 The Studio is not currently the primary in-game chat execution path.
+
+For CPS, Studio functions as the proof surface: the place where state, lineage, drift, containment, and propagation can be inspected and verified.
 
 ### 4.5 Verified Propagation Path
 
@@ -121,13 +139,15 @@ The currently verified operational path is:
 
 This path was verified against the canonical database on May 7, 2026.
 
+This proof path matters because the vertical objective is not to demonstrate a living world. It is to demonstrate that social memory can be created, moved, constrained, inspected, and recalled through CPS.
+
 ### 4.6 Autonomous Cycle (v3.3)
 
-To maintain a living simulation, the engine executes a recurring background process.
+To maintain open-ended information flow inside the bounded demonstrator, the engine executes a recurring background process.
 
 - **Trigger:** Periodic timer (typically every 5-10 minutes) or "District Tick."
 - **Scope:** Processes all `ActionRecords` in a `pending` state across the entire NPC population.
-- **Behavior:** NPCs perform autonomous social checks. If resonance gates pass, information propagates without player involvement, creating a dynamic narrative environment even during player absence.
+- **Behavior:** NPCs perform autonomous social checks. If resonance gates pass, information propagates without player involvement, creating a bounded but persistent social-memory environment even during player absence.
 - **Safety:** Propagation is strictly capped at the 10-hop limit to prevent infinite feedback loops.
 
 ### 4.6 Known Operational Constraints
@@ -135,6 +155,7 @@ To maintain a living simulation, the engine executes a recurring background proc
 - **Privacy leak fixed:** Social action synthesis previously allowed private clauses to bleed into propagated action text and NPC interaction summaries. Relay sanitization now strips those clauses before social propagation.
 - **Read-path mutation fixed:** Studio archive and interaction polling previously called the autonomous executor on read, which could cause extra NPC-to-NPC propagation just by monitoring the system. Those endpoints are now intended to be read-only.
 - **Chat path instability remains:** Studio-side `/api/chat` can still time out against Ollama. Extraction and propagation verification should not rely solely on the Studio chat route until that timeout issue is resolved.
+- **Duplicate integrity remains important:** Duplicate suppression is not cleanup for its own sake. It is how the system avoids repeated retelling from corrupting social memory state and lineage interpretation.
 
 ## 5. Implementation Guidelines
 
@@ -144,3 +165,5 @@ To maintain a living simulation, the engine executes a recurring background proc
 - **Maintenance discipline:** Only grounded transcript content should become durable memory or actions.
 - **Reset workflow:** Test data can be cleared with `python tools/wipe_moirai_db.py`.
 - **Full rebuild workflow:** If test data is disposable, the canonical DB can be deleted and rebuilt from the shared schema in `tools/migrate_legacy_moirai_to_canonical.py`.
+
+Taken together, these implementation rules are the start of a practical grammar for social memory: where information comes from, what form it takes, how far it travels, what remains private, and what later returns with consequence.

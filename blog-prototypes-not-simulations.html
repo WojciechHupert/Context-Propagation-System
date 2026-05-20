@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Inter:wght@300;400;600;700;900&family=IBM+Plex+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/svg+xml" href="moirai-logo.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-X81LJ6XFMR"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-X81LJ6XFMR');
+    </script>
+    <title>CPS | Continuity, Prototypes, and the Temptation of Simulation</title>
+    <meta name="description" content="An essay on continuity systems, Autonomuse, prototype thinking, and why AI is often the interpreter rather than the database." />
+    <meta name="author" content="Wojciech Hupert" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://wojciechhupert.github.io/Moirai_Website/blog-prototypes-not-simulations.html" />
+    <meta name="theme-color" content="#050505" />
+
+    <meta property="og:type" content="article" />
+    <meta property="og:site_name" content="CPS" />
+    <meta property="og:url" content="https://wojciechhupert.github.io/Moirai_Website/blog-prototypes-not-simulations.html" />
+    <meta property="og:title" content="Continuity, Prototypes, and the Temptation of Simulation" />
+    <meta property="og:description" content="An essay on continuity systems, Autonomuse, prototype thinking, and why AI is often the interpreter rather than the database." />
+    <meta property="og:image" content="https://moirai-studio.pages.dev/moirai-social-preview.webp" />
+
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://wojciechhupert.github.io/Moirai_Website/blog-prototypes-not-simulations.html" />
+    <meta property="twitter:title" content="Continuity, Prototypes, and the Temptation of Simulation" />
+    <meta property="twitter:description" content="An essay on continuity systems, Autonomuse, prototype thinking, and why AI is often the interpreter rather than the database." />
+    <meta property="twitter:image" content="https://moirai-studio.pages.dev/moirai-social-preview.webp" />
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Continuity, Prototypes, and the Temptation of Simulation",
+        "description": "An essay on continuity systems, Autonomuse, prototype thinking, and why AI is often the interpreter rather than the database.",
+        "datePublished": "2026-05-18",
+        "dateModified": "2026-05-18",
+        "author": {
+          "@type": "Person",
+          "name": "Wojciech Hupert"
+        },
+        "publisher": {
+          "@type": "Person",
+          "name": "Wojciech Hupert"
+        },
+        "mainEntityOfPage": {
+          "@type": "WebPage",
+          "@id": "https://wojciechhupert.github.io/Moirai_Website/blog-prototypes-not-simulations.html"
+        }
+      }
+    </script>
+
+    <link rel="stylesheet" href="src/style.css" />
+    <style>
+      .blog-page-container {
+        max-width: 840px;
+        margin: 0 auto;
+        padding: 120px 40px;
+      }
+
+      .blog-post-traditional h1 {
+        font-size: clamp(2.8rem, 7vw, 4.4rem);
+        text-transform: none;
+        margin-bottom: 22px;
+        line-height: 1.04;
+      }
+
+      .post-meta {
+        border-bottom: 1px solid var(--border-color);
+        padding-bottom: 24px;
+        margin-bottom: 40px;
+      }
+
+      .post-subtitle {
+        color: #d0d0d0;
+        max-width: 720px;
+        font-size: 1.08rem;
+        line-height: 1.8;
+        margin-bottom: 32px;
+      }
+
+      .post-callout {
+        margin: 40px 0;
+        padding: 24px 26px;
+        border: 1px solid rgba(255, 77, 0, 0.28);
+        background: linear-gradient(180deg, rgba(255, 77, 0, 0.08), rgba(255, 255, 255, 0.02));
+      }
+
+      .post-callout p {
+        margin: 0;
+        color: #ffffff;
+        font-size: 1.2rem;
+        line-height: 1.6;
+      }
+
+      .blog-post-traditional .post-content {
+        font-size: 1.18rem;
+        line-height: 1.85;
+        color: #e0e0e0;
+      }
+
+      .blog-post-traditional .post-content p {
+        margin-bottom: 28px;
+      }
+
+      .blog-post-traditional .post-content h2 {
+        color: var(--text-color);
+        text-transform: none;
+        margin: 56px 0 20px;
+        letter-spacing: -0.02em;
+        font-size: 2rem;
+      }
+
+      .post-video-embed {
+        margin: 36px 0 40px;
+      }
+
+      .post-video-frame {
+        position: relative;
+        width: 100%;
+        aspect-ratio: 16 / 9;
+        border: 1px solid var(--border-color);
+        background:
+          radial-gradient(circle at top right, rgba(255, 77, 0, 0.08), transparent 30%),
+          #060606;
+        overflow: hidden;
+      }
+
+      .post-video-frame iframe {
+        width: 100%;
+        height: 100%;
+        border: 0;
+        display: block;
+      }
+
+      .post-video-caption {
+        margin-top: 12px;
+        color: var(--muted-color);
+      }
+
+      .blog-post-traditional .post-content ul {
+        margin: 24px 0 32px;
+        padding-left: 0;
+      }
+
+      .blog-post-traditional .post-content li {
+        margin-bottom: 14px;
+        position: relative;
+        padding-left: 24px;
+      }
+
+      .blog-post-traditional .post-content li::before {
+        content: "-";
+        position: absolute;
+        left: 0;
+        color: var(--accent-color);
+      }
+
+      .back-link {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        margin-bottom: 48px;
+        color: var(--muted-color);
+        font-family: var(--font-mono);
+        font-size: 0.8rem;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+      }
+
+      .back-link:hover {
+        color: var(--accent-color);
+      }
+
+      .traditional-footer {
+        margin-top: 96px;
+        padding-top: 32px;
+        border-top: 1px solid var(--border-color);
+        text-align: center;
+        color: var(--muted-color);
+        font-family: var(--font-mono);
+        font-size: 0.7rem;
+        letter-spacing: 0.1em;
+      }
+
+      @media (max-width: 768px) {
+        .blog-page-container {
+          padding: 88px 20px 72px;
+        }
+
+        .post-subtitle,
+        .blog-post-traditional .post-content {
+          font-size: 1rem;
+          line-height: 1.7;
+        }
+
+        .post-callout {
+          padding: 20px;
+        }
+
+        .post-callout p {
+          font-size: 1.05rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="grid-overlay"></div>
+
+    <div class="main-container">
+      <header class="site-header">
+        <div class="header-inner">
+          <div class="logo"><a href="./">CPS</a></div>
+          <nav class="site-nav">
+            <a href="./" class="nav-link">Home</a>
+            <a href="how-does-it-work.html" class="nav-link">How Does It Work?</a>
+            <a href="use-cases.html" class="nav-link">Use Cases</a>
+            <a href="foundations.html" class="nav-link">Foundations</a>
+            <a href="blog.html" class="nav-link active">Blog</a>
+            <a href="contact.html" class="nav-link">Contact</a>
+          </nav>
+          <div class="header-actions">
+            <button class="mobile-menu-toggle" id="menuToggle" aria-label="Toggle Menu">
+              <span></span>
+              <span></span>
+              <span></span>
+            </button>
+          </div>
+        </div>
+      </header>
+
+      <main class="blog-page-container">
+        <a href="blog.html" class="back-link">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+          Back to Journal
+        </a>
+
+        <article class="blog-post-traditional">
+          <div class="post-meta mono">
+            <span class="post-date">MAY 18, 2026</span>
+            <span style="margin: 0 16px;">|</span>
+            <span class="post-category">ESSAY</span>
+          </div>
+
+          <h1>Continuity, Prototypes, and the Temptation of Simulation</h1>
+          <p class="post-subtitle">
+            Notes from Autonomuse, professional AI systems work, and a growing conviction that continuity experiments become stronger when they are framed as probes into specific dynamics rather than claims about synthetic societies.
+          </p>
+
+          <div class="post-callout">
+            <p><strong>AI is often the interpreter, not the database.</strong></p>
+          </div>
+
+          <div class="post-content">
+            <p>
+              For the past few years, I have been exploring a question that sits somewhere between product design, simulation, and social systems:
+            </p>
+
+            <p><strong>What actually happens when artificial agents are given continuity over time?</strong></p>
+
+            <p>
+              Not consciousness. Not AGI. Not "digital humans."
+            </p>
+
+            <p>
+              Just continuity: memory, constraints, priorities, environmental context, and the ability to affect a shared space.
+            </p>
+
+            <p>
+              As a small side experiment, I recently built something I call <strong>Autonomuse</strong> in Godot.
+            </p>
+
+            <p>
+              The setup is intentionally primitive: two capsule-shaped agents, Alpha and Beta, placed on an empty plane surrounded by void.
+            </p>
+
+            <p>
+              I gave them behavioral instructions, simple needs, spatial awareness, basic building principles, and lightweight memory persistence.
+            </p>
+
+            <p>
+              From there, they begin organizing themselves: creating shelters, developing routines, adapting to environmental pressure, and gradually constructing a small procedural settlement.
+            </p>
+
+            <div class="post-video-embed">
+              <div class="post-video-frame">
+                <iframe
+                  src="https://www.youtube-nocookie.com/embed/qahqJP3sBpM?rel=0&modestbranding=1&playsinline=1"
+                  title="Autonomuse prototype video"
+                  loading="lazy"
+                  referrerpolicy="strict-origin-when-cross-origin"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowfullscreen>
+                </iframe>
+              </div>
+              <p class="post-video-caption mono">Autonomuse prototype footage</p>
+            </div>
+
+            <p>
+              What interested me was not whether this represented "real emergence."
+            </p>
+
+            <p>
+              I do not think it does.
+            </p>
+
+            <p>
+              In many ways, the experiment became more valuable precisely because of its limitations.
+            </p>
+
+            <p>
+              The longer I observed these systems, the more I realized how quickly humans project social meaning onto continuity and repetition.
+            </p>
+
+            <p>
+              A sequence of constrained behaviors can begin feeling intentional long before genuine understanding exists.
+            </p>
+
+            <p>
+              And I think that distinction matters.
+            </p>
+
+            <p>
+              Especially now, when AI conversations often drift between two extremes: either dismissing these systems entirely, or anthropomorphizing them far beyond reality.
+            </p>
+
+            <p>
+              Personally, I have become increasingly interested in the middle ground.
+            </p>
+
+            <h2>Prototype, Not Society</h2>
+            <p>
+              Not simulation in the grand sense of reproducing human society, but prototypes designed to investigate specific dynamics:
+            </p>
+
+            <ul>
+              <li>memory persistence</li>
+              <li>information flow</li>
+              <li>behavioral feedback loops</li>
+              <li>social interpretation</li>
+              <li>trust formation</li>
+              <li>environmental consequence</li>
+            </ul>
+
+            <p>
+              That distinction has become extremely important in my own work.
+            </p>
+
+            <p>
+              A prototype asks: <strong>What can this system reveal?</strong>
+            </p>
+
+            <p>
+              A simulation implicitly claims: <strong>This behaves sufficiently like reality.</strong>
+            </p>
+
+            <p>
+              I am much more comfortable positioning my work as exploratory prototypes.
+            </p>
+
+            <h2>Structure Around the Model</h2>
+            <p>
+              Ironically, working professionally on AI-assisted systems reinforced this perspective even further.
+            </p>
+
+            <p>
+              During my time at <a href="https://www.podigee.com" target="_blank" rel="noopener noreferrer" style="text-decoration: underline;">Podigee</a>, I had the opportunity to work with a strong team on AI-powered podcasting features. One of the biggest lessons from that experience was understanding how much structure is required around AI systems to make them genuinely useful and reliable in production environments.
+            </p>
+
+            <p>
+              You cannot simply hand raw complexity to a model and expect coherent outcomes.
+            </p>
+
+            <p>
+              The apparent intelligence emerges as much from orchestration, constraints, retrieval systems, metadata, and product design as from the model itself.
+            </p>
+
+            <p>
+              Or put differently:
+            </p>
+
+            <p><strong>AI is often the interpreter, not the database.</strong></p>
+
+            <p>
+              That line matters because it captures something people still regularly misunderstand. Models often appear coherent not because they independently "understand" a world, but because a carefully built scaffolding system gives them durable context, memory boundaries, retrieval pathways, and controlled degrees of freedom.
+            </p>
+
+            <h2>Where I Want to Stand</h2>
+            <p>
+              I think experiments like Autonomuse helped me better understand where I personally want to position myself within this space.
+            </p>
+
+            <p>
+              Less interested in claims about artificial consciousness.
+            </p>
+
+            <p>
+              Much more interested in continuity, propagation, interpretation, and the observable social effects that emerge once information persists over time.
+            </p>
+
+            <p>
+              Not as proof of synthetic humanity.
+            </p>
+
+            <p>
+              But as a way to better understand the structures we may increasingly build around ourselves in the coming decade.
+            </p>
+          </div>
+        </article>
+
+        <div class="traditional-footer">
+          CPS_FOUNDATION // CONTINUITY_RESEARCH // 2026
+        </div>
+      </main>
+
+      <footer class="site-footer">
+        <div class="footer-grid">
+          <div class="footer-column">
+            <div class="logo">CPS</div>
+            <p class="footer-credits" style="margin-top: 12px; max-width: 260px;">
+              Context Propagation System. Exploratory infrastructure for social memory in artificial worlds.
+            </p>
+          </div>
+
+          <div class="footer-column center">
+            <span class="footer-label mono text-accent">NAVIGATE</span>
+            <div class="footer-nav">
+              <a href="./" class="footer-link">Home</a>
+              <a href="how-does-it-work.html" class="footer-link">How Does It Work?</a>
+              <a href="use-cases.html" class="footer-link">Use Cases</a>
+              <a href="foundations.html" class="footer-link">Foundations</a>
+              <a href="blog.html" class="footer-link active">Blog</a>
+              <a href="contact.html" class="footer-link">Contact</a>
+            </div>
+          </div>
+
+          <div class="footer-column right">
+            <span class="footer-label mono text-accent">LEGAL & CREDITS</span>
+            <div class="footer-credits">
+              all rights reserved 2026.<br>
+              <a href="mailto:whupert@gmail.com" style="color: inherit; text-decoration: none;">whupert@gmail.com</a><br>
+              created by: Wojciech Hupert // <a href="https://shapeseeds.com" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: underline;">Shapeseeds</a>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <script type="module" src="src/navigation.js"></script>
+    <script type="module" src="src/main.js"></script>
+  </body>
+</html>

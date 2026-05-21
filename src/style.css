@@ -1662,17 +1662,24 @@ code {
 
 .footer-grid {
   display: grid;
-  grid-template-columns: 1.5fr 1fr 1.5fr;
-  gap: 60px;
+  grid-template-columns: minmax(0, 1.2fr) minmax(280px, 0.95fr);
+  gap: clamp(32px, 5vw, 88px);
   align-items: start;
+  justify-content: space-between;
 }
 
 .footer-column.center {
   text-align: center;
 }
 
+.footer-column {
+  min-width: 0;
+}
+
 .footer-column.right {
   text-align: right;
+  justify-self: end;
+  max-width: 360px;
 }
 
 .footer-label {
@@ -1706,6 +1713,11 @@ code {
   color: var(--muted-color);
 }
 
+.footer-summary {
+  margin-top: 12px;
+  max-width: 420px;
+}
+
 @media (max-width: 768px) {
   .footer-grid {
     grid-template-columns: 1fr;
@@ -1714,6 +1726,8 @@ code {
   }
   .footer-column.center, .footer-column.right {
     text-align: left;
+    justify-self: start;
+    max-width: none;
   }
 }
 

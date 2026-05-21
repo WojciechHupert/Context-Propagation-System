@@ -18,7 +18,7 @@ function initLightbox() {
   const lightboxImg = document.getElementById('lightbox-img');
   const captionText = document.getElementById('caption');
   const closeBtn = document.querySelector('.close-modal');
-  const lightboxTriggers = document.querySelectorAll('.cps-interface-tile, .cps-social-flow-container');
+  const lightboxTriggers = document.querySelectorAll('.cps-interface-slide, .cps-social-flow-container');
 
   if (!lightbox || !lightboxImg || !lightboxTriggers.length) return;
 
@@ -55,19 +55,77 @@ function initLightbox() {
   });
 }
 
+function initCarousel() {
+  const carousels = document.querySelectorAll('[data-carousel]');
+  if (!carousels.length) return;
+
+  carousels.forEach((carousel) => {
+    const track = carousel.querySelector('[data-carousel-track]');
+    const prev = carousel.querySelector('[data-carousel-prev]');
+    const next = carousel.querySelector('[data-carousel-next]');
+    if (!track || !prev || !next) return;
+
+    const getScrollAmount = () => {
+      const firstSlide = track.querySelector('.cps-interface-slide');
+      if (!firstSlide) return 320;
+      const gap = 14;
+      return firstSlide.getBoundingClientRect().width + gap;
+    };
+
+    prev.addEventListener('click', () => {
+      track.scrollBy({ left: -getScrollAmount(), behavior: 'smooth' });
+    });
+
+    next.addEventListener('click', () => {
+      track.scrollBy({ left: getScrollAmount(), behavior: 'smooth' });
+    });
+  });
+}
+
+function initFaqAccordion() {
+  const accordions = document.querySelectorAll('[data-accordion]');
+  if (!accordions.length) return;
+
+  accordions.forEach((accordion) => {
+    const items = accordion.querySelectorAll('.faq-item');
+
+    items.forEach((item) => {
+      const trigger = item.querySelector('.faq-trigger');
+      if (!trigger) return;
+
+      trigger.addEventListener('click', () => {
+        const isOpen = item.classList.contains('is-open');
+
+        items.forEach((entry) => {
+          entry.classList.remove('is-open');
+          const entryTrigger = entry.querySelector('.faq-trigger');
+          entryTrigger?.setAttribute('aria-expanded', 'false');
+        });
+
+        if (!isOpen) {
+          item.classList.add('is-open');
+          trigger.setAttribute('aria-expanded', 'true');
+        }
+      });
+    });
+  });
+}
+
 // Initialize the system
 document.addEventListener('DOMContentLoaded', () => {
   initLightbox();
+  initCarousel();
+  initFaqAccordion();
   // Auto-initialize visualization
   setTimeout(() => {
     window.dispatchEvent(new CustomEvent('moirai-initialize'));
     const hero = document.querySelector('.hero');
     if (hero) hero.classList.add('graph-active');
   }, 500);
-  
+
   // Update status numbers randomly to simulate "processing"
   const statusItems = document.querySelectorAll('.status-item span:last-child');
-  
+
   setInterval(() => {
     statusItems.forEach(item => {
       if (item.innerText.includes('%')) {

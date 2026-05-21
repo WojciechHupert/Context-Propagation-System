@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Inter:wght@300;400;600;700;900&family=IBM+Plex+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&family=IBM+Plex+Mono:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="icon" type="image/svg+xml" href="moirai-logo.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
@@ -16,174 +16,205 @@
       gtag('config', 'G-X81LJ6XFMR');
     </script>
     <title>CPS | Development Journal</title>
-    <meta name="description" content="Development notes and updates on CPS, Lelit Distrikt, structured memory, propagation, and experimental continuity systems." />
+    <meta name="description" content="Essays, development notes, and prototype observations around CPS, continuity systems, artificial worlds, and information flow." />
     <meta name="author" content="Wojciech Hupert" />
-    <meta name="robots" content="index, follow" />
-    <link rel="canonical" href="https://wojciechhupert.github.io/Moirai_Website/blog.html" />
-    <meta name="theme-color" content="#050505" />
+    <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" />
+    <link rel="canonical" href="https://contextpropagationsystem.com/blog.html" />
+    <link rel="alternate" type="text/plain" href="https://contextpropagationsystem.com/ai.txt" title="AI crawl guidance" />
+    <link rel="alternate" type="text/plain" href="https://contextpropagationsystem.com/llms.txt" title="LLM index" />
+    <meta name="theme-color" content="#efefed" />
 
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="CPS" />
-    <meta property="og:url" content="https://wojciechhupert.github.io/Moirai_Website/blog.html" />
+    <meta property="og:url" content="https://contextpropagationsystem.com/blog.html" />
     <meta property="og:title" content="CPS | Development Journal" />
-    <meta property="og:description" content="Development notes and updates on CPS, Lelit Distrikt, structured memory, propagation, and experimental continuity systems." />
-    <meta property="og:image" content="https://moirai-studio.pages.dev/moirai-social-preview.webp" />
+    <meta property="og:description" content="Essays, development notes, and prototype observations around CPS, continuity systems, artificial worlds, and information flow." />
+    <meta property="og:image" content="https://contextpropagationsystem.com/neural_propagation_dashboard.webp" />
+    <meta property="og:image:alt" content="CPS Studio dashboard showing memory propagation and continuity analysis." />
 
     <meta property="twitter:card" content="summary_large_image" />
-    <meta property="twitter:url" content="https://wojciechhupert.github.io/Moirai_Website/blog.html" />
+    <meta property="twitter:url" content="https://contextpropagationsystem.com/blog.html" />
     <meta property="twitter:title" content="CPS | Development Journal" />
-    <meta property="twitter:description" content="Development notes and updates on CPS, Lelit Distrikt, structured memory, propagation, and experimental continuity systems." />
-    <meta property="twitter:image" content="https://moirai-studio.pages.dev/moirai-social-preview.webp" />
+    <meta property="twitter:description" content="Essays, development notes, and prototype observations around CPS, continuity systems, artificial worlds, and information flow." />
+    <meta property="twitter:image" content="https://contextpropagationsystem.com/neural_propagation_dashboard.webp" />
+    <meta name="twitter:image:alt" content="CPS Studio dashboard showing memory propagation and continuity analysis." />
 
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
-        "@type": "WebPage",
-        "name": "CPS | Development Journal",
-        "description": "Development notes and updates on CPS, Lelit Distrikt, structured memory, propagation, and experimental continuity systems.",
-        "url": "https://wojciechhupert.github.io/Moirai_Website/blog.html",
-        "isPartOf": {
-          "@type": "WebSite",
-          "name": "CPS",
-          "url": "https://wojciechhupert.github.io/Moirai_Website/"
+        "@type": "Blog",
+        "name": "CPS Development Journal",
+        "description": "Essays, development notes, and prototype observations around CPS, continuity systems, artificial worlds, and information flow.",
+        "url": "https://contextpropagationsystem.com/blog.html",
+        "publisher": {
+          "@type": "Person",
+          "name": "Wojciech Hupert"
         }
       }
     </script>
 
     <link rel="stylesheet" href="src/style.css" />
     <style>
-      .blog-page-container {
-        max-width: 800px;
+      .blog-index-page {
+        padding: 120px 40px 80px;
+        max-width: 1120px;
         margin: 0 auto;
-        padding: 120px 40px;
       }
-      
-      .blog-post-traditional {
-        background: none;
-        border: none;
-        padding: 0;
-      }
-      
-      .blog-post-traditional h1 {
-        font-size: 3.5rem;
-        text-transform: none;
-        margin-bottom: 24px;
-        line-height: 1.1;
-      }
-      
-      .blog-post-traditional .post-meta {
+
+      .blog-index-hero {
+        padding-bottom: 48px;
         border-bottom: 1px solid var(--border-color);
-        padding-bottom: 24px;
-        margin-bottom: 48px;
+        margin-bottom: 40px;
       }
-      
-      .blog-post-traditional .post-content {
-        font-size: 1.2rem;
+
+      .blog-index-hero h1 {
+        font-size: clamp(3rem, 9vw, 5.8rem);
+        margin-bottom: 20px;
+      }
+
+      .blog-index-hero p {
+        max-width: 760px;
+        color: #474741;
+        font-size: 1.08rem;
         line-height: 1.8;
-        color: #e0e0e0;
       }
-      
-      .blog-post-traditional .post-content p {
-        margin-bottom: 32px;
+
+      .blog-index-grid {
+        display: grid;
+        gap: 24px;
       }
-      
-      .blog-post-traditional .post-content h2, 
-      .blog-post-traditional .post-content h3 {
+
+      .blog-entry-card {
+        display: grid;
+        grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr);
+        border: 1px solid var(--border-color);
+        background:
+          radial-gradient(circle at top right, rgba(255, 77, 0, 0.07), transparent 30%),
+          linear-gradient(180deg, rgba(255, 255, 255, 0.72), rgba(231, 231, 227, 0.94));
+        overflow: hidden;
+        transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+      }
+
+      .blog-entry-card:hover {
+        transform: translateY(-4px);
+        border-color: rgba(255, 77, 0, 0.35);
+        box-shadow: 0 18px 40px rgba(35, 35, 31, 0.12);
+      }
+
+      .blog-entry-card.featured {
+        grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr);
+      }
+
+      .blog-entry-media {
+        min-height: 100%;
+        background: var(--surface-deep);
+        border-right: 1px solid var(--border-color);
+      }
+
+      .blog-entry-media img {
+        width: 100%;
+        height: 100%;
+        min-height: 280px;
+        object-fit: cover;
+      }
+
+      .blog-entry-placeholder {
+        min-height: 100%;
+        display: flex;
+        align-items: end;
+        justify-content: start;
+        padding: 32px;
+        background:
+          radial-gradient(circle at top left, rgba(255, 77, 0, 0.18), transparent 36%),
+          linear-gradient(135deg, rgba(255, 255, 255, 0.42), rgba(255, 77, 0, 0.08) 55%, rgba(221, 221, 216, 0.78));
+      }
+
+      .blog-entry-placeholder span {
+        font-size: clamp(2rem, 4vw, 3rem);
+        font-weight: 900;
+        text-transform: uppercase;
+        line-height: 0.95;
         color: var(--text-color);
-        text-transform: none;
-        margin: 64px 0 24px 0;
-        letter-spacing: -0.02em;
       }
-      
-      .blog-post-traditional .post-content h2 { font-size: 2.2rem; }
-      .blog-post-traditional .post-content h3 { font-size: 1.8rem; }
-      
-      .blog-post-traditional .post-content ul {
-        margin-bottom: 32px;
-        padding-left: 0;
+
+      .blog-entry-content {
+        padding: 28px 30px;
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        justify-content: center;
       }
-      
-      .blog-post-traditional .post-content li {
-        margin-bottom: 16px;
-        position: relative;
-        padding-left: 24px;
-      }
-      
-      .blog-post-traditional .post-content li::before {
-        content: '—';
-        position: absolute;
-        left: 0;
+
+      .blog-entry-meta {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 14px;
         color: var(--accent-color);
       }
-      
-      .post-hero-traditional {
-        width: 100%;
-        height: auto;
-        margin-bottom: 48px;
-        border: 1px solid var(--border-color);
+
+      .blog-entry-content h2 {
+        font-size: clamp(1.8rem, 3vw, 3rem);
+        line-height: 0.96;
       }
-      
+
+      .blog-entry-content p {
+        color: #474741;
+        line-height: 1.75;
+        font-size: 1rem;
+      }
+
+      .blog-entry-cta {
+        width: fit-content;
+        padding-bottom: 6px;
+        border-bottom: 1px solid rgba(255, 77, 0, 0.35);
+        color: var(--text-color);
+      }
+
       .back-link {
         display: inline-flex;
         align-items: center;
         gap: 8px;
-        margin-bottom: 48px;
+        margin-bottom: 36px;
         color: var(--muted-color);
         font-family: var(--font-mono);
         font-size: 0.8rem;
         text-transform: uppercase;
         letter-spacing: 0.1em;
       }
-      
+
       .back-link:hover {
         color: var(--accent-color);
       }
-      
-      .traditional-footer {
-        margin-top: 120px;
-        padding-top: 48px;
-        border-top: 1px solid var(--border-color);
-        text-align: center;
-        color: var(--muted-color);
-        font-family: var(--font-mono);
-        font-size: 0.7rem;
-        letter-spacing: 0.1em;
-      }
 
       @media (max-width: 768px) {
-        .blog-page-container {
-          padding: 88px 20px 72px;
+        .blog-index-page {
+          padding: 88px 20px 64px;
         }
 
-        .blog-post-traditional h1 {
-          font-size: clamp(2.2rem, 10vw, 3rem);
-          line-height: 1.05;
+        .blog-entry-card,
+        .blog-entry-card.featured {
+          grid-template-columns: 1fr;
         }
 
-        .blog-post-traditional .post-content {
-          font-size: 1rem;
-          line-height: 1.65;
+        .blog-entry-media {
+          border-right: none;
+          border-bottom: 1px solid var(--border-color);
         }
 
-        .blog-post-traditional .post-content p {
-          margin-bottom: 24px;
+        .blog-entry-media img,
+        .blog-entry-placeholder {
+          min-height: 220px;
         }
 
-        .post-hero-traditional {
-          width: 100%;
-          height: auto;
-        }
-
-        .traditional-footer {
-          margin-top: 72px;
-          padding-top: 32px;
+        .blog-entry-content {
+          padding: 22px 20px 24px;
         }
       }
     </style>
   </head>
   <body>
     <div class="grid-overlay"></div>
-    
+
     <div class="main-container">
       <header class="site-header">
         <div class="header-inner">
@@ -193,6 +224,7 @@
             <a href="how-does-it-work.html" class="nav-link">How Does It Work?</a>
             <a href="use-cases.html" class="nav-link">Use Cases</a>
             <a href="foundations.html" class="nav-link">Foundations</a>
+            <a href="blog.html" class="nav-link active">Blog</a>
             <a href="contact.html" class="nav-link">Contact</a>
           </nav>
           <div class="header-actions">
@@ -205,87 +237,66 @@
         </div>
       </header>
 
-      <main class="blog-page-container">
+      <main class="blog-index-page">
         <a href="./" class="back-link">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
-          Back to Foundation
+          Back to Home
         </a>
 
-        <article class="blog-post-traditional">
-          <div class="post-meta mono">
-            <span class="post-date">MAY 12, 2026</span>
-            <span style="margin: 0 16px;">|</span>
-            <span class="post-category">DEV_LOG_v3.3</span>
-          </div>
-          
-          <img src="neural_propagation_dashboard.webp" alt="Neural Propagation Dashboard" class="post-hero-traditional" />
+        <section class="blog-index-hero">
+          <p class="mono text-accent" style="margin-bottom: 18px;">CPS JOURNAL</p>
+          <h1>Development Journal</h1>
+          <p>
+            A running record of how CPS evolves: prototype notes, architectural framing, authored-world experiments, and essays on continuity, interpretation, propagation, and the limits of simulation claims.
+          </p>
+        </section>
 
-          <h1>Development Update: Bridging the Neural Gap (v3.3)</h1>
-          <p class="post-subtitle mono" style="margin-top: -12px; color: var(--accent-color); font-size: 0.8rem;">Lelit Distrikt Narrative Foundry</p>
+        <section class="blog-index-grid" aria-label="Blog posts">
+          <a href="blog-prototypes-not-simulations.html" class="blog-entry-card featured">
+            <div class="blog-entry-placeholder">
+              <span>Prototype,<br>Not Simulation</span>
+            </div>
+            <div class="blog-entry-content">
+              <div class="blog-entry-meta mono">
+                <span>MAY 18, 2026</span>
+                <span>ESSAY</span>
+              </div>
+              <h2>Continuity, Prototypes, and the Temptation of Simulation</h2>
+              <p>
+                An essay on Autonomuse, epistemic discipline, and why continuity systems become more valuable when they are framed as exploratory prototypes rather than synthetic societies.
+              </p>
+              <span class="blog-entry-cta mono">Read the post</span>
+            </div>
+          </a>
 
-          <div class="post-content" style="margin-top: 48px;">
-            <p>Today, I am pleased to announce the deployment of <strong>v3.3 of the CPS</strong>. This update marks a significant milestone in my effort to build an experimental continuity architecture for authored AI characters within Lelit Distrikt.</p>
-            
-            <p>In previous versions, the characters were reactive and waited for the player to initiate interaction before they processed the world. With v3.3, the system supports a more bounded autonomous capability.</p>
-
-            <h2>Prototype Milestone: Controlled Social Propagation</h2>
-            <p>The headline feature of this update is the <strong>Autonomous Narrative Cycle</strong>. Managed by a background process, the authored characters can now generate structured internal-state reports and controlled social exchanges within the CPS prototype. Even when the player is not present, the characters remain active:</p>
-            <ul>
-              <li><strong>Exchange & Propagation</strong>: Characters now autonomously trigger interactions to propagate information.</li>
-              <li><strong>10-Hop Continuity</strong>: Information can now travel through up to 10 character nodes, allowing rumors and information to spread across the social graph.</li>
-              <li><strong>Internal Reflection</strong>: Characters now perform 'Internal Reflections,' where they process past interactions to reach new observations about the district state.</li>
-            </ul>
-
-            <h2>The Authenticity Mandate</h2>
-            <p>A core design principle is that authored characters should be residents of the simulation, not AI assistants. To enforce this, I implemented the <strong>Authenticity Mandate</strong>. This technical guardrail prevents characters from roleplaying scene transitions or acting as helpful AI.</p>
-            <p>When you interact with the characters, you are interacting with an authored persona. They stay in character, respect the established 20-turn conversational history, and prioritize their own domain knowledge over generic assistant behavior.</p>
-
-            <h2>From 'Chat' to 'Neural Records'</h2>
-            <p>I have fundamentally changed how the system manages memory. I moved away from vague prose summaries in favor of <strong>Structured Narrative Reports</strong>. Every interaction now generates bulleted <code>FACTS</code> and <code>EXCHANGES</code>.</p>
-            <p>This ensures that the extractor captures durable, inspectable records. These <strong>Neural Records</strong> are the lifeblood of the simulation, ensuring that interactions have a lasting impact on future state.</p>
-
-            <h2>Seeing the System: CPS Studio</h2>
-            <p>To support these complex systems, I overhauled <strong>CPS Studio</strong> with a high-visibility diagnostic dashboard. You can now monitor:</p>
-            <ul>
-              <li><strong>Memory Growth</strong>: Real-time tracking of Neural Records as they are formed.</li>
-              <li><strong>Inference Stream</strong>: A live log of autonomous thought and social exchange.</li>
-              <li><strong>Foundation Pulse</strong>: Instant feedback on database latency and system stability.</li>
-            </ul>
-
-            <h2>Experimental Roadmap</h2>
-            <p>With the core narrative loop (Interaction -> Synthesis -> Propagation -> Memory) now functional as an experimental substrate, the next phase will focus on <strong>Emotional Persistence</strong>. I will integrate character 'States of Mind' (Primary and Secondary emotions) directly into the propagation logic, ensuring that information is framed and shared differently based on the character's internal state.</p>
-            <p>Lelit Distrikt continues to evolve as an authored demonstrator for CPS behavior.</p>
-            
-            <p class="mono" style="margin-top: 64px; color: var(--accent-color); font-style: italic; font-size: 0.9rem;">
-              Stay synchronized. The district is watching.
-            </p>
-          </div>
-        </article>
-
-        <div class="traditional-footer">
-          CPS_FOUNDATION // CONTEXT_PROPAGATION_RESEARCH // 2026
-        </div>
+          <a href="blog-bridging-the-neural-gap.html" class="blog-entry-card">
+            <div class="blog-entry-media">
+              <img src="neural_propagation_dashboard.webp" alt="Neural propagation dashboard preview" loading="lazy" decoding="async">
+            </div>
+            <div class="blog-entry-content">
+              <div class="blog-entry-meta mono">
+                <span>MAY 12, 2026</span>
+                <span>DEV_LOG_v3.3</span>
+              </div>
+              <h2>Development Update: Bridging the Neural Gap</h2>
+              <p>
+                A milestone update covering autonomous narrative cycles, structured neural records, propagation across the social graph, and the latest CPS Studio diagnostic layer.
+              </p>
+              <span class="blog-entry-cta mono">Read the post</span>
+            </div>
+          </a>
+        </section>
       </main>
+
       <footer class="site-footer">
         <div class="footer-grid">
           <div class="footer-column">
             <div class="logo">CPS</div>
             <p class="footer-credits" style="margin-top: 12px; max-width: 260px;">
-              Context Propagation System. Experimental continuity infrastructure for authored AI worlds.
+              Context Propagation System. Exploratory infrastructure for social memory in artificial worlds.
             </p>
           </div>
-          
-          <div class="footer-column center">
-            <span class="footer-label mono text-accent">NAVIGATE</span>
-            <div class="footer-nav">
-              <a href="./" class="footer-link">Home</a>
-              <a href="how-does-it-work.html" class="footer-link">How Does It Work?</a>
-              <a href="use-cases.html" class="footer-link">Use Cases</a>
-              <a href="foundations.html" class="footer-link">Foundations</a>
-              <a href="contact.html" class="footer-link">Contact</a>
-            </div>
-          </div>
-  
+
           <div class="footer-column right">
             <span class="footer-label mono text-accent">LEGAL & CREDITS</span>
             <div class="footer-credits">

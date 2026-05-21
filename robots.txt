@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://wojciechhupert.github.io/Moirai_Website/sitemap.xml
+Sitemap: https://contextpropagationsystem.com/sitemap.xml

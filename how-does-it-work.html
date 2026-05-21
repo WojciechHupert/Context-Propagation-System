@@ -2,6 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&family=IBM+Plex+Mono:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="icon" type="image/svg+xml" href="moirai-logo.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
@@ -18,24 +19,28 @@
     <title>CPS | How CPS Works</title>
     <meta name="description" content="CPS turns moments into structured social memory, routes propagation with constraints, and makes lineage and consequence visible in CPS Studio." />
     <meta name="author" content="Wojciech Hupert" />
-    <meta name="robots" content="index, follow" />
-    <link rel="canonical" href="https://wojciechhupert.github.io/Moirai_Website/how-does-it-work.html" />
-    <meta name="theme-color" content="#050505" />
+    <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" />
+    <link rel="canonical" href="https://contextpropagationsystem.com/how-does-it-work.html" />
+    <link rel="alternate" type="text/plain" href="https://contextpropagationsystem.com/ai.txt" title="AI crawl guidance" />
+    <link rel="alternate" type="text/plain" href="https://contextpropagationsystem.com/llms.txt" title="LLM index" />
+    <meta name="theme-color" content="#efefed" />
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="CPS" />
-    <meta property="og:url" content="https://wojciechhupert.github.io/Moirai_Website/how-does-it-work.html" />
+    <meta property="og:url" content="https://contextpropagationsystem.com/how-does-it-work.html" />
     <meta property="og:title" content="CPS | How CPS Works" />
     <meta property="og:description" content="CPS turns moments into structured social memory, routes propagation with constraints, and makes lineage and consequence visible in CPS Studio." />
-    <meta property="og:image" content="https://wojciechhupert.github.io/Moirai_Website/moirai-social-preview.png" />
+    <meta property="og:image" content="https://contextpropagationsystem.com/neural_propagation_dashboard.webp" />
+    <meta property="og:image:alt" content="CPS Studio dashboard showing memory propagation and continuity analysis." />
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image" />
-    <meta property="twitter:url" content="https://wojciechhupert.github.io/Moirai_Website/how-does-it-work.html" />
+    <meta property="twitter:url" content="https://contextpropagationsystem.com/how-does-it-work.html" />
     <meta property="twitter:title" content="CPS | How CPS Works" />
     <meta property="twitter:description" content="CPS turns moments into structured social memory, routes propagation with constraints, and makes lineage and consequence visible in CPS Studio." />
-    <meta property="twitter:image" content="https://wojciechhupert.github.io/Moirai_Website/moirai-social-preview.png" />
+    <meta property="twitter:image" content="https://contextpropagationsystem.com/neural_propagation_dashboard.webp" />
+    <meta name="twitter:image:alt" content="CPS Studio dashboard showing memory propagation and continuity analysis." />
 
     <script type="application/ld+json">
       {
@@ -43,14 +48,17 @@
         "@type": "WebPage",
         "name": "CPS | How CPS Works",
         "description": "CPS turns moments into structured social memory, routes propagation with constraints, and makes lineage and consequence visible in CPS Studio.",
-        "url": "https://wojciechhupert.github.io/Moirai_Website/how-does-it-work.html",
+        "url": "https://contextpropagationsystem.com/how-does-it-work.html",
         "isPartOf": {
           "@type": "WebSite",
           "name": "CPS",
-          "url": "https://wojciechhupert.github.io/Moirai_Website/"
+          "url": "https://contextpropagationsystem.com/"
         }
       }
     </script>
+
+    <link rel="stylesheet" href="src/style.css">
+    <link rel="stylesheet" href="src/system.css">
   </head>
   <body>
     <div class="grid-overlay"></div>
@@ -78,15 +86,12 @@
       </header>
 
       <main>
-        <section class="system-hero">
-          <div class="system-hero-content">
-            <p class="mono text-accent animate-slide-up how-it-works-kicker" style="animation-delay: 0.04s;">SYSTEM OVERVIEW</p>
-            <h1 class="hero-title system-hero-title animate-slide-up" style="animation-delay: 0.1s;">How Does It Work?</h1>
-
-            <div class="homepage-text-column how-it-works-intro animate-slide-up" style="animation-delay: 0.2s;">
-              <div class="homepage-section-body">
-                <p><strong>CPS works by turning moments into memory and memory into social consequence.</strong> A conversation, event, or observation enters the system. CPS extracts what matters, stores it as structured memory, classifies who should know it, and decides whether it can move through the social network. When information spreads, the recipient does not receive a perfect copy. They receive a situated version: with source, uncertainty, emotional weight, containment rules, and possible distortion. CPS Studio then makes the process visible, so the creator can inspect how knowledge moved, changed, or failed to spread.</p>
-              </div>
+        <section class="use-cases-hero">
+          <div class="use-cases-hero-inner">
+            <p class="mono text-accent animate-slide-up use-cases-kicker" style="animation-delay: 0.04s;">SYSTEM OVERVIEW</p>
+            <h1 class="animate-slide-up" style="animation-delay: 0.1s;">How Does It Work?</h1>
+            <div class="use-cases-hero-body animate-slide-up" style="animation-delay: 0.2s;">
+              <p><strong>CPS works by turning moments into memory and memory into social consequence.</strong> A conversation, event, or observation enters the system. CPS extracts what matters, stores it as structured memory, classifies who should know it, and decides whether it can move through the social network. When information spreads, the recipient does not receive a perfect copy. They receive a situated version: with source, uncertainty, emotional weight, containment rules, and possible distortion. CPS Studio then makes the process visible, so the creator can inspect how knowledge moved, changed, or failed to spread.</p>
             </div>
           </div>
         </section>
@@ -131,19 +136,6 @@
               Context Propagation System. Exploratory infrastructure for social memory in artificial worlds.
             </p>
           </div>
-          
-          <div class="footer-column center">
-            <span class="footer-label mono text-accent">NAVIGATE</span>
-            <div class="footer-nav">
-              <a href="./" class="footer-link">Home</a>
-              <a href="how-does-it-work.html" class="footer-link">How Does It Work?</a>
-              <a href="use-cases.html" class="footer-link">Use Cases</a>
-              <a href="foundations.html" class="footer-link">Foundations</a>
-              <a href="blog.html" class="footer-link">Blog</a>
-              <a href="contact.html" class="footer-link">Contact</a>
-            </div>
-          </div>
-  
           <div class="footer-column right">
             <span class="footer-label mono text-accent">LEGAL & CREDITS</span>
             <div class="footer-credits">

@@ -17,7 +17,12 @@ Allow: /
 User-agent: OAI-SearchBot
 Allow: /
 
-# Knowledge Graph context
-Info: https://wojciechhupert.github.io/Moirai_Website/how-does-it-work.html
-Description: CPS is a cognitive persistence layer for authored social simulations in Unreal Engine.
-Keywords: Context Propagation System, Lelit Distrikt, NPC memory, cognitive persistence, social propagation.
+# Canonical site
+Canonical: https://contextpropagationsystem.com/
+Sitemap: https://contextpropagationsystem.com/sitemap.xml
+LLMs: https://contextpropagationsystem.com/llms.txt
+
+# Knowledge graph context
+Info: https://contextpropagationsystem.com/how-does-it-work.html
+Description: CPS is a continuity and social-memory system for authored artificial worlds, prototypes, and research-facing simulations.
+Keywords: Context Propagation System, CPS, social memory, continuity system, artificial worlds, authored simulations, NPC memory, information propagation, Lelit Distrikt.

@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&family=IBM+Plex+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/svg+xml" href="moirai-logo.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-X81LJ6XFMR"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-X81LJ6XFMR');
+    </script>
+
+    <title>CPS | Project One-Pager</title>
+    <meta name="description" content="A concise one-page summary of CPS: what it is, why it matters, how it works, where it can be used, and how CPS Studio and Lelit Distrikt fit together." />
+    <meta name="author" content="Wojciech Hupert" />
+    <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" />
+    <link rel="canonical" href="https://contextpropagationsystem.com/onepager.html" />
+    <link rel="alternate" type="text/plain" href="https://contextpropagationsystem.com/ai.txt" title="AI crawl guidance" />
+    <link rel="alternate" type="text/plain" href="https://contextpropagationsystem.com/llms.txt" title="LLM index" />
+    <meta name="theme-color" content="#efefed" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="CPS" />
+    <meta property="og:url" content="https://contextpropagationsystem.com/onepager.html" />
+    <meta property="og:title" content="CPS | Project One-Pager" />
+    <meta property="og:description" content="A concise one-page summary of CPS: what it is, why it matters, how it works, where it can be used, and how CPS Studio and Lelit Distrikt fit together." />
+    <meta property="og:image" content="https://contextpropagationsystem.com/neural_propagation_dashboard.webp" />
+    <meta property="og:image:alt" content="CPS Studio dashboard showing memory propagation and continuity analysis." />
+
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://contextpropagationsystem.com/onepager.html" />
+    <meta property="twitter:title" content="CPS | Project One-Pager" />
+    <meta property="twitter:description" content="A concise one-page summary of CPS: what it is, why it matters, how it works, where it can be used, and how CPS Studio and Lelit Distrikt fit together." />
+    <meta property="twitter:image" content="https://contextpropagationsystem.com/neural_propagation_dashboard.webp" />
+    <meta name="twitter:image:alt" content="CPS Studio dashboard showing memory propagation and continuity analysis." />
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "name": "CPS | Project One-Pager",
+        "description": "A concise one-page summary of CPS: what it is, why it matters, how it works, where it can be used, and how CPS Studio and Lelit Distrikt fit together.",
+        "url": "https://contextpropagationsystem.com/onepager.html",
+        "isPartOf": {
+          "@type": "WebSite",
+          "name": "CPS",
+          "url": "https://contextpropagationsystem.com/"
+        }
+      }
+    </script>
+
+    <style>
+      .onepager-page {
+        padding: 56px 40px 96px;
+      }
+
+      .onepager-shell {
+        max-width: 1240px;
+        margin: 0 auto;
+        display: grid;
+        gap: 28px;
+      }
+
+      .onepager-hero {
+        display: grid;
+        grid-template-columns: minmax(0, 1.35fr) minmax(320px, 0.9fr);
+        gap: 24px;
+        align-items: stretch;
+      }
+
+      .onepager-panel {
+        position: relative;
+        border: 1px solid var(--border-color);
+        background:
+          linear-gradient(180deg, rgba(255, 255, 255, 0.78), rgba(236, 236, 232, 0.92)),
+          radial-gradient(circle at top right, rgba(255, 77, 0, 0.08), transparent 32%);
+        overflow: hidden;
+      }
+
+      .onepager-panel::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background:
+          linear-gradient(90deg, rgba(0, 0, 0, 0.05) 1px, transparent 1px),
+          linear-gradient(rgba(0, 0, 0, 0.05) 1px, transparent 1px);
+        background-size: 28px 28px;
+        opacity: 0.18;
+        pointer-events: none;
+      }
+
+      .onepager-hero-copy,
+      .onepager-hero-facts,
+      .onepager-section,
+      .onepager-closing {
+        padding: 32px;
+      }
+
+      .onepager-kicker,
+      .onepager-stat-label,
+      .onepager-mini-kicker {
+        font-family: 'IBM Plex Mono', monospace;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+      }
+
+      .onepager-kicker,
+      .onepager-mini-kicker {
+        font-size: 0.72rem;
+        color: var(--accent-color);
+      }
+
+      .onepager-hero-copy h1 {
+        margin-top: 18px;
+        font-size: clamp(3rem, 8vw, 6.3rem);
+        line-height: 0.92;
+      }
+
+      .onepager-hero-copy p {
+        margin-top: 24px;
+        max-width: 54rem;
+        color: #45453f;
+        font-size: 1.08rem;
+        line-height: 1.78;
+      }
+
+      .onepager-highlight {
+        margin-top: 28px;
+        padding-top: 18px;
+        border-top: 1px solid var(--border-color);
+        color: #2e2d29;
+        font-size: 1.15rem;
+        line-height: 1.55;
+      }
+
+      .onepager-hero-facts {
+        display: grid;
+        gap: 18px;
+        align-content: start;
+      }
+
+      .onepager-stat {
+        position: relative;
+        z-index: 1;
+        padding-bottom: 18px;
+        border-bottom: 1px solid var(--border-color);
+      }
+
+      .onepager-stat:last-child {
+        border-bottom: 0;
+        padding-bottom: 0;
+      }
+
+      .onepager-stat-label {
+        font-size: 0.66rem;
+        color: #7f7c76;
+      }
+
+      .onepager-stat strong {
+        display: block;
+        margin-top: 8px;
+        font-size: 1.35rem;
+        line-height: 1.2;
+        color: #1f1f1c;
+      }
+
+      .onepager-stat span {
+        display: block;
+        margin-top: 8px;
+        color: #55534d;
+        line-height: 1.6;
+      }
+
+      .onepager-grid {
+        display: grid;
+        grid-template-columns: repeat(12, minmax(0, 1fr));
+        gap: 24px;
+      }
+
+      .onepager-section {
+        position: relative;
+        min-height: 100%;
+      }
+
+      .onepager-section h2 {
+        margin-top: 16px;
+        font-size: clamp(1.8rem, 4vw, 3rem);
+        line-height: 1;
+      }
+
+      .onepager-section p {
+        position: relative;
+        z-index: 1;
+        margin-top: 18px;
+        color: #494842;
+        line-height: 1.78;
+      }
+
+      .span-5 { grid-column: span 5; }
+      .span-6 { grid-column: span 6; }
+      .span-7 { grid-column: span 7; }
+      .span-12 { grid-column: span 12; }
+
+      .onepager-list,
+      .onepager-compact-list {
+        margin-top: 20px;
+        display: grid;
+        gap: 12px;
+      }
+
+      .onepager-list li,
+      .onepager-compact-list li {
+        position: relative;
+        padding-left: 16px;
+        color: #484741;
+        line-height: 1.68;
+      }
+
+      .onepager-list li::before,
+      .onepager-compact-list li::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0.7em;
+        width: 6px;
+        height: 6px;
+        background: var(--accent-color);
+      }
+
+      .onepager-flow {
+        margin-top: 24px;
+        display: grid;
+        gap: 14px;
+      }
+
+      .onepager-flow-step {
+        position: relative;
+        z-index: 1;
+        display: grid;
+        grid-template-columns: 56px 1fr;
+        gap: 12px 16px;
+        padding: 16px 18px;
+        border: 1px solid var(--border-color);
+        background: rgba(255, 255, 255, 0.52);
+      }
+
+      .onepager-flow-step strong {
+        font-size: 0.82rem;
+        color: var(--accent-color);
+      }
+
+      .onepager-flow-step h3 {
+        margin: 0;
+        font-size: 1.05rem;
+        line-height: 1.2;
+      }
+
+      .onepager-flow-step p {
+        margin-top: 8px;
+        font-size: 0.94rem;
+      }
+
+      .onepager-cards {
+        margin-top: 22px;
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 16px;
+      }
+
+      .onepager-card {
+        position: relative;
+        z-index: 1;
+        min-height: 100%;
+        padding: 18px;
+        border: 1px solid var(--border-color);
+        background: rgba(255, 255, 255, 0.5);
+      }
+
+      .onepager-card h3 {
+        font-size: 1.05rem;
+        line-height: 1.2;
+      }
+
+      .onepager-card p {
+        margin-top: 10px;
+        font-size: 0.94rem;
+      }
+
+      .onepager-media {
+        margin-top: 24px;
+        position: relative;
+        z-index: 1;
+      }
+
+      .onepager-media img {
+        display: block;
+        width: 100%;
+        height: auto;
+        border: 1px solid var(--border-color);
+        background: #111;
+      }
+
+      .onepager-media figcaption {
+        margin-top: 10px;
+        font-size: 0.7rem;
+        color: #77756e;
+        text-transform: uppercase;
+        letter-spacing: 0.07em;
+      }
+
+      .onepager-quote {
+        margin-top: 22px;
+        padding: 20px 22px;
+        border-left: 2px solid var(--accent-color);
+        background: rgba(255, 255, 255, 0.46);
+        color: #2f2e2a;
+        font-size: 1.05rem;
+        line-height: 1.7;
+      }
+
+      .onepager-closing {
+        display: block;
+      }
+
+      .onepager-closing h2 {
+        margin-top: 14px;
+        font-size: clamp(2rem, 5vw, 3.2rem);
+        line-height: 1.02;
+      }
+
+      .onepager-closing p {
+        margin-top: 18px;
+        max-width: 48rem;
+        color: #4a4944;
+        line-height: 1.78;
+      }
+
+      @media (max-width: 1080px) {
+        .onepager-hero,
+        .onepager-cards {
+          grid-template-columns: 1fr;
+        }
+
+        .span-5,
+        .span-6,
+        .span-7 {
+          grid-column: span 12;
+        }
+
+      }
+
+      @media (max-width: 768px) {
+        .onepager-page {
+          padding: 88px 20px 72px;
+        }
+
+        .onepager-hero-copy,
+        .onepager-hero-facts,
+        .onepager-section,
+        .onepager-closing {
+          padding: 24px;
+        }
+
+        .onepager-flow-step {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      @media print {
+        .grid-overlay,
+        .site-footer,
+        .mobile-menu-toggle {
+          display: none !important;
+        }
+
+        body,
+        .main-container,
+        .onepager-page {
+          background: #fff !important;
+        }
+
+        .onepager-page {
+          padding: 0;
+        }
+
+        .onepager-shell,
+        .onepager-grid {
+          gap: 16px;
+        }
+
+        .onepager-panel::before {
+          opacity: 0.08;
+        }
+      }
+    </style>
+    <link rel="stylesheet" crossorigin href="./assets/style-D25Recf2.css">
+  </head>
+  <body>
+    <div class="grid-overlay"></div>
+
+    <div class="main-container">
+      <main class="onepager-page">
+        <div class="onepager-shell">
+          <section class="onepager-hero">
+            <article class="onepager-panel onepager-hero-copy">
+              <p class="onepager-kicker">Project Summary</p>
+              <h1>CPS at a glance</h1>
+              <p>
+                Context Propagation System is an exploratory continuity and social-memory infrastructure for artificial worlds. It is designed for projects where information should not vanish after a conversation, but persist as structured memory, move through a group, mutate through perspective, remain private when needed, and later return as consequence.
+              </p>
+              <p class="onepager-highlight">
+                CPS is not framed as a disposable chat feature, a full society simulator, or a foundation model effort. It is a bounded prototype for making memory, propagation, lineage, and inspectability operational.
+              </p>
+            </article>
+
+            <aside class="onepager-panel onepager-hero-facts">
+              <div class="onepager-stat">
+                <p class="onepager-stat-label">Core Idea</p>
+                <strong>Information becomes part of a social environment.</strong>
+                <span>What matters is not only what was said, but who knows it, how it travelled, how it changed, and what it causes later.</span>
+              </div>
+              <div class="onepager-stat">
+                <p class="onepager-stat-label">Current Surfaces</p>
+                <strong>CPS Studio + Lelit Distrikt</strong>
+                <span>CPS Studio is the proof and inspection surface. Lelit Distrikt is the first bounded visual endpoint built around the system.</span>
+              </div>
+              <div class="onepager-stat">
+                <p class="onepager-stat-label">Current Position</p>
+                <strong>Exploratory prototype, not production platform.</strong>
+                <span>The project emphasizes bounded scenarios, traceability, local inspectability, and honest claims over premature scale claims.</span>
+              </div>
+            </aside>
+          </section>
+
+          <section class="onepager-grid">
+            <article class="onepager-panel onepager-section span-5">
+              <p class="onepager-mini-kicker">Why It Exists</p>
+              <h2>The problem CPS focuses on</h2>
+              <p>
+                Most AI interactions still behave like isolated exchanges. They produce an answer, then the broader social consequence either disappears or remains opaque. CPS focuses on the continuity layer that appears once systems begin to retain state over time and across agents.
+              </p>
+              <ul class="onepager-list">
+                <li>How does information persist after the originating conversation?</li>
+                <li>Who is allowed to know something, and under what constraints?</li>
+                <li>How does recall change as information passes through trust, bias, fear, privacy, and rumor?</li>
+                <li>How can a creator inspect why a later reaction happened?</li>
+              </ul>
+              <div class="onepager-quote">
+                CPS treats continuity as design material: memory has source, ownership, confidence, privacy boundaries, lineage, and effect.
+              </div>
+            </article>
+
+            <article class="onepager-panel onepager-section span-7">
+              <p class="onepager-mini-kicker">How It Works</p>
+              <h2>Four-layer operating model</h2>
+              <div class="onepager-flow">
+                <div class="onepager-flow-step">
+                  <strong>01</strong>
+                  <div>
+                    <h3>Interaction layer</h3>
+                    <p>Conversations, events, and observations enter through a world, a tool, or another interface.</p>
+                  </div>
+                </div>
+                <div class="onepager-flow-step">
+                  <strong>02</strong>
+                  <div>
+                    <h3>Continuity layer</h3>
+                    <p>CPS turns moments into structured memory with source, ownership, confidence, emotional weight, privacy, and history.</p>
+                  </div>
+                </div>
+                <div class="onepager-flow-step">
+                  <strong>03</strong>
+                  <div>
+                    <h3>Propagation layer</h3>
+                    <p>Information can move through social links instead of global broadcast logic, with containment rules, duplication control, and mutation over time.</p>
+                  </div>
+                </div>
+                <div class="onepager-flow-step">
+                  <strong>04</strong>
+                  <div>
+                    <h3>Observability layer</h3>
+                    <p>CPS Studio exposes memory lineage, propagation depth, recall state, and system behavior so continuity does not become a black box.</p>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="onepager-panel onepager-section span-6">
+              <p class="onepager-mini-kicker">What Makes It Distinct</p>
+              <h2>Three operating pillars</h2>
+              <div class="onepager-cards">
+                <div class="onepager-card">
+                  <h3>Durable memory records</h3>
+                  <p>Dialogue is distilled into lasting records for facts, identities, preferences, and narrative state.</p>
+                </div>
+                <div class="onepager-card">
+                  <h3>Controlled propagation</h3>
+                  <p>Memories move through relationship-shaped routes, not flat omniscient sharing, and can be inspected for mutation and containment.</p>
+                </div>
+                <div class="onepager-card">
+                  <h3>Authenticity guardrails</h3>
+                  <p>Characters remain constrained by authored identity, expertise, and situation rather than defaulting to assistant-like behavior.</p>
+                </div>
+                <div class="onepager-card">
+                  <h3>Structured authority</h3>
+                  <p>Language models interpret and reformulate, but CPS owns the underlying social-memory state and continuity rules.</p>
+                </div>
+              </div>
+            </article>
+
+            <article class="onepager-panel onepager-section span-6">
+              <p class="onepager-mini-kicker">Project Shape</p>
+              <h2>What CPS is and is not</h2>
+              <ul class="onepager-compact-list">
+                <li>It is a continuity and propagation layer for authored artificial environments.</li>
+                <li>It is not primarily a game mechanic, even though it can live inside game-like worlds.</li>
+                <li>It is not a claim to full-society simulation at the current stage.</li>
+                <li>It is not dependent on a single model provider or model family.</li>
+                <li>It is being built as an inspectable instrument for bounded proofs, not as an opaque memory feature.</li>
+              </ul>
+              <figure class="onepager-media">
+                <img src="./assets/overview-DoCrVL4t.png" alt="CPS Studio overview showing project observability views." loading="lazy" decoding="async">
+                <figcaption>CPS Studio overview / public screenshot</figcaption>
+              </figure>
+            </article>
+
+            <article class="onepager-panel onepager-section span-7">
+              <p class="onepager-mini-kicker">Use Cases</p>
+              <h2>Where the system can matter</h2>
+              <p>
+                The site frames CPS as a reusable layer rather than a single fixed story world. The strongest current use case is a bounded authored environment where a small number of agents can demonstrate continuity clearly, but the same logic can support wider applications.
+              </p>
+              <div class="onepager-cards">
+                <div class="onepager-card">
+                  <h3>Interactive worlds</h3>
+                  <p>Characters can remember, misremember, protect, or circulate information in ways that shape later scenes.</p>
+                </div>
+                <div class="onepager-card">
+                  <h3>Research prototypes</h3>
+                  <p>Bounded systems can be used to inspect rumor flow, trust dynamics, privacy, recall quality, and information drift.</p>
+                </div>
+                <div class="onepager-card">
+                  <h3>Cultural installations</h3>
+                  <p>Visitors can enter staged social environments where their interactions affect what the world later remembers and reveals.</p>
+                </div>
+                <div class="onepager-card">
+                  <h3>Human-agent studies</h3>
+                  <p>Future embodied AI contexts will require accountable social memory, not only task execution and dialogue fluency.</p>
+                </div>
+              </div>
+            </article>
+
+            <article class="onepager-panel onepager-section span-5">
+              <p class="onepager-mini-kicker">Current Endpoint</p>
+              <h2>Lelit Distrikt and CPS Studio</h2>
+              <p>
+                Lelit Distrikt is the first visual endpoint built around CPS. It gives the system a bounded district where the afterlife of conversation becomes emotionally legible. CPS Studio is the complementary control and inspection surface used to observe what memories exist, how they spread, and whether the system behaved as intended.
+              </p>
+              <figure class="onepager-media">
+                <img src="./assets/memories-CPFewn7p.png" alt="CPS Studio memories view showing archived narrative memory records." loading="lazy" decoding="async">
+                <figcaption>Memories view / public screenshot</figcaption>
+              </figure>
+            </article>
+
+            <article class="onepager-panel onepager-closing span-12">
+              <p class="onepager-mini-kicker">Current Direction</p>
+              <h2>Designing artificial worlds where information has consequences</h2>
+              <p>
+                The project direction is deliberately narrow and strategic: create bounded, observable systems where social memory can be introduced, constrained, traced, and understood. That makes CPS useful for creators, researchers, and institutions interested in continuity, inspectability, memory boundaries, and the social behavior of information inside artificial groups.
+              </p>
+            </article>
+          </section>
+        </div>
+      </main>
+
+    </div>
+  </body>
+</html>

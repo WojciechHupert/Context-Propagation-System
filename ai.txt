@@ -1,0 +1,28 @@
+User-agent: *
+Allow: /
+
+# Specific guidance for AI crawlers
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+# Canonical site
+Canonical: https://contextpropagationsystem.com/
+Sitemap: https://contextpropagationsystem.com/sitemap.xml
+LLMs: https://contextpropagationsystem.com/llms.txt
+
+# Knowledge graph context
+Info: https://contextpropagationsystem.com/how-does-it-work.html
+Description: CPS is a continuity and social-memory system for authored artificial worlds, prototypes, and research-facing simulations.
+Keywords: Context Propagation System, CPS, social memory, continuity system, artificial worlds, authored simulations, NPC memory, information propagation, Lelit Distrikt.

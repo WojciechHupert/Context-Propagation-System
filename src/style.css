@@ -689,11 +689,11 @@ section {
 
 .nav-link {
   position: relative;
-  font-family: var(--font-mono);
-  font-size: 0.85rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.18em;
+  font-family: var(--font-sans);
+  font-size: 0.93rem;
+  font-weight: 600;
+  text-transform: none;
+  letter-spacing: 0.02em;
   color: rgba(255, 255, 255, 0.7);
   padding: 10px 0;
   border-radius: 0;
@@ -882,9 +882,9 @@ section {
   .nav-link {
     width: 100%;
     justify-content: flex-start;
-    font-size: 1.08rem;
-    font-weight: 700;
-    letter-spacing: 0.14em;
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: 0.01em;
     padding: 18px 0;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     transform: translateX(10px);

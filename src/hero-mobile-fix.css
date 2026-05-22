@@ -1,0 +1,29 @@
+.hero {
+  background:
+    radial-gradient(circle at top right, rgba(191, 215, 255, 0.34), transparent 44%),
+    linear-gradient(135deg, #f7f3ea 0%, #eceae2 48%, #e2e4de 100%);
+}
+
+.hero.graph-disabled .hero-graph-bg {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .hero.graph-disabled {
+    background:
+      radial-gradient(circle at top right, rgba(191, 215, 255, 0.4), transparent 42%),
+      linear-gradient(160deg, #f7f3ea 0%, #ede6db 52%, #e4e2dc 100%);
+  }
+
+  .hero.graph-disabled::after {
+    background:
+      linear-gradient(180deg, rgba(247, 243, 234, 0.18) 0%, rgba(247, 243, 234, 0.78) 30%, rgba(244, 241, 235, 0.94) 100%);
+  }
+
+  .hero.graph-disabled .hero-content h1,
+  .hero.graph-disabled .hero-content h2,
+  .hero.graph-disabled .hero-description,
+  .hero.graph-disabled .hero-subtitle {
+    color: #101010;
+  }
+}

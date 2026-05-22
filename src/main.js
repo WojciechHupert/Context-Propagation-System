@@ -1,13 +1,28 @@
 import './style.css'
+import './hero-mobile-fix.css'
 import React from 'react';
 import { createRoot } from 'react-dom/client';
 import GraphApp from './GraphApp';
 
+const MOBILE_GRAPH_MEDIA_QUERY = '(max-width: 768px)';
+
 // Mount React force graph into the hero
 const graphMount = document.getElementById('force-graph-mount');
-if (graphMount) {
-  const root = createRoot(graphMount);
-  root.render(React.createElement(GraphApp));
+let graphRoot = null;
+
+function mountGraph() {
+  if (!graphMount) return;
+  if (!graphRoot) {
+    graphRoot = createRoot(graphMount);
+  }
+
+  graphRoot.render(React.createElement(GraphApp));
+}
+
+function unmountGraph() {
+  if (!graphRoot) return;
+  graphRoot.unmount();
+  graphRoot = null;
 }
 
 /**
@@ -116,12 +131,38 @@ document.addEventListener('DOMContentLoaded', () => {
   initLightbox();
   initCarousel();
   initFaqAccordion();
-  // Auto-initialize visualization
-  setTimeout(() => {
+  const hero = document.querySelector('.hero');
+  const mobileGraphQuery = window.matchMedia(MOBILE_GRAPH_MEDIA_QUERY);
+
+  const syncHeroVisualizationMode = () => {
+    if (!hero) return;
+
+    const isMobile = mobileGraphQuery.matches;
+    hero.classList.toggle('graph-active', !isMobile);
+    hero.classList.toggle('graph-disabled', isMobile);
+
+    if (graphMount) {
+      graphMount.setAttribute('aria-hidden', String(isMobile));
+    }
+
+    if (isMobile) {
+      unmountGraph();
+      return;
+    }
+
+    mountGraph();
+
     window.dispatchEvent(new CustomEvent('moirai-initialize'));
-    const hero = document.querySelector('.hero');
-    if (hero) hero.classList.add('graph-active');
-  }, 500);
+  };
+
+  // Auto-initialize visualization for non-mobile viewports only.
+  setTimeout(syncHeroVisualizationMode, 500);
+
+  if (typeof mobileGraphQuery.addEventListener === 'function') {
+    mobileGraphQuery.addEventListener('change', syncHeroVisualizationMode);
+  } else {
+    mobileGraphQuery.addListener(syncHeroVisualizationMode);
+  }
 
   // Update status numbers randomly to simulate "processing"
   const statusItems = document.querySelectorAll('.status-item span:last-child');

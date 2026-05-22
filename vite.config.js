@@ -27,6 +27,8 @@ export default defineConfig({
         howDoesItWork: resolve(__dirname, 'how-does-it-work.html'),
         useCases: resolve(__dirname, 'use-cases.html'),
         blog: resolve(__dirname, 'blog.html'),
+        blogBridgingTheNeuralGap: resolve(__dirname, 'blog-bridging-the-neural-gap.html'),
+        blogPrototypesNotSimulations: resolve(__dirname, 'blog-prototypes-not-simulations.html'),
         contact: resolve(__dirname, 'contact.html'),
         privacyPolicy: resolve(__dirname, 'privacy-policy.html'),
         cookiePolicy: resolve(__dirname, 'cookie-policy.html'),

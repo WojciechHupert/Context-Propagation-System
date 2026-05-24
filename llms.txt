@@ -7,7 +7,6 @@ Primary pages:
 - Home: https://contextpropagationsystem.com/
 - How It Works: https://contextpropagationsystem.com/how-does-it-work.html
 - Use Cases: https://contextpropagationsystem.com/use-cases.html
-- Foundations: https://contextpropagationsystem.com/foundations.html
 - Development Journal: https://contextpropagationsystem.com/blog.html
 - Contact: https://contextpropagationsystem.com/contact.html
 
